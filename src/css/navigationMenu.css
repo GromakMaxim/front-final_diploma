@@ -1,0 +1,28 @@
+.main-menu{
+    width: 100vw;
+    background-color: #292929;
+}
+
+.main-menu-list{
+    display: flex;
+    flex-direction: row;
+    color: white;
+    justify-content: flex-start;
+}
+
+.main-menu-list{margin-left: 100px}
+
+
+li{
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+    margin-right: 50px;
+    margin-right: 50px;
+}
+
+.main-menu-list > li > a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 30px;
+}
