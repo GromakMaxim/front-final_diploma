@@ -1,4 +1,9 @@
 @import url("../css/navigationMenu.css");
 @import url("../css/mainPage.css");
 @import url("../css/logo.css");
-@import url("../css/chooseYourPath.css");
+@import url("../css/findTicketsWidget.css");
+@import url("../css/aboutUs.css");
+
+section {
+    display: block;
+}

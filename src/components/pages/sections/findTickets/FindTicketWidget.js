@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ChooseYourPathWidget(props) {
+export default function FindTicketWidget(props) {
 
     return (
         <div className='widget-search-wrapper'>
