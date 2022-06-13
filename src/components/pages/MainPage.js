@@ -4,6 +4,7 @@ import HowItWorks from "./sections/HowItWorks";
 import Logo from "./sections/Logo";
 import FindTicketWidget from "./sections/findTickets/FindTicketWidget";
 import AboutUs from "./sections/AboutUs";
+import FeedbackWidget from "./sections/feedback/FeedbackWidget";
 
 export default function MainPage(props) {
     return (
@@ -13,6 +14,7 @@ export default function MainPage(props) {
             <FindTicketWidget/>
             <AboutUs/>
             <HowItWorks/>
+            <FeedbackWidget/>
         </div>
     );
 }

@@ -1,0 +1,81 @@
+.feedback{
+    background-color: #fff;
+    padding-top: 145px;
+    padding-bottom: 80px;
+    text-align: left;
+}
+
+.feed-container > h2{
+    text-transform: uppercase;
+    color: #292929;
+    font-weight: 500;
+    font-size: 36px;
+    margin: 0;
+}
+
+.feed-container{
+    width: 1350px;
+    margin: 0 auto;
+}
+
+.feed-list{
+    display: flex;
+    flex-direction: row;
+
+    list-style: none;
+    margin-top: 65px;
+    padding: 0;
+    justify-content: space-between;
+}
+
+.feed-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 45%;
+}
+
+.feed-item > div{
+    display: flex;
+    flex-direction: column;
+}
+
+.feed-username{
+    color: #000;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    margin-left: 38px;
+}
+
+.feed-description{
+    color: #928f94;
+    font-size: 18px;
+    font-weight: 500;
+    font-style: italic;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+.feed-description:before{
+    color: #928F94;
+    content: "\201C";
+    font-size: 36px;
+    line-height: 0.1em;
+    margin-right: 0.2em;
+    vertical-align: -0.3em;
+}
+
+.feed-description:after{
+    color: #928F94;
+    content: "\201E";
+    font-size: 36px;
+    line-height: 0.1em;
+    margin-left: 10px;
+}
+
+
+.avatar{
+    border-radius: 100px;
+}
