@@ -56,7 +56,7 @@ export default function Footer(props) {
         <footer>
             <div>
                 <div className='contact-us'>
-                    <span>Свяжитесь с нами</span>
+                    <h3>Свяжитесь с нами</h3>
 
                     <ContactUsItem pic={phone_img} data='8 (800) 000 00 00'/>
                     <ContactUsItem pic={email_img} data='inbox@mail.ru'/>
