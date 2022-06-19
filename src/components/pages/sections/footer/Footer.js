@@ -4,8 +4,54 @@ import phone_img from '../footer/img/phone.png';
 import email_img from '../footer/img/email.png';
 import skype_img from '../footer/img/skype.png';
 import address_img from '../footer/img/search.png';
+import SocialItem from "./SocialItem";
+
 
 export default function Footer(props) {
+    let data = [
+        {
+            id: 0,
+            link: 'https://www.youtube.com/',
+            label: 'youtube',
+        },
+
+        {
+            id: 1,
+            link: 'https://ru.linkedin.com/',
+            label: 'linkedin',
+            img: ''
+        },
+
+        {
+            id: 2,
+            link: 'https://www.google.com/',
+            label: 'google',
+            img: ''
+        },
+
+        {
+            id: 3,
+            link: 'https://www.facebook.com/',
+            label: 'facebook',
+            img: ''
+        },
+
+        {
+            id: 4,
+            link: 'https://twitter.com/',
+            label: 'twitter',
+            img: ''
+        },
+
+
+    ];
+
+
+    let socialsArray = [];
+
+    data.forEach(item=> socialsArray.push(<SocialItem key={item.id} data={item}/>));
+
+
     return (
         <footer>
             <div>
@@ -19,37 +65,24 @@ export default function Footer(props) {
 
                 </div>
 
-                <section className="subscribe"><h3>Подписка</h3>
+                <section className="subscribe">
+                    <h3>Подписка</h3>
                     <div className="subscribe-form">
                         <form>
                             <label htmlFor="subscribe-email">Будьте в курсе событий</label>
                             <div className="form-container">
                                 <input type="email" id="subscribe-email" placeholder="e-mail" required=""/>
-                                    <button type="submit" className="subscribe-form-btn">отправить</button>
+                                <button type="submit" className="subscribe-form-btn">отправить</button>
                             </div>
                         </form>
                     </div>
                     <div className="social-links"><h3>Подписывайтесь на нас</h3>
                         <ul className="social-list">
-                            <li className="social-item"><a href="https://www.youtube.com/"
-                                                           className="social-link social-link-youtube"
-                                                           aria-label="youtube" aria-hidden="true">youtube</a></li>
-                            <li className="social-item"><a href="https://ru.linkedin.com"
-                                                           className="social-link social-link-in" aria-label="linkedin"
-                                                           aria-hidden="true">linkedin</a></li>
-                            <li className="social-item"><a href="https://www.google.com/"
-                                                           className="social-link social-link-google"
-                                                           aria-label="google" aria-hidden="true">google</a></li>
-                            <li className="social-item"><a href="https://www.facebook.com/"
-                                                           className="social-link social-link-facebook"
-                                                           aria-label="facebook" aria-hidden="true">facebook</a></li>
-                            <li className="social-item"><a href="https://twitter.com/"
-                                                           className="social-link social-link-twitter"
-                                                           aria-label="twitter" aria-hidden="true">twitter</a></li>
+                            {socialsArray}
                         </ul>
                     </div>
                 </section>
             </div>
         </footer>
-);
+    );
 }
