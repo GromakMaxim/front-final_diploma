@@ -3,7 +3,7 @@ import React from "react";
 export default function FindTicketWidget(props) {
 
     return (
-        <div className='widget-search-wrapper'>
+        <section className='widget-search-wrapper'>
             <div className='motto'>
                 <span>Вся жизнь - </span>
                 <span> путешествие!</span>
@@ -27,6 +27,6 @@ export default function FindTicketWidget(props) {
                 </div>
                 <button type="submit" className="form-search-btn">Найти билет</button>
             </form>
-        </div>
+        </section>
     );
 }

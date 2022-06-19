@@ -14,9 +14,16 @@ export default function MainPage(props) {
             <NavigationMenu/>
             <FindTicketWidget/>
             <AboutUs/>
-            <HowItWorks/>
-            <FeedbackWidget/>
-            <Footer/>
         </div>
     );
+
+    /**
+     * <Logo/>
+     <NavigationMenu/>
+     <FindTicketWidget/>
+     <AboutUs/>
+     <HowItWorks/>
+     <FeedbackWidget/>
+     <Footer/>
+     */
 }

@@ -1,11 +1,8 @@
 import React from "react";
-import {Link} from "react-router-dom";
-import {Route, Routes} from "react-router";
-import MainPage from "../MainPage";
 
 export default function NavigationMenu(props){
     return(
-        <div className='main-menu'>
+        <section className='main-menu'>
 
             <ul className='main-menu-list'>
                 <li>
@@ -21,6 +18,6 @@ export default function NavigationMenu(props){
                     <a href='#contacts'>Контакты</a>
                 </li>
             </ul>
-        </div>
+        </section>
     );
 }
