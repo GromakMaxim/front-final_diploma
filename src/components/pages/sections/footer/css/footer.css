@@ -1,0 +1,33 @@
+footer{
+    background-color: #2D2B2F;
+    padding-top: 50px;
+
+
+}
+
+footer > div{
+    width: 1350px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-around;
+}
+
+.contact-us-item{
+    display: flex;
+    flex-direction: row;
+}
+
+.contact-us-item > img{
+    margin-right: 10px;
+}
+
+.contact-us-item > span{
+    color: #E5E5E5;
+    font-size: 24px;
+    font-weight: 400;
+    max-width: 200px;
+    text-align: left;
+}

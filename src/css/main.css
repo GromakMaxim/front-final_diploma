@@ -5,6 +5,7 @@
 @import url("../css/aboutUs.css");
 @import url("../css/howItWorks.css");
 @import url("../css/feedback.css");
+@import url("../components/pages/sections/footer/css/footer.css");
 
 section {
     display: block;
