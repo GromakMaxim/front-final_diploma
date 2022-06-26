@@ -2,11 +2,16 @@
 @import url("../css/mainPage.css");
 @import url("../css/logo.css");
 @import url("../css/findTicketsWidget.css");
-@import url("../css/aboutUs.css");
+@import url("../components/pages/sections/aboutUs/css/aboutUs.css");
 @import url("../css/howItWorks.css");
-@import url("../css/feedback.css");
+@import url("../components/pages/sections/feedback/css/feedback.css");
 @import url("../components/pages/sections/footer/css/footer.css");
+@import url("../components/pages/sections/footer/css/footer_bottom.css");
 
-section {
-    display: block;
+section{
+    display: flex;
+}
+
+.body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', serif
 }

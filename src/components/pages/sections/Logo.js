@@ -2,6 +2,6 @@ import React from "react";
 
 export default function Logo(props){
     return (
-        <div className='logo'>Лого</div>
+        <section className='logo'>Лого</section>
     );
 }

@@ -1,4 +1,6 @@
 .info-section {
+    display: flex;
+
     background-color: #fff;
     padding-top: 145px;
     padding-bottom: 80px;
@@ -6,7 +8,6 @@
 }
 
 .info-section > .container{
-    width: 1350px;
     margin: 0 auto;
 }
 

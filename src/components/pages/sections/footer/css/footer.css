@@ -1,4 +1,3 @@
-@import url("../css/footer_bottom.css");
 
 footer{
     background-color: #2D2B2F;
@@ -8,7 +7,6 @@ footer{
 }
 
 footer > div{
-    width: 1350px;
     display: flex;
     flex-direction: row;
 
@@ -52,6 +50,8 @@ footer > div{
 }
 
 .subscribe {
+    display: flex;
+    flex-direction: column;
     text-align: left;
 }
 
