@@ -55,7 +55,7 @@ export default function Footer(props) {
 
     return (
         <>
-            <footer>
+            <footer id='contacts'>
                 <div>
                     <div className='contact-us'>
                         <h3>Свяжитесь с нами</h3>

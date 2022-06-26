@@ -63,7 +63,7 @@ export default function FeedbackWidget(props) {
 
     array.forEach(item => result.push(<FeedItem key={item.id} data={item}/>))
     return (
-        <section className='feedback'>
+        <section className='feedback' id='feedback'>
             <div className='feed-container'>
                 <h2> отзывы </h2>
 
