@@ -1,4 +1,4 @@
-.widget-search-wrapper{
+.widget-search-wrapper {
     display: flex;
     flex-direction: row;
     margin-right: auto;
@@ -19,7 +19,7 @@
     align-self: center;
 }
 
-.widget-search-ticket{
+.widget-search-ticket {
     display: flex;
     flex-direction: column;
     width: 750px;
@@ -31,19 +31,20 @@
     margin-right: 100px;
 }
 
-.pic-refresh{
+.pic-refresh {
     width: 30px;
     height: 30px;
-    background-image: url("../../public/images/reload.png");
+    background-image: url("../../../../../../public/images/reload.png");
     filter: invert(100%);
     background-size: 30px;
 }
+
 div > h3 {
     font-size: 30px;
     color: white;
 }
 
-.direction, .date{
+.direction, .date {
     display: flex;
     flex-direction: column;
     margin-left: auto;
@@ -51,23 +52,23 @@ div > h3 {
 }
 
 .widget-search-ticket > .direction > div,
-.widget-search-ticket > .date > div{
+.widget-search-ticket > .date > div {
     display: flex;
     flex-direction: row;
 }
 
-.direction > .h3{
+.direction > .h3 {
     width: auto;
     text-align: left;
 }
 
-.from, .to{
+.from, .to {
     width: 300px;
     border-radius: 5px;
     padding: 10px;
 }
 
-.widget-search-ticket > button{
+.widget-search-ticket > button {
     width: 320px;
     background-color: #FFA800;
     border: 1px solid #FFA800;

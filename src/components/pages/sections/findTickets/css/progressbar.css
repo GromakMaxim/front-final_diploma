@@ -1,0 +1,50 @@
+.progressbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: 1px solid black;
+    color: white;
+}
+
+.stage {
+    display: flex;
+    width: 25%;
+    height: 100px;
+    background-color: #FFA800;
+    border: 1px solid black;
+}
+
+.stage > span, .stage > div {
+    margin: auto;
+}
+
+.stage-arrow {
+    width: 0;
+    height: 0;
+    border: 0 solid transparent;
+    border-bottom-width: 50px;
+    border-top-width: 50px;
+    border-left: 37px solid black;
+}
+
+.number{
+    display: flex;
+
+    width: 60px;
+    height: 60px;
+    border: 3px solid white;
+    border-radius: 150px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.number > span{
+    margin: auto;
+}
+
+
+.stage-title {
+    font-size: 30px;
+    font-weight: 700;
+
+}
