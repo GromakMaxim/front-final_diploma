@@ -1,8 +1,8 @@
 import React from "react";
 
-export default function Progressbar({isPassangerPage, isPayment, isVerification}) {
+export default function Progressbar(props) {
     return (
-        <div className='progressbar'>
+        <div className="progressbar">
             <div className='stage active'>
                 <div className='number'>
                     <span>1</span>

@@ -1,41 +1,43 @@
 import React from "react";
 import Progressbar from "./progress/Progressbar";
+import DefaultWidget from "./progress/DefaultWidget";
+import HorizontalWidget from "./progress/HorizontalWidget";
+import Tickets from "../ticketResults/Tickets";
 
-export default function FindTicketWidget(props) {
+export default class FindTicketWidget extends React.Component {
 
+    constructor(props, context) {
+        super(props, context);
+        this.show = this.show.bind(this);
 
-    function find() {
+        this.state = {showProgressbar: false};
+
 
     }
 
-    return (
-        <>
-            <Progressbar/>
-            <section className='widget-search-wrapper'>
-                <div className='motto'>
-                    <span>Вся жизнь - </span>
-                    <span> путешествие!</span>
-                </div>
-                <form className='widget-search-ticket'>
-                    <div className='direction'>
-                        <h3>Направление</h3>
-                        <div>
-                            <input className='from' type='text' placeholder='Откуда'/>
-                            <div className='pic-refresh'/>
-                            <input className='to' type='text' placeholder='Куда'/>
-                        </div>
-                    </div>
-                    <div className='date'>
-                        <h3>Дата</h3>
-                        <div>
-                            <input className='from' type='date' placeholder='ДД/ММ/ГГ'/>
-                            <div className='pic-refresh'/>
-                            <input className='to' type='text' placeholder='ДД/ММ/ГГ'/>
-                        </div>
-                    </div>
-                    <button type="submit" className="form-search-btn">Найти билет</button>
-                </form>
-            </section>
-        </>
-    );
+    show() {
+        console.log('clicked')
+        this.setState({showProgressbar: true});
+        console.log(this.state.showProgressbar)
+    }
+
+    render() {
+        const condition = this.state.showProgressbar;
+
+        let bar = null;
+        let widget = <DefaultWidget func = {this.show}/>
+        let tickets = <Tickets />;
+        if (condition) {
+            bar = <Progressbar/>
+            widget = <HorizontalWidget />
+            tickets = <Tickets />
+        }
+        return (
+            <>
+                {widget}
+                {bar}
+                {tickets}
+            </>
+        )
+    }
 }

@@ -1,0 +1,18 @@
+@import url("../css/offer.css");
+
+.ticket-results{
+    display: flex;
+    align-items: flex-start;
+    background-color: #E5E5E5;
+    padding: 95px 256px 193px 258px;
+
+    border: 1px solid black;
+
+}
+
+.offers-list{
+    display: flex;
+    flex-direction: column;
+}
+
+

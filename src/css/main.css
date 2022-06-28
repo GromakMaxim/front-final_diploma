@@ -8,6 +8,7 @@
 @import url("../components/pages/sections/footer/css/footer.css");
 @import url("../components/pages/sections/footer/css/footer_bottom.css");
 @import url("../components/pages/sections/findTickets/css/progressbar.css");
+@import url("../components/pages/sections/ticketResults/css/ticket-results.css");
 
 section{
     display: flex;
@@ -15,4 +16,8 @@ section{
 
 .body{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', serif
+}
+
+.display-none{
+    display: none;
 }
