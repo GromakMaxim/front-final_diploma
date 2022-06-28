@@ -10,8 +10,11 @@
     display: flex;
     width: 25%;
     height: 100px;
+    background-color: #3e3c41;
+}
+
+.stage.active{
     background-color: #FFA800;
-    border: 1px solid black;
 }
 
 .stage > span, .stage > div {
@@ -21,10 +24,15 @@
 .stage-arrow {
     width: 0;
     height: 0;
-    border: 0 solid transparent;
+    border: 3px solid transparent;
     border-bottom-width: 50px;
     border-top-width: 50px;
-    border-left: 37px solid black;
+    border-left: 37px solid white;
+}
+
+.stage-arrow.active{
+    border-left: 37px solid #FFA800;
+    background-color: #3e3c41;
 }
 
 .number{
@@ -46,5 +54,4 @@
 .stage-title {
     font-size: 30px;
     font-weight: 700;
-
 }

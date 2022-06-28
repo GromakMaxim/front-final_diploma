@@ -3,6 +3,11 @@ import Progressbar from "./progress/Progressbar";
 
 export default function FindTicketWidget(props) {
 
+
+    function find() {
+
+    }
+
     return (
         <>
             <Progressbar/>
