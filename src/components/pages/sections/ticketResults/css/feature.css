@@ -1,0 +1,47 @@
+.features{
+    display: flex;
+    flex-direction: column;
+}
+
+.feature{
+    display: flex;
+    flex-direction: row;
+}
+
+.feature > .price > span{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.feature > .price{
+    flex-direction: row;
+}
+
+.feature > .type{
+    display: flex;
+}
+
+.feature > td{
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.feature > td:nth-child(3){
+}
+
+.feature > .seats{
+    font-weight: 500;
+    color: #FFA800;
+}
+
+.feature > .price{
+    display: flex;
+    color: #2D2B2F;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.feature > td > img{
+
+}

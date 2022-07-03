@@ -1,4 +1,4 @@
-import Offer from "./Offer";
+import Offer from "./offer/Offer";
 import React from "react";
 
 export default function Offers(props) {

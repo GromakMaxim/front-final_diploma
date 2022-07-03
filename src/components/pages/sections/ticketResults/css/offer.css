@@ -1,3 +1,5 @@
+@import url("../css/feature.css");
+
 .offer{
     display: flex;
     flex-direction: row;
@@ -5,16 +7,39 @@
     border: 1px solid black;
 }
 
-.offer-right{
-    width: 70%;
+.offer > .left{
+    display: flex;
+    flex-direction: column;
+
+    width: 20%;
     border: 1px solid black;
+    padding: 20px;
+    background-color: #E4E0E9;
 }
 
-.offer-left{
-    width: 30%;
-    border: 1px solid black;
-    padding: 20px
+.offer > .left > img{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+
 }
+
+.offer > .center{
+    display: flex;
+    flex-direction: row;
+
+    width: 60%;
+    background-color: white;
+}
+
+.offer > .right{
+    width: 20%;
+    background-color: white;
+    border-left: 1px solid black;
+    padding: 20px;
+}
+
+
 
 .from-to-wrap{
     display: flex;
@@ -26,7 +51,9 @@
     height: 3px;
 }
 
-.offer > .center{
-    display: flex;
-    flex-direction: row;
+
+.offer > .center > .from .time, .offer > .center > .to .time {
+    color: #2D2B2F;
+    font-size: 24px;
+    font-weight: 700;
 }
