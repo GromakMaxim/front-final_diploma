@@ -8,6 +8,30 @@
     flex-direction: row;
 }
 
+.feature > div{
+
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.feature > .type{
+    width: 80px;
+    max-width: 100px;
+}
+
+.feature > .seats{
+    width: 40px;
+}
+
+.feature > .cell{
+    width: 24px;
+}
+
+.feature > .price{
+    width: 60px;
+}
+
+
 .feature > .price > span{
     margin-top: auto;
     margin-bottom: auto;
@@ -21,11 +45,7 @@
     display: flex;
 }
 
-.feature > td{
-    display: flex;
-    margin-top: auto;
-    margin-bottom: auto;
-}
+
 
 .feature > td:nth-child(3){
 }

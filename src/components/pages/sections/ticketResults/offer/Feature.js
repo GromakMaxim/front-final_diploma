@@ -8,22 +8,22 @@ export default function Feature(props) {
     if (props.type === '4') descr = 'Сидячий';
 
     return (
-        <tr className='feature'>
-            <td className='type'>
+        <div className='feature'>
+            <div className='type'>
                 <span>{descr}</span>
-            </td>
-            <td className='seats'>{props.seats}</td>
-            <td>
+            </div>
+            <div className='seats'>{props.seats}</div>
+            <div className='cell'>
                 <span>от</span>
-            </td>
+            </div>
 
-            <td className='price'>
+            <div className='price'>
                 <span>{props.price}</span>
 
-            </td>
-            <td>
+            </div>
+            <div>
                 <img src="/images/icon-value.png" alt="russian ruble"/>
-            </td>
-        </tr>
+            </div>
+        </div>
     );
 }

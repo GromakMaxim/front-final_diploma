@@ -15,27 +15,31 @@ export default function Features(props) {
     let fourth = null;
 
     if (props.data.have_first_class) {
-        first = <Feature type='1' seats={props.data.available_seats_info.first} price={props.data.price_info.first.top_price}/>
+        first = <Feature type='1' seats={props.data.available_seats_info.first}
+                         price={props.data.price_info.first.top_price}/>
     }
 
     if (props.data.have_second_class) {
-        second = <Feature type='2' seats={props.data.available_seats_info.second} price={props.data.price_info.second.top_price}/>
+        second = <Feature type='2' seats={props.data.available_seats_info.second}
+                          price={props.data.price_info.second.top_price}/>
     }
 
     if (props.data.have_third_class) {
-        third = <Feature type='3' seats={props.data.available_seats_info.third} price={props.data.price_info.third.top_price}/>
+        third = <Feature type='3' seats={props.data.available_seats_info.third}
+                         price={props.data.price_info.third.top_price}/>
     }
 
     if (props.data.have_fourth_class) {
-        fourth = <Feature type='4' seats={props.data.available_seats_info.fourth} price={props.data.price_info.fourth.top_price}/>
+        fourth = <Feature type='4' seats={props.data.available_seats_info.fourth}
+                          price={props.data.price_info.fourth.top_price}/>
     }
 
     return (
-        <table className='features'>
+        <div className='features'>
             {first}
             {second}
             {third}
             {fourth}
-        </table>
+        </div>
     );
 }
