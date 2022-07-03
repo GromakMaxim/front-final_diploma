@@ -1,3 +1,32 @@
 .offer{
-    border: 1px solid black
+    display: flex;
+    flex-direction: row;
+
+    border: 1px solid black;
+}
+
+.offer-right{
+    width: 70%;
+    border: 1px solid black;
+}
+
+.offer-left{
+    width: 30%;
+    border: 1px solid black;
+    padding: 20px
+}
+
+.from-to-wrap{
+    display: flex;
+    flex-direction: column;
+}
+
+.from-to-wrap > img{
+    width: auto;
+    height: 3px;
+}
+
+.offer > .center{
+    display: flex;
+    flex-direction: row;
 }
