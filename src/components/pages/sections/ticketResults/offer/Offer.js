@@ -1,17 +1,17 @@
 import React from "react";
-import { format, intervalToDuration  } from 'date-fns'
+import {format, intervalToDuration} from 'date-fns'
 import Features from "./Features";
 
 export default function Offer(props) {
 
-    function getTime(timestamp){
-        return  format(new Date(timestamp), "hh:mm");
+    function getTime(timestamp) {
+        return format(new Date(timestamp), "hh:mm");
     }
 
-    function getDuration(){
+    function getDuration() {
         let seconds = props.data.departure.duration;
-        let dateObj = intervalToDuration({ start: 0, end: seconds * 1000 })
-        return dateObj.hours + ":" +  dateObj.minutes;
+        let dateObj = intervalToDuration({start: 0, end: seconds * 1000})
+        return dateObj.hours + ":" + dateObj.minutes;
     }
 
     return (
@@ -28,24 +28,28 @@ export default function Offer(props) {
                 </div>
             </div>
             <div className='center'>
-                <div className='from'>
+                <div className='offer-from'>
                     <div className='time'>{getTime(props.data.departure.from.datetime)}</div>
-                    <div className='city'>{props.data.departure.from.city.name}</div>
-                    <div className='station'>{props.data.departure.from.railway_station_name}</div>
+                    <div className='wrap'>
+                        <div className='city'>{props.data.departure.from.city.name}</div>
+                        <div className='station'>{props.data.departure.from.railway_station_name}</div>
+                    </div>
                 </div>
                 <div className='wrap'>
                     <div className='diff'>{getDuration()}</div>
                     <img src="/images/arrow-gold-right.png" alt="arrow"/>
                 </div>
-                <div className='to'>
+                <div className='offer-to'>
                     <div className='time'>{getTime(props.data.departure.to.datetime)}</div>
-                    <div className='city'>{props.data.departure.to.city.name}</div>
-                    <div className='station'>{props.data.departure.to.railway_station_name}</div>
+                    <div className='wrap'>
+                        <div className='city'>{props.data.departure.to.city.name}</div>
+                        <div className='station'>{props.data.departure.to.railway_station_name}</div>
+                    </div>
                 </div>
 
             </div>
             <div className='right'>
-                <Features data = {props.data.departure}/>
+                <Features data={props.data.departure}/>
             </div>
         </div>
     );

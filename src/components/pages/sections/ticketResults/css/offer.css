@@ -1,59 +1,100 @@
 @import url("../css/feature.css");
 
-.offer{
+.offer {
     display: flex;
     flex-direction: row;
 
-    border: 1px solid black;
+    background-color: white;
+    border: 1px solid #C4C4C4;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 2px 0px;
+    margin-bottom: 50px;
 }
 
-.offer > .left{
+.offer > .left {
     display: flex;
     flex-direction: column;
 
     width: 20%;
-    border: 1px solid black;
     padding: 20px;
     background-color: #E4E0E9;
 }
 
-.offer > .left > img{
+.offer > .left > img {
     margin-left: auto;
     margin-right: auto;
     width: 100px;
 
 }
 
-.offer > .center{
+.offer > .center {
     display: flex;
     flex-direction: row;
 
-    width: 55%;
+    width: 50%;
     background-color: white;
+    margin: auto;
 }
 
-.offer > .right{
-    width: 25%;
+.offer-from, .wrap, .offer-to {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.offer > .center > .wrap > .diff {
+    color: #C4C4C4;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 7px;
+}
+
+.offer > .right {
+    width: 30%;
     background-color: white;
     border-left: 1px solid black;
     padding: 20px;
 }
 
 
-
-.from-to-wrap{
+.from-to-wrap {
     display: flex;
     flex-direction: column;
 }
 
-.from-to-wrap > img{
+.from-to-wrap > img {
     width: auto;
     height: 3px;
 }
 
+.offer > .center > .offer-from,
+.offer > .center > .offer-to {
+    display: flex;
+    flex-direction: column;
+}
 
-.offer > .center > .from .time, .offer > .center > .to .time {
+
+.offer > .center > .offer-from > .time,
+.offer > .center > .offer-to > .time {
     color: #2D2B2F;
     font-size: 24px;
     font-weight: 700;
+    margin-right: auto;
+}
+
+.offer > .center > .offer-from > .wrap,
+.offer > .center > .offer-to > .wrap {
+    display: flex;
+    flex-direction: column;
+}
+
+.offer > .center > .offer-from > .wrap > .city,
+.offer > .center > .offer-to > .wrap > .city,
+.offer > .center > .offer-from > .wrap > .station,
+.offer > .center > .offer-to > .wrap > .station {
+    text-transform: capitalize;
+    margin-right: auto;
+}
+
+.offer > .center > .offer-from > .station,
+.offer > .center > .offer-to > .station {
+    color: #928F94;
 }

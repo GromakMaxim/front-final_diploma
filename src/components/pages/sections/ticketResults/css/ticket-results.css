@@ -13,6 +13,7 @@
 .offers-list{
     display: flex;
     flex-direction: column;
+    width: 800px;
     margin-left: auto;
     margin-right: auto;
 }

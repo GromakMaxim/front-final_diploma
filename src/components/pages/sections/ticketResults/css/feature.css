@@ -1,67 +1,68 @@
-.features{
+.features {
     display: flex;
     flex-direction: column;
 }
 
-.feature{
+.feature {
     display: flex;
     flex-direction: row;
 }
 
-.feature > div{
+.feature > div {
 
     margin-top: auto;
     margin-bottom: auto;
 }
 
-.feature > .type{
+.feature > .type {
     width: 80px;
     max-width: 100px;
 }
 
-.feature > .seats{
+.feature > .seats {
     width: 40px;
 }
 
-.feature > .cell{
+.feature > .cell {
+    display: flex;
     width: 24px;
 }
 
-.feature > .price{
+.feature > .price {
+    display: flex;
     width: 60px;
 }
 
 
-.feature > .price > span{
+.feature > .price > span {
     margin-top: auto;
     margin-bottom: auto;
 }
 
-.feature > .price{
+.feature > .price {
     flex-direction: row;
 }
 
-.feature > .type{
+.feature > .type {
     display: flex;
 }
 
 
-
-.feature > td:nth-child(3){
+.feature > td:nth-child(3) {
 }
 
-.feature > .seats{
+.feature > .seats {
     font-weight: 500;
     color: #FFA800;
 }
 
-.feature > .price{
+.feature > .price {
     display: flex;
     color: #2D2B2F;
     font-weight: 700;
     font-size: 24px;
 }
 
-.feature > td > img{
+.feature > td > img {
 
 }
