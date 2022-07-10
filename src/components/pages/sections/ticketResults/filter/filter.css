@@ -1,0 +1,41 @@
+@import url("./slider.css");
+@import url("./date-filter.css");
+
+.filter {
+    display: flex;
+    flex-direction: column;
+    background-color: #3E3C41;
+    color: #fff;
+}
+
+.triggers {
+    display: flex;
+    flex-direction: column;
+
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.trigger:first-child{
+    margin-top: 10px;
+}
+
+
+.trigger {
+    display: flex;
+    flex-direction: row;
+    padding: 20px 45px 20px 45px;
+}
+
+.trigger > .toggle {
+    margin-left: auto;
+    margin-right: 2px;
+}
+
+.trigger > img {
+    margin-right: 10px;
+}
+
+.trigger > span {
+    text-transform: capitalize;
+}

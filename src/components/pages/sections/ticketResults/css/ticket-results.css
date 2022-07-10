@@ -1,4 +1,5 @@
 @import url("../css/offer.css");
+@import url("../filter/filter.css");
 
 .ticket-results{
     display: flex;

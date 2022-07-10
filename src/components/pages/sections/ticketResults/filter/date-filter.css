@@ -1,0 +1,56 @@
+.date-filter {
+    padding: 43px 36px 33px 29px;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.date-filter-form fieldset:first-of-type {
+    margin-bottom: 26px;
+}
+
+.date-filter-form legend {
+    font-size: 30px;
+    line-height: 35px;
+    color: #fff;
+    text-align: left;
+}
+
+.form-input_date {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.react-datepicker-wrapper {
+    display: inline-block;
+    padding: 0;
+    border: 0;
+}
+
+.react-datepicker__input-container {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+.date-filter-form input {
+    width: 295px;
+    border: none;
+    padding: 11px 55px 11px 8px;
+    font-size: 18px;
+    line-height: 21px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAiCAYAAABIiGl0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE4SURBVHgB7ZfLbYQwEIZnkAvgDgfoYEsgHSQdhApSQpISUkG2hHSwlLAlWOJ15c4rv6MQGbRBy7KGA3wSMtbY+o0Ze2aYLpCmadu9t20buq57pAnEcRxYlnXq+o7j8HCMRSuxmvDPFuR57tV1/YLt8VQf2/uojTkzc0ETwHwbzeFPhPkLjd00zbksyw/f9yUnSXKAQf0Pm5ahwAKeOMuyE1YY0ILgQyPWPXhJtufV2xMWg76Eh0syADy5d7Z7whB9n3ovXwvui2eIf3b93bl2YWMImgEyjbcxe1VVRxUC6d7CiN+vY3YhRIRGXpxLK7EL78LGmHWcEM2iMftYWjxLGCH0gW5kgyXMIK8ufh8T2KRVK0Jl9Vol0TOaQjmlBeGQ/rnIDSFRuIV6tRhgJR4ZRB0viKpQWXwD0LJ16yRiWBkAAAAASUVORK5CYII=);
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    background-size: 20px 22px;
+    border-radius: 3px;
+}
+.form-input_date input {
+    width: 320px;
+    box-sizing: border-box;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAiCAYAAABIiGl0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE4SURBVHgB7ZfLbYQwEIZnkAvgDgfoYEsgHSQdhApSQpISUkG2hHSwlLAlWOJ15c4rv6MQGbRBy7KGA3wSMtbY+o0Ze2aYLpCmadu9t20buq57pAnEcRxYlnXq+o7j8HCMRSuxmvDPFuR57tV1/YLt8VQf2/uojTkzc0ETwHwbzeFPhPkLjd00zbksyw/f9yUnSXKAQf0Pm5ahwAKeOMuyE1YY0ILgQyPWPXhJtufV2xMWg76Eh0syADy5d7Z7whB9n3ovXwvui2eIf3b93bl2YWMImgEyjbcxe1VVRxUC6d7CiN+vY3YhRIRGXpxLK7EL78LGmHWcEM2iMftYWjxLGCH0gW5kgyXMIK8ufh8T2KRVK0Jl9Vol0TOaQjmlBeGQ/rnIDSFRuIV6tRhgJR4ZRB0viKpQWXwD0LJ16yRiWBkAAAAASUVORK5CYII=);
+    background-position: right 15px center;
+    background-repeat: no-repeat;
+}
+
+fieldset{
+    border: none;
+}

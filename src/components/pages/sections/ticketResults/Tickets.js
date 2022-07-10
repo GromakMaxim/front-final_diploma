@@ -1,5 +1,5 @@
 import React from "react";
-import Filter from "./Filter";
+import Filter from "./filter/Filter";
 import Offers from "./Offers";
 
 export default function Tickets() {
