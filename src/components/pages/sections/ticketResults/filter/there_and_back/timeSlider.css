@@ -1,0 +1,21 @@
+.time-slider {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+.time-slider > .slider-title{
+    font-size: 25px;
+    line-height: 35px;
+    color: #fff;
+    text-align: left;
+    padding: 10px;
+}
+
+.time-slider > .slider-title.left{
+    margin-right: auto;
+}
+
+.time-slider > .slider-title.right{
+    margin-left: auto;
+}

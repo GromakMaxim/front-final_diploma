@@ -1,4 +1,5 @@
 import React from "react";
+import TimeSlider from "./TimeSlider";
 
 export default function TimeFilter(props){
     return (
@@ -12,6 +13,9 @@ export default function TimeFilter(props){
                 </div>
                 <div className="time-filter-btn"/>
             </div>
+
+            <TimeSlider title='Время отбытия' align='left' />
+            <TimeSlider title='Время прибытия' align='right' />
         </div>
     )
 }

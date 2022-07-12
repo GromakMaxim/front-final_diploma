@@ -1,5 +1,6 @@
 import React from "react";
-import TimeFilter from "./departure/TimeFilter";
+import TimeFilter from "./TimeFilter";
+import TimeSlider from "./TimeSlider";
 
 export default function ThereAndBack(props) {
     return (

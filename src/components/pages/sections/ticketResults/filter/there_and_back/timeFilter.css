@@ -36,5 +36,11 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 10px;
+    cursor: pointer;
 }
 
+
+.time-filter-btn:hover {
+    border-color: #FCDC9D;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAB8SURBVHgB5dLNEUVAEATg7vcEsCEIQSgyIBURKHfEIANxUBQhCGDt+DluGQc3pU9b9e3MYWYAJbavUtuVseaBBvgxIRHur+aS8TAvKuQxOf6Z+yCEgcAQmD1YxLksAGkEMl/0jM5/vlFwGzvU7TpWk+ZfWId+q3CFrDSablyBI82qS3eeAAAAAElFTkSuQmCC);
+}
