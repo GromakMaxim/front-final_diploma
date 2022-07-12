@@ -2,6 +2,7 @@
 @import url("./dateFilter/date-filter.css");
 @import url("./costFilter/costFilter.css");
 @import url("./costFilter/slider/slider.css");
+@import url("./there_and_back/departure/departureTimeFilter.css");
 
 .filter {
     display: flex;

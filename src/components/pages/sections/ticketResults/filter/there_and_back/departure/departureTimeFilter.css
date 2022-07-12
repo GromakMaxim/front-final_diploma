@@ -1,0 +1,40 @@
+.time-filter {
+    padding: 27px 34px 34px 32px;
+    border-bottom: 1px solid #E5E5E5;
+}
+
+.time-filter-top, .time-filter-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.time-filter-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.time-icon img {
+    height: 100%;
+    width: 100%;
+}
+
+.time-name {
+    margin-left: 12px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.time-filter-btn {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAABbSURBVHgB7ZHBCcAgDEV/iwN0lI7SEbpKJyidqKPoCG4QI+YkiaA3wQefQB65/AAGRHRzLvTCRz/HW37HIBMdbtLcq7hDEqp95DzOkJlTpuZs1jsA13AfSuMqCWPVHuIpcg3FAAAAAElFTkSuQmCC);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 10px;
+}
+
