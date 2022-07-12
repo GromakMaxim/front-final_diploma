@@ -1,5 +1,7 @@
-@import url("./slider.css");
-@import url("./date-filter.css");
+@import url("./triggers/slider.css");
+@import url("./dateFilter/date-filter.css");
+@import url("./costFilter/costFilter.css");
+@import url("./costFilter/slider/slider.css");
 
 .filter {
     display: flex;

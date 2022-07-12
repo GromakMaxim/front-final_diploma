@@ -1,11 +1,11 @@
 import React from "react";
-import Filter from "./filter/Filter";
+import FilterWrapper from "./filter/FilterWrapper";
 import Offers from "./Offers";
 
 export default function Tickets() {
     return (
         <div className='ticket-results'>
-            <Filter/>
+            <FilterWrapper/>
             <Offers/>
         </div>
     )
