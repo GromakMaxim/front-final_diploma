@@ -1,6 +1,7 @@
 import React from "react";
 import GetBack from "./getBack/GetBack";
 import TrainInfo from "./train_info/TrainInfo";
+import TicketsNumber from "./tickets_number/TicketsNumber";
 
 export default function SeatSelection(props) {
 
@@ -9,6 +10,7 @@ export default function SeatSelection(props) {
             <h2>Выбор мест</h2>
             <GetBack/>
             <TrainInfo/>
+            <TicketsNumber/>
         </div>
     );
 }

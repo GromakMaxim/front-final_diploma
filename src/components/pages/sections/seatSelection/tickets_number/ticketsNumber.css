@@ -1,0 +1,75 @@
+.seat-selection-ticket-count {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px dashed #C4C4C4;
+}
+
+.seat-selection-ticket-count > h3 {
+    margin-top: 40px;
+    margin-bottom: 13px;
+    text-align: left;
+    margin-left: 20px;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    color: #292929;
+}
+
+.ticket-count-form {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.count-form {
+    height: 192px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background: #F7F6F6;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+}
+
+.count-form:hover {
+    box-shadow: none;
+    border: 1px solid #FFA800;
+}
+
+.count-form.zero {
+    background-color: #fff;
+    box-shadow: none;
+}
+
+.count-form.zero {
+    background-color: #fff;
+    box-shadow: none;
+}
+
+.input-block {
+    width: 240px;
+    height: 50px;
+    border: 1px solid #928F94;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 15px;
+    color: #292929;
+    display: block;
+    background-color: #fff;
+    margin-left: 35px;
+    text-align: left;
+}
+
+.input-value {
+    border: none;
+    outline: none;
+    width: 30px;
+}
+
+.input-description {
+    width: 241px;
+    text-align: left;
+    margin: 23px auto 55px;
+    color: #928F94;
+}
