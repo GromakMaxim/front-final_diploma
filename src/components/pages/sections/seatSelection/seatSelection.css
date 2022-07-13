@@ -1,6 +1,7 @@
 @import url("../seatSelection/getBack/getback.css");
 @import url("../seatSelection/train_info/trainInfo.css");
 @import url("../seatSelection/tickets_number/ticketsNumber.css");
+@import url("../seatSelection/wagon/type.css");
 
 .seats-selection-wrapper{
     display: flex;
