@@ -1,0 +1,81 @@
+.seat-selection-ticket-info {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+}
+.seat-selection-ticket-info .train-info {
+    flex-grow: 1;
+}
+
+.seat-selection-ticket-info > div {
+    display: flex;
+    align-items: center;
+    background-color: #F7F6F6;
+    border-right: 1px solid #fff;
+    box-sizing: border-box;
+}
+
+.train-departure, .train-arrival{
+    display: flex;
+    flex-direction: column;
+}
+
+.train-icon {
+    margin: auto;
+}
+
+.train-name {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: auto;
+}
+
+.train-name .train-number {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.departure-info{
+    padding: 20px;
+}
+
+.train-number {
+    color: #3E3C41;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 17px;
+}
+
+.train-name .train-departure-city, .train-name .train-arrival-city {
+    margin-left: 0;
+}
+
+.train-arrival-city, .train-departure-city {
+    margin-left: 26px;
+    color: #000;
+    text-align: left;
+}
+
+.datetime {
+    color: #2D2B2F;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.seat-selection-ticket-info .departure-arrow {
+    margin-right: 55px;
+    margin-left: 55px;
+}
+
+.seat-selection-ticket-info .duration-info {
+    flex-grow: 1;
+    padding: 47px 35px;
+    border: none;
+}
+
+.duration-info .duration-icon {
+    margin-right: 10px;
+}

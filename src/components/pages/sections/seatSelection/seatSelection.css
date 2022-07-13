@@ -1,52 +1,11 @@
+@import url("../seatSelection/getBack/getback.css");
+@import url("../seatSelection/train_info/trainInfo.css");
+
 .seats-selection-wrapper{
     display: flex;
     flex-direction: column;
-    width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 900px;
+    margin-left: 70px;
 }
 
-.seats-selection{
-    display: flex;
-    flex-direction: column;
-    border: 1px solid black;
-    background-color: white;
-}
 
-.seats-selection-wrapper > h2 {
-    text-transform: uppercase;
-    margin-right: auto;
-    margin-top: 0;
-}
-
-.seat-selection-button-wrapper {
-    display: flex;
-    justify-content: flex-start;
-    padding: 20px;
-}
-
-.seat-selection-button-wrapper div {
-    width: 76px;
-    height: 60px;
-    background-color: #FFA800;
-    border-radius: 5px;
-    margin-right: 10px;
-}
-
-.seat-selection-button-wrapper div img {
-    margin: 20px auto;
-    cursor: pointer;
-}
-
-.seat-selection-button-wrapper button {
-    border: 1px solid #292929;
-    box-sizing: border-box;
-    border-radius: 5px;
-    padding: 15px 34px;
-    color: #292929;
-    font-size: 24px;
-    font-weight: 700;
-    font-family: inherit;
-    background-color: #fff;
-    cursor: pointer;
-}
