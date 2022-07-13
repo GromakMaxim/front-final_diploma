@@ -2,6 +2,7 @@
 @import url("../seatSelection/train_info/trainInfo.css");
 @import url("../seatSelection/tickets_number/ticketsNumber.css");
 @import url("../seatSelection/wagon/type.css");
+@import url("../seatSelection/wagon/wagonInfo.css");
 
 .seats-selection-wrapper{
     display: flex;
