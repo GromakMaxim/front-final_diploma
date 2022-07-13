@@ -3,6 +3,7 @@ import Progressbar from "./progress/Progressbar";
 import DefaultWidget from "./progress/DefaultWidget";
 import HorizontalWidget from "./progress/HorizontalWidget";
 import Tickets from "../ticketResults/Tickets";
+import SeatSelection from "../seatSelection/SeatSelection";
 
 export default class FindTicketWidget extends React.Component {
 
