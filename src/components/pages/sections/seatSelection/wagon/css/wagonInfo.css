@@ -1,0 +1,256 @@
+.seat-selection-wagons-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.seat-selection-wagons-info > header {
+    background: rgba(255, 168, 0, 0.44);
+    padding: 4px 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #292929;
+    font-size: 16px;
+}
+
+.wagons-sort {
+    display: flex;
+    align-items: center;
+}
+
+.wagons-sort > h4 {
+    margin: 0 5px 0 0;
+    font-weight: 400;
+}
+
+.wagons-sort-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.wagons-sort-list > li.selected {
+    color: #fff;
+}
+.wagons-sort-list > li:not(:last-of-type) {
+    margin-right: 5px;
+}
+.wagons-sort-list > li {
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.wagons-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.wagons-list-item {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 75px;
+    border-bottom: 1px solid #C4C4C4;
+}
+
+.wagon-main-info {
+    display: flex;
+}
+
+.wagon-number {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    color: #292929;
+    background-color: #FFD98F;
+}
+
+.wagon-number-1 {
+    font-weight: 700;
+    font-size: 72px;
+}
+
+.wagon-number-2{
+    font-size: 24px;
+}
+
+.wagon-info-table {
+    padding-top: 33px;
+    margin-left: 85px;
+    text-align: left;
+    width: 100%;
+}
+
+.wagon-info-table-titles {
+    color: #928F94;
+    font-weight: 400;
+    font-size: 18px;
+    font-family: inherit;
+}
+
+.wagon-info-table-titles td:first-of-type {
+    width: 202px;
+}
+
+.wagon-info-table-titles td:first-of-type span {
+    color: #000;
+    margin-left: 5px;
+}
+
+.wagon-seat-info {
+    font-size: 24px;
+    font-weight: 400;
+    font-family: inherit;
+}
+
+.wagon-seat-info span {
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+.wagon-seat-price {
+    font-weight: 700;
+    font-size: 24px;
+    color: #000000;
+}
+
+.wagon-seat-price img {
+    margin-left: 10px;
+}
+
+.features-icons-list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.icon.wi-fi {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGcSURBVHgBvVM7bsJAEPXaFhJURILeDcLQ4Jwg5gbkBOEGcIPACRyqtHCC5AZxunTZNIBEswdw4TSWC3/yJtlFTmJbREgZaTXjnZm3bz5mWoVYltVuNBquYRhWnudtumOMhbB5HMdcCBGW5bGfF7Ztu0i8helq9eIDfLPf79elgMPh0EGAp4CITZZlj9BvuFdsLHyPoB2y5Z2AfwxgcQQcDAYzqDuy4fShlgjwa9hRzgTKU8B4aLHdbpes1+s5pmm+yv4sd7vdJzD1sNlsTnE3gs+SjwmoZypXMer3+3Nd1z3pHyuGEyQJvMAJqNVqeXBO6xgifo2WUCVCtsslMt+GIh0PsldhmqYbvE7N59BtANC0p/BdyVJFkiTXh8OBKwyzCIgER5a3iqJoUbEaPjaBHpzDnmGtaEBHwF9rQyypdLKRSGxucBzZI15clWJsJaAS9PVJK6yQWm4pHP26LMvTqwCJCSXS5MDiAgCMbO1r71baf4lxShDKn3c6HTsIAn42oBzMPc6k2+2+A/SlLl7X/iCFf/o8IZZ0Ton9ALfF2VXzRk0WAAAAAElFTkSuQmCC);
+}
+
+.icon.conditioning {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAJ3SURBVHgBnVQ7juJAEG3A4ichWQQQrglAfIL1nmDNCZa5wcwJhj0B5gSIE8CeYJZow/ENYBM+EQ43IPAmgBCCea/pnrFGBo+mpFa1u6teV72qckrESLVatUulUnaz2QTig5KKMyiXy3+gcsVi0SwUCv+CINjH+STFjQjV1pSGyaSZz+e7+r7ZbNq1Wq0T5WtEHdbrdSuRSEwbjYYHbZ7PZ3kO3QPYF+gAq4uHHmIj5cutVmuwXC59ONHBgtaRzrDvn04nC59dcUOSBEJEz4wulUo5cJIpAXgMkDYilQXabrc+lIfzNs4r2Pu465Em+mI5r6CGYdCY6a6hf2gOFTAjlqDZbLYDm2cEQDsnk8l8k/wZxpS+yOQNdD6fzxaLBV/+TXCC4tX7G9kxgBEidxRFFB84rjaQhcLrAyhGwgKwOCOc9Y7H4901ZFA12u12FWTgETR8JwsFoP8sAl6vIGoC3enUVPRRYuZyOQcBTLA65FVfJK44yLYCT1NWnw+KS2FGYZuI8yGid3X6T0wdle/v9/sATf4oVNsoSiIfxt0slIkE9H0/0OlPsJjKGoBr7F2sX6RDVz9KcDeDz1dsJ6CtS0Ce6+b3hCJbpdsOG12Jsq/s76nCd7L5VY9aCjxAf3ritgzZQuB8oL47oX8Fp+8yfuCDzfyXoPpSTYmlDMnfT2ZB7vAPYHE4gUOeo1Mc7WdwaqBdfsCQo8lv3buvM84xTafTPpy/g/cnRdPDarUav08jsqVs2zYPh8NatcwjiybeWocRc5T5s2lHUXW1T7Vw1jUoKLD0OIIaap8/nvc+SREv5NgHd+zjsT4EmCsuhf28WJZlftT2BcJHXOylfGjrAAAAAElFTkSuQmCC);
+}
+
+.icon.linens {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAYAAAAS7Y8mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAGzSURBVHgBrVTLccIwEJWMD3DCHcQ58L3EHWAqCFQAlEAFJBUkqQCoAKgAKMEnOKoEOMGMZ+y855EZx8ZmEmdnZGm1H719WkuKHGm32y4mjsXxeFTilyKTSrPZHFQqlRHXYRh6mHpSyhNmC7p6kGsPAItYMeNFt9t1EDy6XC4TpdRJo6bjDPsE8GYYxksQBF9Y7zIIpVyxusxxnU5nhUR2ei+p087DAGKOeZzy/dT0/UQMsdJcAqmV1LV9rAG4SLYFUoUqlvBdoyI3rsbgp9FoOPc41PxmhAeQz8Ph0EfcGX5bJF2RStu2rRti0zRtTN6dHBYdY84p1KvVqoNkr1Qx9kj4jEMUK4HtA3uTmAqXpaSzokSvVqvNW60W0Z/hU2cVGB7WG6DepSsBPWeMp6jdcNIWm33xDxJfaoSYKPSNjrC2RUlBNUuTF4dkpMK7Xq/TJJ9/ESKO6AIfA+g9kD/VZfTyghDAG7ce5OZfOjTZqwjY60D+ZblcwyaK3g3d3zP6kGNFKjCvEfhOgygQBBeZCc5hS966Ag2+831/g0eoFMdIPMd7M5QJJGMg5kXWRTmJXrlvmb/VZmBAfLwAAAAASUVORK5CYII=);
+}
+
+.features-icons-list li {
+    width: 36px;
+    height: 34px;
+    box-sizing: border-box;
+    margin-right: 13px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: 1px solid #292929;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.icon {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.icon.selected {
+    background-color: #FDB935;
+    border: none;
+}
+
+.features-icons-list li:hover {
+    background-color: #FFA800;
+    border: 1px solid #292929;
+}
+
+.random-peoples-watch {
+    width: 199px;
+    background-color: #F3F3F3;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 16px 13px 11px 16px;
+    margin-right: 42px;
+    align-self: flex-end;
+    margin-top: 20px;
+}
+
+.railway {
+    margin-left: 20px;
+    width: 921px;
+    height: 145px;
+    background-image: url("../img/railway.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.railway-number {
+    width: 34px;
+    height: 24px;
+    background-color: #333;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    padding-top: 3px;
+    box-sizing: border-box;
+    margin-left: 39px;
+}
+
+.railway-cover {
+    width: 713px;
+    height: 115px;
+    margin-left: 134px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.railway-seats-list.top-row {
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.railway-seats-list {
+    padding-bottom: 2px;
+    display: flex;
+}
+
+.top-row .railway-seats-block:first-of-type:not(.fourth .top-row .railway-seats-block:first-of-type), .top-row .railway-seats-block:last-of-type:not(.fourth .top-row .railway-seats-block:last-of-type) {
+    width: 26px;
+}
+
+.top-row .railway-seats-block {
+    width: 56px;
+    height: 63px;
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+}
+
+.railway-seat.available {
+    background-color: #f2f2f2;
+    border: 2px solid #f2f2f2;
+    color: #000;
+    cursor: pointer;
+    padding-top: 5px;
+}
+
+.railway-seat {
+    width: 26px;
+    height: 28px;
+    padding-top: 8px;
+    background-color: #ccc;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.available:hover {
+    border-color: #FFA800;
+}
