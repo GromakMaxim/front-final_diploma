@@ -8,6 +8,10 @@ import FeedbackWidget from "./sections/feedback/FeedbackWidget";
 import Footer from "./sections/footer/Footer";
 
 export default function MainPage(props) {
+
+
+
+
     return (
         <div className='main-page'>
             <Logo/>
