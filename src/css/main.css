@@ -10,6 +10,7 @@
 @import url("../components/pages/sections/findTickets/css/progressbar.css");
 @import url("../components/pages/sections/ticketResults/css/ticket-results.css");
 @import url("../components/pages/sections/seatSelection/seatSelection.css");
+@import url("../components/pages/sections/findTickets/css/horizontalWidget.css");
 
 section{
     display: flex;

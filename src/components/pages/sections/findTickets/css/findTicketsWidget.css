@@ -31,6 +31,12 @@
     margin-right: 100px;
 }
 
+.widget-search-ticket.horizontal{
+    display: flex;
+    flex-direction: row;
+    width: auto;
+}
+
 .pic-refresh {
     width: 30px;
     height: 30px;
