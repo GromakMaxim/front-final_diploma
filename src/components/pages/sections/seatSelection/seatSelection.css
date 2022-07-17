@@ -12,3 +12,25 @@
 }
 
 
+.next-page-btn:hover {
+    box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+}
+.next-page-btn {
+    display: flex;
+
+    font-weight: 700;
+    font-size: 24px;
+    font-family: inherit;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #928F94;
+    border: 1px solid #928F94;
+    border-radius: 5px;
+    box-sizing: border-box;
+    outline: none;
+    color: #FFFFFF;
+    padding: 15px 70px;
+    float: right;
+    margin-top: 90px;
+    margin-left: auto;
+}

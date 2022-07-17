@@ -339,7 +339,7 @@ export default function Offers(props) {
 
     let offers = [];
     data[0].items.forEach(item => {
-        offers.push(<Offer key={item.departure._id} data={item}/>);
+        offers.push(<Offer key={item.departure._id} data={item} goTo={props.goTo}/>);
     })
 
     return (

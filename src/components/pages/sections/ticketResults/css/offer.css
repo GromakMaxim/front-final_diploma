@@ -98,3 +98,17 @@
 .offer > .center > .offer-to > .station {
     color: #928F94;
 }
+
+.btn-seat-selection {
+    margin-top: 30px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: #FFA800;
+    border-radius: 5px;
+    border: none;
+    padding: 6px 13px 9px 9px;
+    cursor: pointer;
+    box-sizing: border-box;
+}

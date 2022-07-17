@@ -13,6 +13,7 @@ export default function SeatSelection(props) {
             <TrainInfo/>
             <TicketsNumber/>
             <Wagon/>
+            <button type="button" className="next-page-btn false" onClick={props.goTo}>Далее</button>
         </div>
     );
 }

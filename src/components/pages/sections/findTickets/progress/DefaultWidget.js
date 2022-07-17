@@ -24,7 +24,7 @@ export default function DefaultWidget(props) {
                         <input className='to' type='text' placeholder='ДД/ММ/ГГ'/>
                     </div>
                 </div>
-                <button className="form-search-btn" onClick={props.func}>Найти билет</button>
+                <button className="form-search-btn" onClick={props.goTo}>Найти билет</button>
             </div>
         </section>
     );

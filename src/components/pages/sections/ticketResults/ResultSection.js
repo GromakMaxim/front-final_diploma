@@ -1,14 +1,17 @@
-import React from "react";
+import React, {useState} from "react";
 import FilterWrapper from "./filter/FilterWrapper";
 import Offers from "./Offers";
 import SeatSelection from "../seatSelection/SeatSelection";
 
-export default function Tickets() {
+export default function ResultSection(props) {
+
+
     return (
         <div className='ticket-results'>
             <FilterWrapper/>
-
-            <SeatSelection/>
+            <Offers/>
         </div>
     )
+
+
 }

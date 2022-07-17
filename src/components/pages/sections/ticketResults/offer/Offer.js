@@ -50,6 +50,7 @@ export default function Offer(props) {
             </div>
             <div className='right'>
                 <Features data={props.data.departure}/>
+                <button className="btn-seat-selection" onClick={props.goTo}>Выбрать места</button>
             </div>
         </div>
     );

@@ -11,6 +11,7 @@
 @import url("../components/pages/sections/ticketResults/css/ticket-results.css");
 @import url("../components/pages/sections/seatSelection/seatSelection.css");
 @import url("../components/pages/sections/findTickets/css/horizontalWidget.css");
+@import url("../components/pages/sections/passangers/passenger.css");
 
 section{
     display: flex;
