@@ -2,6 +2,15 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background-image: url("../../public/train_header.png");
+    background-position: center center;
+    background-repeat: no-repeat;
     position: relative;
+}
+
+.bgr1{
+    background-image: url("../../public/train_header.png");
+}
+
+.bgr2{
+    background-image: url("../../public/train_header2.png");
 }

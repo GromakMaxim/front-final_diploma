@@ -1,12 +1,19 @@
 import React from "react";
 
 export default function DefaultWidget(props) {
-    return (
-        <section className='widget-search-wrapper'>
+    let motto = null;
+
+    if (!props.bar){
+        motto = (
             <div className='motto'>
                 <span>Вся жизнь - </span>
                 <span> путешествие!</span>
             </div>
+        );
+    }
+    return (
+        <section className='widget-search-wrapper'>
+            {motto}
             <div className='widget-search-ticket'>
                 <div className='direction'>
                     <h3>Направление</h3>

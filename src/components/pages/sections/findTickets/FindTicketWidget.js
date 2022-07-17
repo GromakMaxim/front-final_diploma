@@ -1,11 +1,18 @@
-import React, {useState} from "react";
-import Progressbar from "./progress/Progressbar";
+import React from "react";
 import DefaultWidget from "./progress/DefaultWidget";
 import HorizontalWidget from "./progress/HorizontalWidget";
 import Tickets from "../ticketResults/Tickets";
 
 export default function FindTicketWidget(props) {
-    const [barIsEnabled, showProgressBar] = useState(false);
+    if (props.bar) {
+        return (
+            <>
+            <DefaultWidget func={props.func} bar={props.bar}/>
+            <Tickets/>
+            </>
+        )
+    } else {
+        return <DefaultWidget func={props.func}/>
+    }
 
-    return <DefaultWidget/>
 }

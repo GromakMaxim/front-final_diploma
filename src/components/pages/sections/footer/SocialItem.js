@@ -1,7 +1,6 @@
 import React from "react";
 
 export default function SocialItem(props) {
-    console.log(props.data.pic)
     const classes = "social-link social-link-" + props.data.label
 
     return (
