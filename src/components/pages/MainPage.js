@@ -14,6 +14,7 @@ import AddPassangerWidget from "./sections/passangers/AddPassangerWidget";
 
 export default function MainPage(props) {
 
+    const [defaultIsDisplayed, showDefault] = useState(true);
     const [offersIsDisplayed, showOffers] = useState(false);
     const [seatsIsDisplayed, showSeats] = useState(false);
     const [passengersIsDisplayed, showPsngrs] = useState(false);
@@ -27,6 +28,7 @@ export default function MainPage(props) {
         showOffers(!offersIsDisplayed);
         showSeats(false);
         showPsngrs(false);
+        showDefault(false);
     }
 
     function openSeats() {
@@ -34,6 +36,7 @@ export default function MainPage(props) {
         showSeats(!seatsIsDisplayed);
         showPsngrs(false);
         showOffers(false);
+        showDefault(false)
     }
 
     function openPassengers() {
@@ -41,9 +44,10 @@ export default function MainPage(props) {
         showPsngrs(!passengersIsDisplayed);
         showOffers(false);
         showSeats(false);
+        showDefault(false);
     }
 
-    if (offersIsDisplayed) {
+    if (!defaultIsDisplayed) {
         classes = 'main-page bgr2'
     } else {
         classes = 'main-page bgr1';
