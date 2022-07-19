@@ -67,7 +67,7 @@ export default function Payment(props) {
                     </div>
                 </form>
                 <div className="payment-form-btn">
-                    <button type="button">Купить билеты</button>
+                    <button type="button" onClick={props.goTo}>Купить билеты</button>
                 </div>
             </div>
         </section>

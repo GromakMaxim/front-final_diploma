@@ -12,6 +12,7 @@ import Offers from "./sections/ticketResults/Offers";
 import SeatSelection from "./sections/seatSelection/SeatSelection";
 import AddPassangerWidget from "./sections/passengers/AddPassangerWidget";
 import Payment from "./sections/payment/Payment";
+import Confirm from "./sections/confirmation/Confirm";
 
 export default function MainPage(props) {
 
@@ -20,6 +21,7 @@ export default function MainPage(props) {
     const [seatsIsDisplayed, showSeats] = useState(false);
     const [passengersIsDisplayed, showPsngrs] = useState(false);
     const [paymentIsDisplayed, showPayment] = useState(false);
+    const [confirmIsDisplayed, showConfirmation] = useState(false);
 
 
     let classes = null;
@@ -32,6 +34,7 @@ export default function MainPage(props) {
         showSeats(false);
         showPsngrs(false);
         showPayment(false);
+        showConfirmation(false);
     }
 
     function openSeats() {
@@ -41,6 +44,7 @@ export default function MainPage(props) {
         showSeats(!seatsIsDisplayed);
         showPsngrs(false);
         showPayment(false);
+        showConfirmation(false);
     }
 
     function openPassengers() {
@@ -50,6 +54,7 @@ export default function MainPage(props) {
         showSeats(false);
         showPsngrs(!passengersIsDisplayed);
         showPayment(false);
+        showConfirmation(false);
     }
 
     function openPayment(){
@@ -59,7 +64,17 @@ export default function MainPage(props) {
         showSeats(false);
         showPsngrs(false);
         showPayment(!paymentIsDisplayed);
+        showConfirmation(false);
+    }
 
+    function openConfirm(){
+        console.log('confirm opened');
+        showDefault(false);
+        showOffers(false);
+        showSeats(false);
+        showPsngrs(false);
+        showPayment(false);
+        showConfirmation(!confirmIsDisplayed);
     }
 
     if (!defaultIsDisplayed) {
@@ -121,7 +136,22 @@ export default function MainPage(props) {
                 <HorizontalWidget/>
                 <div className='ticket-results'>
                     <FilterWrapper/>
-                    <Payment/>
+                    <Payment goTo={openConfirm}/>
+                </div>
+                <Footer/>
+            </div>
+        )
+    }
+
+    if (confirmIsDisplayed){
+        return (
+            <div className={classes}>
+                <Logo/>
+                <NavigationMenu/>
+                <HorizontalWidget/>
+                <div className='ticket-results'>
+                    <FilterWrapper/>
+                    <Confirm/>
                 </div>
                 <Footer/>
             </div>

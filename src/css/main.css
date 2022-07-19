@@ -13,6 +13,7 @@
 @import url("../components/pages/sections/findTickets/css/horizontalWidget.css");
 @import url("../components/pages/sections/passengers/passenger.css");
 @import url("../components/pages/sections/payment/payment.css");
+@import url("../components/pages/sections/confirmation/confirm.css");
 
 section{
     display: flex;
