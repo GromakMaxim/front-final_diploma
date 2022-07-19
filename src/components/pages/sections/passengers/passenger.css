@@ -1,3 +1,9 @@
+.passenger-wrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
 .passenger-item {
     width: 100%;
     margin-left: 70px;

@@ -10,7 +10,8 @@ import HorizontalWidget from "./sections/findTickets/progress/HorizontalWidget";
 import FilterWrapper from "./sections/ticketResults/filter/FilterWrapper";
 import Offers from "./sections/ticketResults/Offers";
 import SeatSelection from "./sections/seatSelection/SeatSelection";
-import AddPassangerWidget from "./sections/passangers/AddPassangerWidget";
+import AddPassangerWidget from "./sections/passengers/AddPassangerWidget";
+import Payment from "./sections/payment/Payment";
 
 export default function MainPage(props) {
 
@@ -18,6 +19,7 @@ export default function MainPage(props) {
     const [offersIsDisplayed, showOffers] = useState(false);
     const [seatsIsDisplayed, showSeats] = useState(false);
     const [passengersIsDisplayed, showPsngrs] = useState(false);
+    const [paymentIsDisplayed, showPayment] = useState(false);
 
 
     let classes = null;
@@ -25,26 +27,39 @@ export default function MainPage(props) {
 
     function openOffers() {
         console.log('offers opened')
+        showDefault(false);
         showOffers(!offersIsDisplayed);
         showSeats(false);
         showPsngrs(false);
-        showDefault(false);
+        showPayment(false);
     }
 
     function openSeats() {
-        console.log('seats opened')
+        console.log('seats opened');
+        showDefault(false);
+        showOffers(false);
         showSeats(!seatsIsDisplayed);
         showPsngrs(false);
-        showOffers(false);
-        showDefault(false)
+        showPayment(false);
     }
 
     function openPassengers() {
-        console.log('psngrs opened')
-        showPsngrs(!passengersIsDisplayed);
+        console.log('psngrs opened');
+        showDefault(false);
         showOffers(false);
         showSeats(false);
+        showPsngrs(!passengersIsDisplayed);
+        showPayment(false);
+    }
+
+    function openPayment(){
+        console.log('payment opened');
         showDefault(false);
+        showOffers(false);
+        showSeats(false);
+        showPsngrs(false);
+        showPayment(!paymentIsDisplayed);
+
     }
 
     if (!defaultIsDisplayed) {
@@ -91,7 +106,22 @@ export default function MainPage(props) {
                 <HorizontalWidget/>
                 <div className='ticket-results'>
                     <FilterWrapper/>
-                    <AddPassangerWidget/>
+                    <AddPassangerWidget goTo={openPayment}/>
+                </div>
+                <Footer/>
+            </div>
+        )
+    }
+
+    if (paymentIsDisplayed){
+        return (
+            <div className={classes}>
+                <Logo/>
+                <NavigationMenu/>
+                <HorizontalWidget/>
+                <div className='ticket-results'>
+                    <FilterWrapper/>
+                    <Payment/>
                 </div>
                 <Footer/>
             </div>
