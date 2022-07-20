@@ -83,7 +83,7 @@
 
 .verification-passengers-item-info span {
     color: #928F94;
-    font-family: Roboto;
+    font-family: Roboto, serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -101,11 +101,29 @@
     box-sizing: border-box;
 }
 
+.ticket-price {
+    display: flex;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    color: #fff;
+}
+
 .tickets-price-summary {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 28px;
+}
+
+.summary-value {
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    color: #FFA800;
 }
 
 .btn-seat-selection {
@@ -122,7 +140,7 @@
 }
 
 .verification-payment_method {
-    font-family: Roboto;
+    font-family: Roboto, serif;
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
@@ -155,4 +173,13 @@
     text-transform: uppercase;
     box-sizing: border-box;
     padding: 17px 57px;
+}
+
+.ticket-price .value-image img {
+    width: 14px;
+    height: 17px;
+}
+
+.verification-payment-btn .btn-seat-selection {
+    width: 233px;
 }
