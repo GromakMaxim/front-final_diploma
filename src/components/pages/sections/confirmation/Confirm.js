@@ -1,6 +1,7 @@
 import React from "react";
 import Offer from "../ticketResults/offer/Offer";
 import ActionButton from "../../../commons/ActionButton";
+import PassengerSmall from "./PassengerSmall";
 
 export default function Confirm(props) {
     let item = {
@@ -79,30 +80,8 @@ export default function Confirm(props) {
                 <div className="verification-title">Пассажиры</div>
                 <div className="verification-passengers-main">
                     <ul className="verification-passengers-list">
-                        <li className="verification-passengers-item">
-                            <div className="verification-passengers-item-avatar">
-                                <div className="passenger-avatar"/>
-                                <span className="person_type">Взрослый</span>
-                            </div>
-                            <div className="verification-passengers-item-info">
-                                <span>кнркрк кркрк ркркркер </span>
-                                <span>Пол мужской</span>
-                                <span>Дата рождения 2022-07-19</span>
-                                <span>паспорт 3534 345345</span>
-                            </div>
-                        </li>
-                        <li className="verification-passengers-item">
-                            <div className="verification-passengers-item-avatar">
-                                <div className="passenger-avatar"/>
-                                <span className="person_type">Взрослый</span>
-                            </div>
-                            <div className="verification-passengers-item-info">
-                                <span>екпауп кикикики кпркпркепкпк </span>
-                                <span>Пол мужской</span>
-                                <span>Дата рождения 2022-07-19</span>
-                                <span>паспорт 2423 353465</span>
-                            </div>
-                        </li>
+                        <PassengerSmall gender='Мужской' name='name' surname='surname' patronymic='patro' personType='Взрослый' birth='2022-07-19' document='3534 345345'/>
+                        <PassengerSmall gender='Мужской' name='name1' surname='surname1' patronymic='patro1' personType='Взрослый' birth='2022-07-19' document='3534 345345'/>
                     </ul>
                     <div className="verification-passengers-tickets-price">
                         <div className="tickets-price-summary">
