@@ -67,7 +67,7 @@ export default function Confirm(props) {
 
 
     return (
-        <section className="order-page-passengers-info order-page-payment-page order-page-verification-page">
+        <section className="confirm-wrapper">
             <section className="verification verification-train">
                 <div className="verification-title">Поезд</div>
                 <ul className="found-routes-list">

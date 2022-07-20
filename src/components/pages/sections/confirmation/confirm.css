@@ -1,0 +1,158 @@
+.confirm-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: 70px;
+}
+
+.verification {
+    display: flex;
+    flex-direction: column;
+    background: #FFF;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    box-shadow: 0 2px 2px #000;
+    margin-bottom: 45px;
+}
+
+.verification-title {
+    font-weight: 400;
+    font-size: 30px;
+    color: #292929;
+    text-align: left;
+    padding: 28px 30px 30px;
+}
+
+.found-routes-list {
+    padding: 30px;
+}
+
+.verification-passengers-main, .verification-payment-wrapper {
+    border-top: 1px solid #928F94;
+    display: flex;
+}
+
+.verification-passengers-list {
+    width: 680px;
+    list-style: none;
+    border-right: 1px dashed #E5E5E5;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 30px 0 25px 30px;
+}
+
+.verification-passengers-list li {
+    display: flex;
+    justify-content: flex-start;
+    border-bottom: 1px dashed #E5E5E5;
+    box-sizing: border-box;
+    padding-bottom: 34px;
+    padding-top: 30px;
+}
+
+.verification-passengers-item-avatar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.passenger-avatar {
+    width: 68px;
+    height: 68px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEQAAABECAYAAAA4E5OyAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAUISURBVHgB7ZzdcdtGEMf/B2smGj8kSgWBK1BSQaAKYr0k8eRBdAWRKwhdQawKTD1komQmE6WCwBVIqcBwBdGj7DF53t07fkEEBdwXQdq/GYgfAMXjH7t3t7sHKCRC/46cHgooHNKWQ+NruyuvHVrR/hvaf0PPr+n5K7xHpX6i5wlQiIR+iQPs4zF9w7f08jFtB/Cjoq0koV7hFpfqqQgWnOCCkCWwFXxHTwfwF6EJFuMSY5yFtpxgglghfgG7RVrYap6rJ/QYAG9BpG9QeIn0QtQZWWEqeJDBA/0HWYTCa2xeDGbAbZE2eeBkIWIVGf5eGCn6RkVtO3Kxls4WQmfghGS86rEYDJ+wKzpxA3SkkyBijpp8Nd7oEQ5NbaS+rasLtXYZK8YQ24jCUP2A5+0ObcFWizGlpSj3CrITYkxpIcpaQaRTMnOM3UFhQKKcN+9uwE64rrANHWgXOHCc4JumITlb88F/sWtiMDz68ByqgZWC2KEqx65CcyjygOGqXXdcxrrKa6TBhPOYmW9u0wUFUqDxqO46e3cOUn6xQCsmOMNb6vEbcho2mTSktpwgJmbAOFp+a7khhe07YsGZsOO2obod5X5FzL7MxDzl9OVyHxLbOrLlL78POpZD+mPEpPabZ4Lo3yRYKxALzlV83z27JQLqdtNuRwrxDMvcQh7gZ8Sjoh82hCu3eAHEyaEKWnK+gggiCWHM34zAGTyQzlf7/Y+1PMCJ1cBayH6QrHgz4yD5zhKx0LZCgKkgZuyPRqDMeIWYWA2mfUiBjx1lLcSOLjkiMvVPLyaR4ypyG/0XvsqkrBib/QD51xTtfIejjJymQGx0gBEsk2pgXCjo4z7kELFZGNZcsLHNALHJkLMg8XMePKw99AgLUgSchsM0gjAapy5VNfuZARKh9AU1NSUts9/iYg8lwX2KhKQXxFBJwLZinYcI8RlZRCaxVY7EbEqQRcrZiiFFw7MWETaWy93D5ilmp2TTpwZm6l7hE1Mqr/UhO8jNHvnttfXb5F9ut6r2PvcfOTbTj5AgGm+QBlNy0HQC3qK8bxWhXcVo0pqpShMT/LcnDYy2OJNEmOAfEmDUdRmlPb602+IyTy5NFIhDqSIVpjhbfh5qZWCdhboNW06OUIyp5itfcIH/EcJnFS7JIp75rgRsS+CCVqV+xCMzymgyaz94YvWUpuTHqcRg+LtoG9DTZ/Cn5D/Z4gtnFInxRNaebQQ6sy/4hMAHU2O2glBMAfe6x4gs4xIbxlb5zuEChw5GAyOI7dHd/plrI+Iwggt6HmRmi2/Chds0l220wrUt43kRbLn6fyGV/wIdIP+NN4txwCF6L+k3zJZELMcyDkXlICWGTVL7zUuC2IlUiS58ji+wvYzqk8e70W7X4esWX2JbWeERK/1fFqS1z3RPo9a+kLc6ylxbM6y/3bxO9ULWqPpX3PqJTNNX7WhOEJmlTH0686HgMOOoaWejIBKT6CAxQr/Q64PPtSlEOx2Oub4rLabfGK07pN3lId062X7S0InWaX8B0TaL0lIMptO0eytF6SAG0zkOSbK6OAw3tgMddfmQ+2WqZgl4jj7CpZWJW/bOK1LtpQt1dJE6YS51T3Hlwv2Uktf1zOl+uhlCjfC3y/iT4p8xTu0tM+LdLmNCqUsqe4Su/cS/ocq8FJnDD3PPkG27oUoTYjnv7W13Mln5eIB5YXuRCqZl12Rpb+SR03yJ6j0fAHhTrQZh8+byAAAAAElFTkSuQmCC);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 68px;
+}
+
+.verification-passengers-item-avatar span {
+    color: #292929;
+    margin-top: 18px;
+}
+
+.verification-passengers-item-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 32px;
+}
+
+.verification-passengers-item-info span:first-of-type {
+    color: #292929;
+    margin-bottom: 5px;
+}
+
+.verification-passengers-item-info span {
+    color: #928F94;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.verification-passengers-tickets-price {
+    width: 280px;
+    padding-left: 25px;
+    padding-right: 23px;
+    padding-bottom: 25px;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+
+.tickets-price-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 28px;
+}
+
+.btn-seat-selection {
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    background-color: #FFA800;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    padding: 6px 13px 9px 9px;
+}
+
+.verification-payment_method {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    color: #292929;
+    width: 680px;
+    border-right: 1px dashed #E5E5E5;
+    box-sizing: border-box;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-bottom: 76px;
+    text-align: left;
+}
+
+.verification-payment-btn {
+    width: 280px;
+    padding-left: 25px;
+    padding-right: 23px;
+    padding-bottom: 25px;
+    align-self: flex-end;
+    box-sizing: border-box;
+}
+
+.verification-btn {
+    text-align: right;
+    margin-top: 100px;
+}
+
+.verification-btn .btn-seat-selection {
+    width: 323px;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    padding: 17px 57px;
+}
