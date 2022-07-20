@@ -126,19 +126,6 @@
     color: #FFA800;
 }
 
-.btn-seat-selection {
-    text-align: center;
-    color: #fff;
-    font-size: 24px;
-    font-weight: 700;
-    background-color: #FFA800;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    box-sizing: border-box;
-    padding: 6px 13px 9px 9px;
-}
-
 .verification-payment_method {
     font-family: Roboto, serif;
     font-style: normal;
@@ -155,6 +142,9 @@
 }
 
 .verification-payment-btn {
+    display: flex;
+    flex-direction: column;
+
     width: 280px;
     padding-left: 25px;
     padding-right: 23px;
@@ -164,8 +154,14 @@
 }
 
 .verification-btn {
+    display: flex;
+    flex-direction: column;
+
+    width: 280px;
+
     text-align: right;
     margin-top: 100px;
+    margin-left: auto;
 }
 
 .verification-btn .btn-seat-selection {

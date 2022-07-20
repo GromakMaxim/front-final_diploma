@@ -1,5 +1,6 @@
 import React from "react";
 import Offer from "../ticketResults/offer/Offer";
+import ActionButton from "../../../commons/ActionButton";
 
 export default function Confirm(props) {
     let item = {
@@ -113,7 +114,7 @@ export default function Confirm(props) {
                                 </div>
                             </div>
                         </div>
-                        <button className="btn-seat-selection">Изменить</button>
+                        <ActionButton title='Изменить'/>
                     </div>
                 </div>
             </section>
@@ -122,12 +123,12 @@ export default function Confirm(props) {
                 <div className="verification-payment-wrapper">
                     <div className="verification-payment_method">Онлайн</div>
                     <div className="verification-payment-btn">
-                        <button className="btn-seat-selection">Изменить</button>
+                        <ActionButton title='Изменить'/>
                     </div>
                 </div>
             </section>
             <section className="verification-btn">
-                <button className="btn-seat-selection">Подтвердить</button>
+                <ActionButton title='Подтвердить'/>
             </section>
         </section>
     );
