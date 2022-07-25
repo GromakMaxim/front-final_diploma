@@ -107,7 +107,7 @@ export default function Confirm(props) {
                 </div>
             </section>
             <section className="verification-btn">
-                <ActionButton title='Подтвердить'/>
+                <ActionButton title='Подтвердить' goTo={props.goTo}/>
             </section>
         </section>
     );

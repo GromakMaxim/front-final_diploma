@@ -14,6 +14,6 @@ export default function ActionButton(props){
     }
 
     return(
-        <button style={cssStyle} className="action-btn">{props.title}</button>
+        <button style={cssStyle} className="action-btn" onClick={props.goTo}>{props.title}</button>
     )
 }

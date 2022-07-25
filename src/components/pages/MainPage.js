@@ -13,6 +13,8 @@ import SeatSelection from "./sections/seatSelection/SeatSelection";
 import AddPassangerWidget from "./sections/passengers/AddPassangerWidget";
 import Payment from "./sections/payment/Payment";
 import Confirm from "./sections/confirmation/Confirm";
+import ThanksPage from "./sections/thanksPage/ThanksPage";
+import ThnxWidget from "./sections/findTickets/progress/ThnxWidget";
 
 export default function MainPage(props) {
 
@@ -22,6 +24,7 @@ export default function MainPage(props) {
     const [passengersIsDisplayed, showPsngrs] = useState(false);
     const [paymentIsDisplayed, showPayment] = useState(false);
     const [confirmIsDisplayed, showConfirmation] = useState(false);
+    const [thnxIsDisplayed, showThnx] = useState(false);
 
 
     let classes = null;
@@ -35,6 +38,7 @@ export default function MainPage(props) {
         showPsngrs(false);
         showPayment(false);
         showConfirmation(false);
+        showThnx(false);
     }
 
     function openSeats() {
@@ -45,6 +49,7 @@ export default function MainPage(props) {
         showPsngrs(false);
         showPayment(false);
         showConfirmation(false);
+        showThnx(false);
     }
 
     function openPassengers() {
@@ -55,6 +60,7 @@ export default function MainPage(props) {
         showPsngrs(!passengersIsDisplayed);
         showPayment(false);
         showConfirmation(false);
+        showThnx(false);
     }
 
     function openPayment(){
@@ -65,6 +71,7 @@ export default function MainPage(props) {
         showPsngrs(false);
         showPayment(!paymentIsDisplayed);
         showConfirmation(false);
+        showThnx(false);
     }
 
     function openConfirm(){
@@ -75,13 +82,27 @@ export default function MainPage(props) {
         showPsngrs(false);
         showPayment(false);
         showConfirmation(!confirmIsDisplayed);
+        showThnx(false);
+    }
+
+    function openThnx(){
+        console.log('thanks page opened');
+        showDefault(false);
+        showOffers(false);
+        showSeats(false);
+        showPsngrs(false);
+        showPayment(false);
+        showConfirmation(false);
+        showThnx(!thnxIsDisplayed);
     }
 
     if (!defaultIsDisplayed) {
-        classes = 'main-page bgr2'
+        classes = 'main-page bgr2';
     } else {
         classes = 'main-page bgr1';
     }
+
+    if (thnxIsDisplayed) classes = 'main-page bgr3';
 
     if (offersIsDisplayed) {
         return (
@@ -151,11 +172,23 @@ export default function MainPage(props) {
                 <HorizontalWidget/>
                 <div className='ticket-results'>
                     <FilterWrapper/>
-                    <Confirm/>
+                    <Confirm goTo={openThnx}/>
                 </div>
                 <Footer/>
             </div>
         )
+    }
+
+    if (thnxIsDisplayed){
+        return <div className={classes}>
+            <Logo/>
+            <NavigationMenu/>
+            <ThnxWidget/>
+            <div className='thnx'>
+                <ThanksPage/>
+            </div>
+            <Footer/>
+        </div>
     }
 
     return (
