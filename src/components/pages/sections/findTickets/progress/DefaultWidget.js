@@ -18,35 +18,21 @@ export default function DefaultWidget(props) {
     async function search(event) {
         event.preventDefault();
 
-        let fromId = await apiClient.getCities(fromCity);
-        let toId = await apiClient.getCities(toCity);
-
-        let fromDate = await dateHandler.dateParser(startDate);
-        let toDate = await dateHandler.dateParser(endDate);
+        let fromId = await apiClient.getCityId(fromCity);
+        let toId = await apiClient.getCityId(toCity);
 
 
         const stateForSubmit = {
             from_city_id: fromId,
             to_city_id: toId,
-            date_start: fromDate,
-            date_end: toDate,
+            date_start: startDate,
+            date_end: endDate,
         }
         console.log(stateForSubmit);
 
-        apiClient.getRoutes(stateForSubmit)
-            .then(res => props.addRoutes(res))
-            .catch(error => console.log(error));
+        let results = await apiClient.getRoutes(stateForSubmit);
+        console.log(results)
 
-
-        this.setState({
-            // fromCity: {name: '', id: ''},
-            // toCity: {name: '', id: ''},
-            startDate: '',
-            endDate: '',
-            isOpen: false,
-            list: [],
-            focusInput: ''
-        })
     }
 
     function onInputFromCity(e) {
@@ -57,11 +43,11 @@ export default function DefaultWidget(props) {
         setToCity(e.target.value);
     }
 
-    function onInputStartDate(e){
+    function onInputStartDate(e) {
         setStartDate(e.target.value);
     }
 
-    function onInputEndDate(e){
+    function onInputEndDate(e) {
         setEndDate(e.target.value);
     }
 

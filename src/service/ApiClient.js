@@ -5,8 +5,6 @@ export default class ApiClient {
     }
 
     async getResource(url) {
-        console.log(url);
-        console.log(`${this._apiBase}${url}`)
         const res = await fetch(`${this._apiBase}${url}`);
 
         if(!res.ok) {
@@ -17,17 +15,16 @@ export default class ApiClient {
     }
 
 
-    async getCities(value) {
-        console.log(value)
-        console.log(`/routes/cities?name=${value}`)
-        return this.getResource(`/routes/cities?name=${value}`);
+    async getCityId(value) {
+        let result = await this.getResource(`/routes/cities?name=${value}`);
+        return result[0]._id;
     }
 
     getLastRoutes() {
         return this.getResource('/routes/last');
     }
 
-    getRoutes(body) {
+    async getRoutes(body) {
         // console.log(body);
 
         let bodyString = [];

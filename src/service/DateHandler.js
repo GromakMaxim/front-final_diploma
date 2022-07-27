@@ -1,5 +1,6 @@
 export default class DateHandler {
     async dateParser(date) {
+        console.log("!:" + date)
         let day;
         let month;
 
@@ -15,7 +16,9 @@ export default class DateHandler {
             month = date.getMonth() + 1;
         }
 
-        return `${date.getFullYear()}-${month}-${day}`;
+        let result = `${date.getFullYear()}-${month}-${day}`;
+
+        return result;
 
     }
 }
