@@ -6,6 +6,8 @@ import Wagon from "./wagon/Wagon";
 
 export default function SeatSelection(props) {
 
+
+
     return (
         <div className='seats-selection-wrapper'>
             <h2>Выбор мест</h2>

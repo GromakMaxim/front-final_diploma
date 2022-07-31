@@ -4,6 +4,11 @@ import Features from "./Features";
 
 export default function Offer(props) {
 
+    async function clickHandler() {
+        await props.search(props.id);
+        await props.goTo();
+    }
+
     function getTime(timestamp) {
         return format(new Date(timestamp), "hh:mm");
     }
@@ -50,7 +55,7 @@ export default function Offer(props) {
             </div>
             <div className='right'>
                 <Features data={props.data.departure}/>
-                <button className="btn-seat-selection" onClick={props.goTo}>Выбрать места</button>
+                <button className="btn-seat-selection" onClick={clickHandler}>Выбрать места</button>
             </div>
         </div>
     );

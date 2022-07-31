@@ -20,11 +20,13 @@ import ApiClient from "../../service/ApiClient";
 export default function MainPage(props) {
 
     const [offersData, setOffersData] = useState();
+    const [seatsData, setSeatsData] = useState();
+
     const [display, setDisplay] = useState();
 
 
     let classes = null;
-    let displayThis = <DefaultWidget searchTickets={search} goTo={openOffers}/>
+    let displayThis = <DefaultWidget searchTickets={searchOffers} goTo={openOffers}/>
 
     let apiClient = new ApiClient();
 
@@ -53,7 +55,7 @@ export default function MainPage(props) {
         setDisplay('thnx');
     }
 
-    async function search(fromCity, toCity, startDate, endDate) {
+    async function searchOffers(fromCity, toCity, startDate, endDate) {
 
         let fromId = await apiClient.getCityId(fromCity);
         let toId = await apiClient.getCityId(toCity);
@@ -66,9 +68,16 @@ export default function MainPage(props) {
         }
 
         let results = await apiClient.getRoutes(stateForSubmit);
+        console.log(results)
         setOffersData(results)
 
         setDisplay('offers');
+    }
+
+    async function searchSeats(id){
+        let result = await apiClient.getSeats(id);
+        console.log(result)
+        setSeatsData(result);
     }
 
 
@@ -84,7 +93,7 @@ export default function MainPage(props) {
                 <HorizontalWidget/>
                 <div className='ticket-results'>
                     <FilterWrapper/>
-                    <Offers data={offersData} goTo={openSeats}/>
+                    <Offers data={offersData} search={searchSeats} goTo={openSeats}/>
                 </div>
             </>
             break;
@@ -94,7 +103,7 @@ export default function MainPage(props) {
                 <HorizontalWidget/>
                 <div className='ticket-results'>
                     <FilterWrapper/>
-                    <SeatSelection goTo={openPassengers}/>
+                    <SeatSelection data={seatsData} searchSeats={searchSeats} goTo={openPassengers}/>
                 </div>
             </>
             break;
