@@ -15,187 +15,135 @@ import Payment from "./sections/payment/Payment";
 import Confirm from "./sections/confirmation/Confirm";
 import ThanksPage from "./sections/thanksPage/ThanksPage";
 import ThnxWidget from "./sections/findTickets/progress/ThnxWidget";
+import ApiClient from "../../service/ApiClient";
 
 export default function MainPage(props) {
 
-    const [defaultIsDisplayed, showDefault] = useState(true);
-    const [offersIsDisplayed, showOffers] = useState(false);
-    const [seatsIsDisplayed, showSeats] = useState(false);
-    const [passengersIsDisplayed, showPsngrs] = useState(false);
-    const [paymentIsDisplayed, showPayment] = useState(false);
-    const [confirmIsDisplayed, showConfirmation] = useState(false);
-    const [thnxIsDisplayed, showThnx] = useState(false);
+    const [offersData, setOffersData] = useState();
+    const [display, setDisplay] = useState();
 
 
     let classes = null;
+    let displayThis = <DefaultWidget searchTickets={search} goTo={openOffers}/>
 
-
-    function openOffers() {
-        console.log('offers opened')
-        showDefault(false);
-        showOffers(!offersIsDisplayed);
-        showSeats(false);
-        showPsngrs(false);
-        showPayment(false);
-        showConfirmation(false);
-        showThnx(false);
-    }
+    let apiClient = new ApiClient();
 
     function openSeats() {
-        console.log('seats opened');
-        showDefault(false);
-        showOffers(false);
-        showSeats(!seatsIsDisplayed);
-        showPsngrs(false);
-        showPayment(false);
-        showConfirmation(false);
-        showThnx(false);
+        setDisplay('seats');
+    }
+
+    function openOffers() {
+        setDisplay('offers');
     }
 
     function openPassengers() {
-        console.log('psngrs opened');
-        showDefault(false);
-        showOffers(false);
-        showSeats(false);
-        showPsngrs(!passengersIsDisplayed);
-        showPayment(false);
-        showConfirmation(false);
-        showThnx(false);
+        setDisplay('passengers');
     }
 
-    function openPayment(){
-        console.log('payment opened');
-        showDefault(false);
-        showOffers(false);
-        showSeats(false);
-        showPsngrs(false);
-        showPayment(!paymentIsDisplayed);
-        showConfirmation(false);
-        showThnx(false);
+    function openPayment() {
+        setDisplay('payment');
     }
 
-    function openConfirm(){
-        console.log('confirm opened');
-        showDefault(false);
-        showOffers(false);
-        showSeats(false);
-        showPsngrs(false);
-        showPayment(false);
-        showConfirmation(!confirmIsDisplayed);
-        showThnx(false);
+    function openConfirm() {
+        setDisplay('confirm');
     }
 
-    function openThnx(){
-        console.log('thanks page opened');
-        showDefault(false);
-        showOffers(false);
-        showSeats(false);
-        showPsngrs(false);
-        showPayment(false);
-        showConfirmation(false);
-        showThnx(!thnxIsDisplayed);
+    function openThnx() {
+        classes = 'main-page bgr3';
+        setDisplay('thnx');
     }
 
-    if (!defaultIsDisplayed) {
+    async function search(fromCity, toCity, startDate, endDate) {
+
+        let fromId = await apiClient.getCityId(fromCity);
+        let toId = await apiClient.getCityId(toCity);
+
+        const stateForSubmit = {
+            from_city_id: fromId,
+            to_city_id: toId,
+            date_start: startDate ? startDate : '',
+            date_end: endDate ? endDate : '',
+        }
+
+        let results = await apiClient.getRoutes(stateForSubmit);
+        setOffersData(results)
+
+        setDisplay('offers');
+    }
+
+
+    if (display === 'default') {
         classes = 'main-page bgr2';
     } else {
         classes = 'main-page bgr1';
     }
 
-    if (thnxIsDisplayed) classes = 'main-page bgr3';
-
-    if (offersIsDisplayed) {
-        return (
-            <div className={classes}>
-                <Logo/>
-                <NavigationMenu/>
+    switch (display) {
+        case 'offers':
+            displayThis = <>
                 <HorizontalWidget/>
                 <div className='ticket-results'>
                     <FilterWrapper/>
-                    <Offers goTo={openSeats}/>
+                    <Offers data={offersData} goTo={openSeats}/>
                 </div>
-                <Footer/>
-            </div>
-        );
-    }
+            </>
+            break;
 
-    if (seatsIsDisplayed) {
-        return (
-            <div className={classes}>
-                <Logo/>
-                <NavigationMenu/>
+        case 'seats':
+            displayThis = <>
                 <HorizontalWidget/>
                 <div className='ticket-results'>
                     <FilterWrapper/>
                     <SeatSelection goTo={openPassengers}/>
                 </div>
-                <Footer/>
-            </div>
-        )
-    }
+            </>
+            break;
 
-    if (passengersIsDisplayed){
-        return (
-            <div className={classes}>
-                <Logo/>
-                <NavigationMenu/>
+        case 'passengers':
+            displayThis = <>
                 <HorizontalWidget/>
                 <div className='ticket-results'>
                     <FilterWrapper/>
                     <AddPassangerWidget goTo={openPayment}/>
                 </div>
-                <Footer/>
-            </div>
-        )
-    }
+            </>
+            break;
 
-    if (paymentIsDisplayed){
-        return (
-            <div className={classes}>
-                <Logo/>
-                <NavigationMenu/>
+        case 'payment':
+            displayThis = <>
                 <HorizontalWidget/>
                 <div className='ticket-results'>
                     <FilterWrapper/>
                     <Payment goTo={openConfirm}/>
                 </div>
-                <Footer/>
-            </div>
-        )
-    }
+            </>
+            break;
 
-    if (confirmIsDisplayed){
-        return (
-            <div className={classes}>
-                <Logo/>
-                <NavigationMenu/>
+        case 'confirm':
+            displayThis = <>
                 <HorizontalWidget/>
                 <div className='ticket-results'>
                     <FilterWrapper/>
                     <Confirm goTo={openThnx}/>
                 </div>
-                <Footer/>
-            </div>
-        )
+            </>
+            break;
+
+        case 'thnx':
+            displayThis = <>
+                <ThnxWidget/>
+                <div className='thnx'>
+                    <ThanksPage/>
+                </div>
+            </>
     }
 
-    if (thnxIsDisplayed){
-        return <div className={classes}>
-            <Logo/>
-            <NavigationMenu/>
-            <ThnxWidget/>
-            <div className='thnx'>
-                <ThanksPage/>
-            </div>
-            <Footer/>
-        </div>
-    }
 
     return (
         <div className={classes}>
             <Logo/>
             <NavigationMenu/>
-            <DefaultWidget goTo={openOffers}/>
+            {displayThis}
             <AboutUs/>
             <HowItWorks/>
             <FeedbackWidget/>
