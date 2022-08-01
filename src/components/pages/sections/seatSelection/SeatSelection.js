@@ -12,7 +12,7 @@ export default function SeatSelection(props) {
         <div className='seats-selection-wrapper'>
             <h2>Выбор мест</h2>
             <GetBack/>
-            <TrainInfo/>
+            <TrainInfo trainData={props.train}/>
             <TicketsNumber/>
             <Wagon/>
             <button type="button" className="next-page-btn false" onClick={props.goTo}>Далее</button>

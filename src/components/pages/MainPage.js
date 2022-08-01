@@ -21,6 +21,7 @@ export default function MainPage(props) {
 
     const [offersData, setOffersData] = useState();
     const [seatsData, setSeatsData] = useState();
+    const [selectedTrain, setSelectedTrain] = useState();
 
     const [display, setDisplay] = useState();
 
@@ -68,16 +69,19 @@ export default function MainPage(props) {
         }
 
         let results = await apiClient.getRoutes(stateForSubmit);
-        console.log(results)
-        setOffersData(results)
+        console.log('offers');
+        console.log(results);
+        setOffersData(results);
 
         setDisplay('offers');
     }
 
     async function searchSeats(id){
+        let found = offersData.items.filter(offer => offer.departure._id === id)[0];
         let result = await apiClient.getSeats(id);
         console.log(result)
         setSeatsData(result);
+        setSelectedTrain(found);
     }
 
 
@@ -103,7 +107,7 @@ export default function MainPage(props) {
                 <HorizontalWidget/>
                 <div className='ticket-results'>
                     <FilterWrapper/>
-                    <SeatSelection data={seatsData} searchSeats={searchSeats} goTo={openPassengers}/>
+                    <SeatSelection data={seatsData} train={selectedTrain} searchSeats={searchSeats} goTo={openPassengers}/>
                 </div>
             </>
             break;
