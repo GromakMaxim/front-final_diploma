@@ -12,7 +12,7 @@ export default function DateFilter(props) {
                                 <input type="text" name="date_start"
                                        placeholder="ДД/ММ/ГГ"
                                        autoComplete="off"
-                                       className="" value=""/>
+                                       className="" defaultValue=""/>
                             </div>
                         </div>
                     </div>
@@ -25,7 +25,7 @@ export default function DateFilter(props) {
                                 <input type="text" name="date_end"
                                        placeholder="ДД/ММ/ГГ"
                                        autoComplete="off"
-                                       className="" value=""/>
+                                       className="" defaultValue=""/>
                             </div>
                         </div>
                     </div>
