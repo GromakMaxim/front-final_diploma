@@ -1,13 +1,38 @@
 import WagonPicture from "./WagonPicture";
+import React from "react";
 
 export default function WagonInfo(props) {
+    let data = props.data;
+    console.log('wagon info');
+    console.log(data[0]);
+
+
+
+    let array = [];
+    for (let i = 1; i <= data.length; i++) {
+        let index;
+        if (i < 10) index = "0"+i;
+        if (i===1){
+            array.push(<li key={i} onClick={clickWagonHandle} className="selected" aria-hidden="true">{index}</li>);
+        } else {
+            array.push(<li key={i} onClick={clickWagonHandle} className="" aria-hidden="true">{index}</li>);
+        }
+    }
+
+    function clickWagonHandle(e){
+        let selectedIndex = e.target.textContent;
+        props.selectWagon(selectedIndex);
+
+        console.log('current')
+        console.log(props.selected)
+    }
+
     return (
         <section className="seat-selection-wagons-info">
             <header>
                 <div className="wagons-sort"><h4>Вагоны</h4>
                     <ul className="wagons-sort-list">
-                        <li className="selected" aria-hidden="true">01</li>
-                        <li className="" aria-hidden="true">02</li>
+                        {array}
                     </ul>
                 </div>
                 <div>Нумерация вагонов начинается с головы поезда</div>

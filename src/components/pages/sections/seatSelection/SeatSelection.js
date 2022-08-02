@@ -2,10 +2,11 @@ import React from "react";
 import GetBack from "./getBack/GetBack";
 import TrainInfo from "./train_info/TrainInfo";
 import TicketsNumber from "./tickets_number/TicketsNumber";
-import Wagon from "./wagon/Wagon";
+import WagonSection from "./wagon/WagonSection";
 
 export default function SeatSelection(props) {
-
+    console.log('seats selection');
+    console.log(props.data)
 
 
     return (
@@ -14,7 +15,7 @@ export default function SeatSelection(props) {
             <GetBack/>
             <TrainInfo trainData={props.train}/>
             <TicketsNumber/>
-            <Wagon/>
+            <WagonSection selected={props.selected} selectWagon={props.selectWagon} data={props.data}/>
             <button type="button" className="next-page-btn false" onClick={props.goTo}>Далее</button>
         </div>
     );
