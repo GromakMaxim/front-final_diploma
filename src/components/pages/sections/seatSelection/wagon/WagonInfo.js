@@ -1,5 +1,6 @@
 import WagonPicture from "./WagonPicture";
 import React from "react";
+import AvailableFeatures from "../AvailableFeatures";
 
 export default function WagonInfo(props) {
     let data = props.data;
@@ -61,13 +62,7 @@ export default function WagonInfo(props) {
                                     <td className="wagon-seat-price">1959
                                         <img src="/images/icon-value.png" alt="icon price" width="14" height="17"/>
                                     </td>
-                                    <td className="features-icons-list">
-                                        <ul>
-                                            <li className="icon wi-fi tooltip"/>
-                                            <li className="icon conditioning selected tooltip"/>
-                                            <li className="icon linens selected tooltip"/>
-                                        </ul>
-                                    </td>
+                                    <AvailableFeatures selected={props.selected}/>
                                 </tr>
                                 <tr>
                                     <td className="wagon-seat-info">Нижние
