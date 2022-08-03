@@ -1,6 +1,7 @@
 import WagonPicture from "./WagonPicture";
 import React from "react";
 import AvailableFeatures from "../AvailableFeatures";
+import SeatsPrices from "../SeatsPrices";
 
 export default function WagonInfo(props) {
     let data = props.data;
@@ -46,35 +47,7 @@ export default function WagonInfo(props) {
                                 <span className="wagon-number-1">01</span>
                                 <span className="wagon-number-2">вагон</span>
                             </div>
-                            <table className="wagon-info-table">
-                                <thead>
-                                <tr className="wagon-info-table-titles">
-                                    <td>Места<span></span></td>
-                                    <td>Стоимость</td>
-                                    <td>Обслуживание ФПК</td>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td className="wagon-seat-info">Верхние
-                                        <span>10</span>
-                                    </td>
-                                    <td className="wagon-seat-price">{props.selected.coach.top_price}
-                                        <img src="/images/icon-value.png" alt="icon price" width="14" height="17"/>
-                                    </td>
-                                    <AvailableFeatures selected={props.selected}/>
-                                </tr>
-                                <tr>
-                                    <td className="wagon-seat-info">Нижние
-                                        <span>11</span>
-                                    </td>
-                                    <td className="wagon-seat-price">{props.selected.coach.bottom_price}
-                                        <img src="/images/icon-value.png" alt="icon price" width="14" height="17"/>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                </tbody>
-                            </table>
+                            <SeatsPrices selected={props.selected}/>
                         </div>
                         <div className="random-peoples-watch">
                             <span>19</span>
