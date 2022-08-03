@@ -5,7 +5,7 @@ import WagonType from "../WagonType";
 export default function WagonSection(props) {
     return (
         <>
-            <WagonType/>
+            <WagonType selected={props.selected}/>
             <WagonInfo selected={props.selected} selectWagon={props.selectWagon} data={props.data}/>
         </>
     );

@@ -88,7 +88,7 @@ export default function MainPage(props) {
         let result = await apiClient.getSeats(id);
         console.log(result)
         await setSeatsData(result);
-        await setSelectedWagon(seatsData[0]);
+        await setSelectedWagon(result[0]);
 
     }
 
