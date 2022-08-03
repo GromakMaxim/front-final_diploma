@@ -59,7 +59,7 @@ export default function WagonInfo(props) {
                                     <td className="wagon-seat-info">Верхние
                                         <span>10</span>
                                     </td>
-                                    <td className="wagon-seat-price">1959
+                                    <td className="wagon-seat-price">{props.selected.coach.top_price}
                                         <img src="/images/icon-value.png" alt="icon price" width="14" height="17"/>
                                     </td>
                                     <AvailableFeatures selected={props.selected}/>
@@ -68,7 +68,7 @@ export default function WagonInfo(props) {
                                     <td className="wagon-seat-info">Нижние
                                         <span>11</span>
                                     </td>
-                                    <td className="wagon-seat-price">2730
+                                    <td className="wagon-seat-price">{props.selected.coach.bottom_price}
                                         <img src="/images/icon-value.png" alt="icon price" width="14" height="17"/>
                                     </td>
                                     <td></td>
