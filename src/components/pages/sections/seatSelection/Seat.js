@@ -1,34 +1,27 @@
 import React, {useState} from 'react';
 
-export default function Seat ({seatsAvailable, number, seatsListChange}) {
+export default function Seat (props) {
+    let classes = "railway-seat available "
 
-    const [selectedSeat, setSelectedSeat] = useState(false);
+    switch (props.wagonType) {
+        case '1':
+            classes = classes + 'wagon1';
+            break;
 
-    const pushOnSeatsList = (seatNumber) => {
-        if(seatsAvailable.includes(number)) {
-            setSelectedSeat(!selectedSeat);
-            seatsListChange(seatNumber);
-        } else {
-            return
-        }
+        case '2':
+            classes = classes + 'wagon2';
+            break;
 
+        case '3':
+            classes = classes + 'wagon3';
+            break;
+
+        case '4':
+            classes = classes + 'wagon4';
+            break;
     }
-
-    const getClassName = () => {
-        let a = '',
-            b = '';
-        if(seatsAvailable.includes(number)) {a = 'available'}
-        if(selectedSeat) {b = 'selected'}
-        return `railway-seat ${a} ${b}`
-    }
-
 
     return (
-        <div
-            className={getClassName()}
-            aria-hidden='true'
-            onClick={() => pushOnSeatsList(number)}
-        >{number}</div>
-
+        <div className={classes} aria-hidden="true">{props.number}</div>
     )
 }

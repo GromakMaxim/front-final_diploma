@@ -1,17 +1,5 @@
-.seat-selection-wagons-info{
-    display: flex;
-    flex-direction: column;
-}
-
-.seat-selection-wagons-info > header {
-    background: rgba(255, 168, 0, 0.44);
-    padding: 4px 34px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: #292929;
-    font-size: 16px;
-}
+@import url("seat.css");
+@import url('block.css');
 
 .wagons-sort {
     display: flex;
@@ -188,6 +176,10 @@
     background-position: center center;
 }
 
+.railway.fourth{
+    background-image: url("../img/fourth-railway.png");
+}
+
 .railway-number {
     width: 34px;
     height: 24px;
@@ -223,34 +215,8 @@
     width: 26px;
 }
 
-.top-row .railway-seats-block {
-    width: 56px;
-    height: 63px;
-    display: flex;
-    flex-direction: column-reverse;
-    flex-wrap: wrap;
+.fourth .top-row:first-child{
+    margin-top: 2px;
+    margin-bottom: 5px;
 }
 
-.railway-seat.available {
-    background-color: #f2f2f2;
-    border: 2px solid #f2f2f2;
-    color: #000;
-    cursor: pointer;
-    padding-top: 5px;
-}
-
-.railway-seat {
-    width: 26px;
-    height: 28px;
-    padding-top: 8px;
-    background-color: #ccc;
-    color: #fff;
-    font-size: 12px;
-    font-weight: 700;
-    text-align: center;
-    box-sizing: border-box;
-}
-
-.available:hover {
-    border-color: #FFA800;
-}

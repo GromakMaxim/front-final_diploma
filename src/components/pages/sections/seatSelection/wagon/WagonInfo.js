@@ -53,7 +53,7 @@ export default function WagonInfo(props) {
                             <span>19</span>
                             человек выбирают места в этом поезде
                         </div>
-                        <WagonPicture/>
+                        <WagonPicture wagonType={props.selected.coach.class_type}/>
                     </li>
                 </ul>
             </main>

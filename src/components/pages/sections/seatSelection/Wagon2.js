@@ -5,7 +5,7 @@ import React from "react";
 export default function Wagon2(props){
     return (
         <>
-            <div className='railway-seats-list top-row'>
+            <div className='wagon2 railway-seats-list top-row'>
                 <div className='railway-seats-block'>
                     <Seat number={1}/>
                     <Seat number={2}/>

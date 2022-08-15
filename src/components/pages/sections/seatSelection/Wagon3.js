@@ -6,7 +6,7 @@ export default function Wagon3(props){
     return (
         <>
             <Wagon2 />
-            <div className='railway-seats-list bottom-row'>
+            <div className='wagon3 railway-seats-list bottom-row'>
                 <div className='railway-seats-block'>
                     <Seat number={33}/>
                     <Seat number={34}/>

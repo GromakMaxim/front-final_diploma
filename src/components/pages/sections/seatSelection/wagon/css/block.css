@@ -1,0 +1,19 @@
+.top-row .railway-seats-block {
+    width: 56px;
+    height: 63px;
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+}
+
+.railway-seats-block.wagon4{
+    height: 50px;
+}
+
+.railway-seats-list.wagon4{
+    margin-left: 10px;
+}
+
+.fourth .railway-cover{
+    height: 100px;
+}
