@@ -22,6 +22,6 @@ export default function Seat (props) {
     }
 
     return (
-        <div className={classes} aria-hidden="true">{props.number}</div>
+        <div className={classes} aria-hidden="true" onClick={props.selectSeatFunc}>{props.number}</div>
     )
 }

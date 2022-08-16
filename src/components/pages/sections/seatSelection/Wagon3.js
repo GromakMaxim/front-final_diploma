@@ -2,45 +2,34 @@ import Wagon2 from "./Wagon2";
 import React from "react";
 import Seat from "./Seat";
 
+/**
+ * плацкарт
+ */
 export default function Wagon3(props){
     return (
         <>
             <Wagon2 />
             <div className='wagon3 railway-seats-list bottom-row'>
-                <div className='railway-seats-block'>
-                    <Seat number={33}/>
-                    <Seat number={34}/>
-                </div>
-                <div className='railway-seats-block'>
-                    <Seat number={35}/>
-                    <Seat number={36}/>
-                </div>
-                <div className='railway-seats-block'>
-                    <Seat number={37}/>
-                    <Seat number={38}/>
-                </div>
-                <div className='railway-seats-block'>
-                    <Seat number={39}/>
-                    <Seat number={40}/>
-                </div>
-                <div className='railway-seats-block'>
-                    <Seat number={41}/>
-                    <Seat number={42}/>
-                </div>
-                <div className='railway-seats-block'>
-                    <Seat number={43}/>
-                    <Seat number={44}/>
-                </div>
-                <div className='railway-seats-block'>
-                    <Seat number={45}/>
-                    <Seat number={46}/>
-                </div>
-                <div className='railway-seats-block'>
-                    <Seat number={47}/>
-                    <Seat number={48}/>
-                </div>
-
+                {buildBlock([33, 34])}
+                {buildBlock([35, 36])}
+                {buildBlock([37, 38])}
+                {buildBlock([39, 40])}
+                {buildBlock([41, 42])}
+                {buildBlock([43, 44])}
+                {buildBlock([45, 46])}
+                {buildBlock([47, 48])}
             </div>
         </>
     )
+
+    function buildBlock(arr) {
+        let obj = [];
+        for (let i = 0; i < arr.length; i++) {
+            obj.push(<Seat key={i} wagonType='1' number={arr[i]} selectSeatFunc={props.selectSeatFunc}/>)
+        }
+
+        return <div className='railway-seats-block'>
+            {obj}
+        </div>
+    }
 }

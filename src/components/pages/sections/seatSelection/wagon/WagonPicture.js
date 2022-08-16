@@ -11,22 +11,22 @@ export default function WagonPicture(props){
     switch (props.wagonType) {
         case 'first':
             classes = 'railway first';
-            showThisWagon = <Wagon1/>
+            showThisWagon = <Wagon1 selectSeatFunc={props.selectSeatFunc}/>
             break;
 
         case 'second':
             classes = 'railway second';
-            showThisWagon = <Wagon2/>
+            showThisWagon = <Wagon2 selectSeatFunc={props.selectSeatFunc}/>
             break;
 
         case 'third':
             classes = 'railway third';
-            showThisWagon = <Wagon3/>
+            showThisWagon = <Wagon3 selectSeatFunc={props.selectSeatFunc}/>
             break;
 
         case 'fourth':
             classes = 'railway fourth';
-            showThisWagon = <Wagon4/>
+            showThisWagon = <Wagon4 selectSeatFunc={props.selectSeatFunc}/>
             break;
     }
 
