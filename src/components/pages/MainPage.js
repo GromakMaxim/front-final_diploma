@@ -119,7 +119,8 @@ export default function MainPage(props) {
                                    searchSeats={searchSeats}
                                    goTo={openPassengers}
                                    selectWagon={selectAnyWagon}
-                                   selected={selectedWagon}/>
+                                   selected={selectedWagon}
+                                    getBack={openOffers}/>
                 </div>
             </>
             break;
