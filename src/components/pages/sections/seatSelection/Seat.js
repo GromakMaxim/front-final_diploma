@@ -5,7 +5,6 @@ export default function Seat (props) {
         let set = props.selectedSeatsData;
         set.add(props.number);
         props.selectSeatFunc(set);
-        console.log(set)
     }
 
 

@@ -4,8 +4,6 @@ import SeatsPrices from "../SeatsPrices";
 
 export default function WagonInfo(props) {
     let data = props.data;
-    console.log('wagon info');
-    console.log(data[0]);
 
 
     let array = [];
@@ -19,12 +17,16 @@ export default function WagonInfo(props) {
         }
     }
 
-    function clickWagonHandle(e) {
+    /**
+     * клик, выбор вагона
+     */
+    async function clickWagonHandle(e) {
         let selectedIndex = e.target.textContent;
         props.selectWagon(selectedIndex);
 
-        console.log('current')
-        console.log(props.selected)
+        console.log('current: ' + props.selected);
+
+        await props.selectSeatFunc(new Set());
     }
 
     return (

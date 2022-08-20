@@ -23,7 +23,7 @@ export default function MainPage(props) {
     const [seatsData, setSeatsData] = useState();
     const [selectedTrain, setSelectedTrain] = useState();
     const [selectedWagon, setSelectedWagon] = useState();
-    const [selectedSeats, setSelectedSeats] = useState(new Set());
+    const [selectedSeatsData, setSelectedSeats] = useState(new Set());
 
     const [display, setDisplay] = useState();
 
@@ -60,10 +60,13 @@ export default function MainPage(props) {
 
     function selectAnyWagon(index) {
         setSelectedWagon(seatsData[index - 1]);
+        console.log('wagon: ' + seatsData);
     }
 
-    function selectSeats(arr){
-        setSelectedSeats(arr)
+    function selectSeats(arr) {
+        setSelectedSeats(arr);
+        console.log('seats:');
+        console.log(selectedSeatsData)
     }
 
 
@@ -128,7 +131,7 @@ export default function MainPage(props) {
                                    selected={selectedWagon}
                                    getBack={openOffers}
                                    selectSeatsFunc={selectSeats}
-                                    selectedSeatsData={selectedSeats}
+                                   selectedSeatsData={selectedSeatsData}
                     />
                 </div>
             </>

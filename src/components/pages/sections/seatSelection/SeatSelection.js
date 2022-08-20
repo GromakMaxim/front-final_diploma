@@ -20,7 +20,7 @@ export default function SeatSelection(props) {
     return (
         <div className='seats-selection-wrapper'>
             <h2>Выбор мест</h2>
-            <GetBack func={props.getBack}/>
+            <GetBack selectSeatFunc={props.selectSeatsFunc} func={props.getBack}/>
             <TrainInfo trainData={props.train}/>
             <TicketsNumber/>
             <WagonSection selectSeatFunc={props.selectSeatsFunc}
