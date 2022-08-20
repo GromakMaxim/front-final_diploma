@@ -8,7 +8,6 @@ import WagonSection from "./wagon/WagonSection";
  * экран выбора мест
  */
 export default function SeatSelection(props) {
-    const [selectedSeats, setSeats] = useState([]);
 
     function selectSeat(e){
         console.log(e.target())
@@ -24,7 +23,8 @@ export default function SeatSelection(props) {
             <GetBack func={props.getBack}/>
             <TrainInfo trainData={props.train}/>
             <TicketsNumber/>
-            <WagonSection selectSeatFunc={selectSeat}
+            <WagonSection selectSeatFunc={props.selectSeatsFunc}
+                          selectedSeatsData={props.selectedSeatsData}
                           selected={props.selected}
                           selectWagon={props.selectWagon}
                           data={props.data}/>

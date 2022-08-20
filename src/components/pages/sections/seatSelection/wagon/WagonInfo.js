@@ -1,6 +1,5 @@
 import WagonPicture from "./WagonPicture";
 import React from "react";
-import AvailableFeatures from "../AvailableFeatures";
 import SeatsPrices from "../SeatsPrices";
 
 export default function WagonInfo(props) {
@@ -9,19 +8,18 @@ export default function WagonInfo(props) {
     console.log(data[0]);
 
 
-
     let array = [];
     for (let i = 1; i <= data.length; i++) {
         let index;
-        if (i < 10) index = "0"+i;
-        if (i===1){
+        if (i < 10) index = "0" + i;
+        if (i === 1) {
             array.push(<li key={i} onClick={clickWagonHandle} className="selected" aria-hidden="true">{index}</li>);
         } else {
             array.push(<li key={i} onClick={clickWagonHandle} className="" aria-hidden="true">{index}</li>);
         }
     }
 
-    function clickWagonHandle(e){
+    function clickWagonHandle(e) {
         let selectedIndex = e.target.textContent;
         props.selectWagon(selectedIndex);
 
@@ -50,10 +48,11 @@ export default function WagonInfo(props) {
                             <SeatsPrices selected={props.selected}/>
                         </div>
                         <div className="random-peoples-watch">
-                            <span>19</span>
+                            <span>19 </span>
                             человек выбирают места в этом поезде
                         </div>
                         <WagonPicture selectSeatFunc={props.selectSeatFunc}
+                                      selectedSeatsData={props.selectedSeatsData}
                                       wagonType={props.selected.coach.class_type}/>
                     </li>
                 </ul>

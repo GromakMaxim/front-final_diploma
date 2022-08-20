@@ -4,148 +4,62 @@ import React from "react";
 /**
  * сидячий
  */
-export default function Wagon4(props){
+export default function Wagon4(props) {
 
     let classes = 'railway-seats-block wagon4'
     return (
         <>
             <div className='wagon4 railway-seats-list top-row'>
-                <div className={classes}>
-                    <Seat wagonType='4' number={1}/>
-                    <Seat wagonType='4' number={2}/>
-                </div>
-                <div className={classes}>
-                    <Seat wagonType='4' number={3} />
-                    <Seat wagonType='4' number={4} />
-                </div>
-                <div className={classes}>
-                    <Seat wagonType='4' number={5}/>
-                    <Seat wagonType='4' number={6}/>
-                </div>
-                <div className={classes}>
-                    <Seat wagonType='4' number={7}/>
-                    <Seat wagonType='4' number={8}/>
-                </div>
-                <div className={classes}>
-                    <Seat wagonType='4' number={9}/>
-                    <Seat wagonType='4' number={10}/>
-                </div>
-                <div className={classes}>
-                    <Seat wagonType='4' number={11}/>
-                    <Seat wagonType='4' number={12}/>
-                </div>
-                <div className={classes}>
-                    <Seat wagonType='4' number={13}/>
-                    <Seat wagonType='4' number={14}/>
-                </div>
-                <div className={classes}>
-                    <Seat wagonType='4' number={15}/>
-                    <Seat wagonType='4' number={16}/>
-                </div>
-
-                <div className={classes}>
-                    <Seat wagonType='4' number={17}/>
-                    <Seat wagonType='4' number={18}/>
-                </div>
-                <div className={classes}>
-                    <Seat wagonType='4' number={19}/>
-                    <Seat wagonType='4' number={20}/>
-                </div>
-                <div className={classes}>
-                    <Seat wagonType='4' number={21}/>
-                    <Seat wagonType='4' number={22}/>
-                </div>
-                <div className={classes}>
-                    <Seat wagonType='4' number={23}/>
-                    <Seat wagonType='4' number={24}/>
-                </div>
-                <div className={classes}>
-                    <Seat wagonType='4' number={25}/>
-                    <Seat wagonType='4' number={26}/>
-                </div>
-                <div className={classes}>
-                    <Seat wagonType='4' number={27}/>
-                    <Seat wagonType='4' number={28}/>
-                </div>
-                <div className={classes}>
-                    <Seat wagonType='4' number={29}/>
-                    <Seat wagonType='4' number={30}/>
-                </div>
-                <div className={classes}>
-                    <Seat wagonType='4' number={31}/>
-                    <Seat wagonType='4' number={32}/>
-                </div>
-
-
+                {buildBlock([1, 2])}
+                {buildBlock([3, 4])}
+                {buildBlock([5, 6])}
+                {buildBlock([7, 8])}
+                {buildBlock([9, 10])}
+                {buildBlock([11, 12])}
+                {buildBlock([13, 14])}
+                {buildBlock([15, 16])}
+                {buildBlock([17, 18])}
+                {buildBlock([19, 20])}
+                {buildBlock([21, 22])}
+                {buildBlock([23, 24])}
+                {buildBlock([25, 26])}
+                {buildBlock([27, 28])}
+                {buildBlock([29, 30])}
+                {buildBlock([31, 32])}
             </div>
 
             <div className='wagon4 railway-seats-list top-row'>
-                <div className={classes}>
-                    <Seat wagonType='4' number={33}/>
-                </div>
-                <div className={classes}>
-                    <Seat wagonType='4' number={34}/>
-                    <Seat wagonType='4' number={35}/>
-                </div>
-                <div className={classes}>
-                    <Seat wagonType='4' number={36}/>
-                    <Seat wagonType='4' number={37}/>
-                </div>
-                <div className={classes}>
-                    <Seat wagonType='4' number={38}/>
-                    <Seat wagonType='4' number={39}/>
-                </div>
-                <div className={classes}>
-                    <Seat wagonType='4' number={40}/>
-                    <Seat wagonType='4' number={41}/>
-                </div>
-                <div className={classes}>
-                    <Seat wagonType='4' number={42}/>
-                    <Seat wagonType='4' number={43}/>
-                </div>
-                <div className={classes}>
-                    <Seat wagonType='4' number={44}/>
-                    <Seat wagonType='4' number={45}/>
-                </div>
-                <div className={classes}>
-                    <Seat wagonType='4' number={46}/>
-                    <Seat wagonType='4' number={47}/>
-                </div>
-                <div className={classes}>
-                    <Seat wagonType='4' number={48}/>
-                    <Seat wagonType='4' number={49}/>
-                </div>
-
-                <div className={classes}>
-                    <Seat wagonType='4' number={50}/>
-                    <Seat wagonType='4' number={51}/>
-                </div>
-                <div className={classes}>
-                    <Seat wagonType='4' number={52}/>
-                    <Seat wagonType='4' number={53}/>
-                </div>
-                <div className={classes}>
-                    <Seat wagonType='4' number={54}/>
-                    <Seat wagonType='4' number={55}/>
-                </div>
-                <div className={classes}>
-                    <Seat wagonType='4' number={56}/>
-                    <Seat wagonType='4' number={57}/>
-                </div>
-                <div className={classes}>
-                    <Seat wagonType='4' number={58}/>
-                    <Seat wagonType='4' number={59}/>
-                </div>
-                <div className={classes}>
-                    <Seat wagonType='4' number={60}/>
-                    <Seat wagonType='4' number={61}/>
-                </div>
-                <div className={classes}>
-                    <Seat wagonType='4' number={62}/>
-                </div>
-
+                {buildBlock([33])}
+                {buildBlock([34, 35])}
+                {buildBlock([36, 37])}
+                {buildBlock([38, 39])}
+                {buildBlock([40, 41])}
+                {buildBlock([42, 43])}
+                {buildBlock([44, 45])}
+                {buildBlock([46, 47])}
+                {buildBlock([48, 49])}
+                {buildBlock([50, 51])}
+                {buildBlock([52, 53])}
+                {buildBlock([54, 55])}
+                {buildBlock([56, 57])}
+                {buildBlock([58, 59])}
+                {buildBlock([60, 61])}
+                {buildBlock([62])}
             </div>
         </>
 
+
     )
+
+    function buildBlock(arr) {
+        let obj = [];
+        for (let i = 0; i < arr.length; i++) {
+            obj.push(<Seat key={i} wagonType='4' number={arr[i]} selectSeatFunc={props.selectSeatFunc}
+                           selectedSeatsData={props.selectedSeatsData}/>)
+        }
+
+        return <div className='railway-seats-block wagon4'>
+            {obj}
+        </div>
+    }
 }

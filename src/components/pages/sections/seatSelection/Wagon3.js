@@ -1,6 +1,7 @@
 import Wagon2 from "./Wagon2";
 import React from "react";
 import Seat from "./Seat";
+import Wagon1 from "./Wagon1";
 
 /**
  * плацкарт
@@ -25,7 +26,8 @@ export default function Wagon3(props){
     function buildBlock(arr) {
         let obj = [];
         for (let i = 0; i < arr.length; i++) {
-            obj.push(<Seat key={i} wagonType='1' number={arr[i]} selectSeatFunc={props.selectSeatFunc}/>)
+            obj.push(<Seat key={i} wagonType='3' number={arr[i]} selectSeatFunc={props.selectSeatFunc}
+                           selectedSeatsData={props.selectedSeatsData}/>)
         }
 
         return <div className='railway-seats-block'>

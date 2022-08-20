@@ -6,8 +6,9 @@ export default function WagonSection(props) {
     return (
         <>
             <WagonType selected={props.selected}/>
-            
+
             <WagonInfo selectSeatFunc={props.selectSeatFunc}
+                       selectedSeatsData={props.selectedSeatsData}
                        selected={props.selected}
                        selectWagon={props.selectWagon}
                        data={props.data}/>

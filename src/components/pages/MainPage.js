@@ -23,6 +23,7 @@ export default function MainPage(props) {
     const [seatsData, setSeatsData] = useState();
     const [selectedTrain, setSelectedTrain] = useState();
     const [selectedWagon, setSelectedWagon] = useState();
+    const [selectedSeats, setSelectedSeats] = useState(new Set());
 
     const [display, setDisplay] = useState();
 
@@ -58,8 +59,13 @@ export default function MainPage(props) {
     }
 
     function selectAnyWagon(index) {
-        setSelectedWagon(seatsData[index-1]);
+        setSelectedWagon(seatsData[index - 1]);
     }
+
+    function selectSeats(arr){
+        setSelectedSeats(arr)
+    }
+
 
     async function searchOffers(fromCity, toCity, startDate, endDate) {
 
@@ -120,7 +126,10 @@ export default function MainPage(props) {
                                    goTo={openPassengers}
                                    selectWagon={selectAnyWagon}
                                    selected={selectedWagon}
-                                    getBack={openOffers}/>
+                                   getBack={openOffers}
+                                   selectSeatsFunc={selectSeats}
+                                    selectedSeatsData={selectedSeats}
+                    />
                 </div>
             </>
             break;

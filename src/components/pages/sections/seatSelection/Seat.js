@@ -1,6 +1,14 @@
 import React, {useState} from 'react';
 
 export default function Seat (props) {
+    function clickHandler(){
+        let set = props.selectedSeatsData;
+        set.add(props.number);
+        props.selectSeatFunc(set);
+        console.log(set)
+    }
+
+
     let classes = "railway-seat available "
 
     switch (props.wagonType) {
@@ -22,6 +30,6 @@ export default function Seat (props) {
     }
 
     return (
-        <div className={classes} aria-hidden="true" onClick={props.selectSeatFunc}>{props.number}</div>
+        <div className={classes} aria-hidden="true" onClick={clickHandler}>{props.number}</div>
     )
 }
