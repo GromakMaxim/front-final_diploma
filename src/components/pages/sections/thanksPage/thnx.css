@@ -58,13 +58,15 @@
     box-sizing: border-box;
     display: flex;
     justify-content: center;
-    padding: 40px 80px;
+    padding: 40px 250px;
 }
 
 .action-plan_item {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
     width: 155px;
-    margin-right: 145px;
     text-align: center;
     font-weight: normal;
     font-size: 18px;
@@ -110,7 +112,10 @@
 }
 
 .successful-order-page_text {
+    display: flex;
+    flex-direction: column;
     padding: 95px 111px 130px 205px;
+    align-items: start;
 }
 
 
@@ -193,4 +198,15 @@
     margin-right: 105px;
     margin-left: 120px;
     align-self: center;
+}
+
+.successful-order-page_text span:last-of-type {
+    margin-top: 35px;
+    font-weight: 700;
+}
+.successful-order-page_text span {
+    display: block;
+    color: #292929;
+    font-weight: 400;
+    font-size: 24px;
 }

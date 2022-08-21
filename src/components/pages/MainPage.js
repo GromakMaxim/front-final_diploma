@@ -187,9 +187,19 @@ export default function MainPage(props) {
             displayThis = <>
                 <ThnxWidget/>
                 <div className='thnx'>
-                    <ThanksPage/>
+                    <ThanksPage
+                        paymentData={paymentData}/>
                 </div>
             </>
+            return (
+                <div className={classes}>
+                    <Logo/>
+                    <NavigationMenu/>
+                    {displayThis}
+                    <Footer/>
+                </div>
+            )
+            break;
     }
 
 

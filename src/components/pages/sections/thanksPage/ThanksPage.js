@@ -1,3 +1,6 @@
+import React from "react";
+import Steps from "./Steps";
+
 export default function ThanksPage(props) {
     return (
         <div className="successful-order-page">
@@ -11,28 +14,9 @@ export default function ThanksPage(props) {
                     </div>
                 </div>
             </section>
-            <section className="successful-order-page_action">
-                <div className="action-plan_item">
-                    <div className="action-plan_item-image email"/>
-                    <span>билеты будут отправлены на ваш
-                        <b>e-mail</b>
-                    </span>
-                </div>
-                <div className="action-plan_item">
-                    <div className="action-plan_item-image print"/>
-                    <span>
-                        <b>распечатайте</b>
-                        и сохраняйте билеты до даты поездки</span>
-                </div>
-                <div className="action-plan_item">
-                    <div className="action-plan_item-image control"/>
-                    <span>
-                        <b>предьявите</b>
-                        распечатанные билеты при посадке</span>
-                </div>
-            </section>
+            <Steps />
             <section className="successful-order-page_text">
-                <span className="appeal">керкркр кркркер!</span>
+                <span className="appeal">{props.paymentData.surname} {props.paymentData.name}!</span>
                 <span>Ваш заказ успешно оформлен.</span>
                 <span>В ближайшее время с вами свяжется наш оператор для подтверждения.</span>
                 <span>Благодарим Вас за оказанное доверие и желаем приятного путешествия!</span>
