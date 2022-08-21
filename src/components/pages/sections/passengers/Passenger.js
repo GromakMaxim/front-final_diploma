@@ -6,6 +6,7 @@ import PassengerLimitedMobilitySection from "./formSections/PassengerLimitedMobi
 import PassengerDocumentSection from "./formSections/PassengerDocumentSection";
 import Passport from "./dataObject/Passport";
 import BirthCertificate from "./dataObject/BirthCertificate";
+import PassengerAgeSection from "./formSections/PassengerAgeSection";
 
 export default function Passenger(props) {
     const [gender, setGender] = useState();
@@ -98,6 +99,13 @@ export default function Passenger(props) {
         console.log(user);
     }
 
+    function setAge(e){
+        let obj = user;
+        obj.type = e.target.value;
+        setUserData(obj);
+        console.log(user);
+    }
+
 
     if (!detailsIsDisplayed) {
         return (
@@ -123,14 +131,7 @@ export default function Passenger(props) {
             </div>
             <div className="passenger-form-wrapper">
                 <form className="passenger-form">
-                    <div className="passenger-form-section passenger-type-section">
-                        <label htmlFor="person_type" className="hidden">Тип
-                            пассажира</label>
-                        <select id="person_type" name="person_type">
-                            <option name="person_type" value="is_adult">Взрослый</option>
-                            <option name="person_type" value="is_child">Детский</option>
-                        </select>
-                    </div>
+                    <PassengerAgeSection setAge={setAge}/>
 
                     <PassengerFIOSection funcName={nameInputHandle} funcSurname={surnameInputHandle}
                                          funcPatronymic={patronymicInputHandle}/>
