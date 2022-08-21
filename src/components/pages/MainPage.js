@@ -25,7 +25,7 @@ export default function MainPage(props) {
     const [selectedTrain, setSelectedTrain] = useState();
     const [selectedWagon, setSelectedWagon] = useState();
     const [selectedSeatsData, setSelectedSeats] = useState(new Set());
-    const [selectedPassengers, setPassengers] = useState(new Set());
+    const [selectedPassengersData, setPassengers] = useState(new Set());
     const [paymentData, setPaymentData] = useState(new UserPaymentData());
 
     const [display, setDisplay] = useState();
@@ -49,8 +49,8 @@ export default function MainPage(props) {
     }
 
     function openPayment() {
-        if (selectedPassengers.size !== 0 && selectedSeatsData.size !== 0) {
-            if (selectedPassengers.size === selectedSeatsData.size) {
+        if (selectedPassengersData.size !== 0 && selectedSeatsData.size !== 0) {
+            if (selectedPassengersData.size === selectedSeatsData.size) {
                 setDisplay('payment');
             }
         }
@@ -152,7 +152,7 @@ export default function MainPage(props) {
                     <AddPassangerWidget
                         selectedSeatsData={selectedSeatsData}
                         selectPassengersFunc={setPassengers}
-                        selectedPassengersData={selectedPassengers}
+                        selectedPassengersData={selectedPassengersData}
                         goTo={openPayment}/>
                 </div>
             </>
@@ -175,7 +175,10 @@ export default function MainPage(props) {
                 <HorizontalWidget/>
                 <div className='ticket-results'>
                     <FilterWrapper/>
-                    <Confirm goTo={openThnx}/>
+                    <Confirm
+                        paymentData={paymentData}
+                        selectedPassengersData={selectedPassengersData}
+                        goTo={openThnx}/>
                 </div>
             </>
             break;
