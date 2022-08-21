@@ -6,7 +6,10 @@ export default function AddPassengerWidget(props) {
 
     let passengerNumber = 1;
     props.selectedSeatsData.forEach(seat => {
-        arr.push(<Passenger key={seat} number={passengerNumber}/>);
+        arr.push(<Passenger key={seat}
+                            number={passengerNumber}
+                            selectPassengersFunc={props.selectPassengersFunc}
+                            selectedPassengersData={props.selectedPassengersData}/>);
         passengerNumber++;
     })
 

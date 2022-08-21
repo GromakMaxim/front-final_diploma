@@ -327,6 +327,7 @@
     padding: 31px 30px 31px 25px;
     box-sizing: border-box;
     text-align: right;
+
 }
 
 .next-passenger-form-btn input {
@@ -340,4 +341,5 @@
     padding: 12px 23px;
     border: 1px solid #292929;
     border-radius: 5px;
+    cursor: pointer;
 }

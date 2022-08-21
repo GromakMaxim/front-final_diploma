@@ -99,11 +99,18 @@ export default function Passenger(props) {
         console.log(user);
     }
 
-    function setAge(e){
+    function setAge(e) {
         let obj = user;
         obj.type = e.target.value;
         setUserData(obj);
         console.log(user);
+    }
+
+    function sendFormHandle(e) {
+        e.preventDefault();
+        let set = props.selectedPassengersData;
+        set.add(user);
+        props.selectPassengersFunc(set);
     }
 
 
@@ -147,7 +154,7 @@ export default function Passenger(props) {
                                               setCertificateNumber={setCertificateNumber}/>
 
                     <div className="next-passenger-form-btn false">
-                        <input type="submit" defaultValue='Следующий пассажир'/>
+                        <input type="submit" value='Следующий пассажир' onClick={sendFormHandle}/>
                     </div>
                 </form>
             </div>

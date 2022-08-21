@@ -24,7 +24,7 @@ export default function MainPage(props) {
     const [selectedTrain, setSelectedTrain] = useState();
     const [selectedWagon, setSelectedWagon] = useState();
     const [selectedSeatsData, setSelectedSeats] = useState(new Set());
-    const [selectedPassengers, setPassengers] = useState();
+    const [selectedPassengers, setPassengers] = useState(new Set());
 
     const [display, setDisplay] = useState();
 
@@ -51,7 +51,11 @@ export default function MainPage(props) {
     }
 
     function openConfirm() {
-        setDisplay('confirm');
+        if (selectedPassengers.size !== 0 && selectedSeatsData.size !== 0){
+            if (selectedPassengers.size === selectedSeatsData.size){
+                setDisplay('confirm');
+            }
+        }
     }
 
     function openThnx() {
@@ -146,6 +150,7 @@ export default function MainPage(props) {
                     <AddPassangerWidget
                         selectedSeatsData={selectedSeatsData}
                         selectPassengersFunc={setPassengers}
+                        selectedPassengersData={selectedPassengers}
                         goTo={openPayment}/>
                 </div>
             </>

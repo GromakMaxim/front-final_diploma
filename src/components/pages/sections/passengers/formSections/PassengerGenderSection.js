@@ -32,7 +32,7 @@ export default function PassengerGenderSection(props) {
             <div className="gender-section-datepicker">
                 <label htmlFor="birthday">Дата рождения</label>
                 <input id="birthday" name="birthday" type="date" placeholder="ДД/ММ/ГГ" required=""
-                       defaultValue='' onClick={props.selectBirthdate}/>
+                       defaultValue='' onChange={props.selectBirthdate}/>
             </div>
         </div>
     );
