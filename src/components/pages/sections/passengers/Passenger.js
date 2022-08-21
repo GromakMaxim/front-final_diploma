@@ -2,6 +2,8 @@ import React, {useState} from "react";
 import UserObject from "./dataObject/UserObject";
 import PassengerGenderSection from "./formSections/PassengerGenderSection";
 import PassengerFIOSection from "./formSections/PassengerFIOSection";
+import PassengerLimitedMobilitySection from "./formSections/PassengerLimitedMobilitySection";
+import PassengerDocumentSection from "./formSections/PassengerDocumentSection";
 
 export default function Passenger(props) {
     const [gender, setGender] = useState();
@@ -48,6 +50,13 @@ export default function Passenger(props) {
         console.log(user);
     }
 
+    function setUserMobility(bool){
+        let obj = user;
+        obj.limitedMobility = bool;
+        setUserData(obj);
+        console.log(user);
+    }
+
 
     if (!detailsIsDisplayed) {
         return (
@@ -85,36 +94,9 @@ export default function Passenger(props) {
                                          funcPatronymic={patronymicInputHandle}/>
 
                     <PassengerGenderSection selectBirthdate={dateInputHandler} selectedGender={gender} func={genderInputHandle}/>
+                    <PassengerLimitedMobilitySection func={setUserMobility}/>
+                    <PassengerDocumentSection/>
 
-                    <div className="passenger-form-section passenger-invalid-section">
-                        <input id="isInvalid" name="isInvalid" type="checkbox"/>
-                        <label htmlFor="isInvalid" className="isInvalid">ограниченная подвижность</label>
-                    </div>
-                    <div className="passenger-form-section passenger-document_type-section">
-                        <div>
-                            <label htmlFor="document_type">Тип документа</label>
-                            <select id="document_type" required="" name="document_type">
-                                <option name="document_type" value="паспорт">Паспорт РФ</option>
-                                <option name="document_type" value="свидетельство">Свидетельство о рождении</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label htmlFor="document_series">Серия</label>
-                            <input id="document_series"
-                                   name="document_series" type="text"
-                                   placeholder="_ _ _ _" required=""
-                                   pattern="[0-9]+" minLength="4"
-                                   maxLength="4" defaultValue=''/>
-                        </div>
-                        <div>
-                            <label htmlFor="document_number">Номер</label>
-                            <input id="document_number"
-                                   name="document_number" type="text"
-                                   placeholder="_ _ _ _ _ _" required=""
-                                   pattern="[0-9]+" minLength="6"
-                                   maxLength="6" defaultValue=''/>
-                        </div>
-                    </div>
                     <div className="next-passenger-form-btn false">
                         <input type="submit" defaultValue='Следующий пассажир'/>
                     </div>
