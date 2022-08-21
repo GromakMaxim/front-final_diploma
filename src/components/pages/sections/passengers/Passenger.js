@@ -1,7 +1,9 @@
 import React, {useState} from "react";
 import UserObject from "./dataObject/UserObject";
+import PassengerGenderSection from "./PassengerGenderSection";
 
 export default function Passenger(props) {
+    const [gender, setGender] = useState();
     const [detailsIsDisplayed, showDetails] = useState(false);
     const [user, setUserData] = useState(new UserObject());
 
@@ -23,12 +25,21 @@ export default function Passenger(props) {
         console.log(user);
     }
 
-    function patronymicInputHandle(e){
+    function patronymicInputHandle(e) {
         let obj = user;
         obj.patronymic = e.target.value;
         setUserData(obj);
         console.log(user);
     }
+
+    function genderInputHandle(e) {
+        setGender(e.target.value);
+        let obj = user;
+        obj.gender = e.target.value;
+        setUserData(obj);
+        console.log(user);
+    }
+
 
     if (!detailsIsDisplayed) {
         return (
@@ -83,20 +94,8 @@ export default function Passenger(props) {
                                    pattern="[a-zA-Zёа-яЁА-Я]+" defaultValue='' onChange={patronymicInputHandle}/>
                         </div>
                     </div>
-                    <div className="passenger-form-section passenger-gender-section">
-                        <div>
-                            <span className="gender-lable">Пол</span>
-                            <div className="gender-button-wrapper">
-                                <button type="button" className="gender-btn gender-btn-left selected">М</button>
-                                <button type="button" className="gender-btn gender-btn-right false">Ж</button>
-                            </div>
-                        </div>
-                        <div className="gender-section-datepicker">
-                            <label htmlFor="birthday">Дата рождения</label>
-                            <input id="birthday" name="birthday" type="date" placeholder="ДД/ММ/ГГ" required=""
-                                   defaultValue=''/>
-                        </div>
-                    </div>
+                    <PassengerGenderSection selectedGender={gender} func={genderInputHandle}/>
+
                     <div className="passenger-form-section passenger-invalid-section">
                         <input id="isInvalid" name="isInvalid" type="checkbox"/>
                         <label htmlFor="isInvalid" className="isInvalid">ограниченная подвижность</label>
