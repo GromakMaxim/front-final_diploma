@@ -1,4 +1,4 @@
-import Seat from "./Seat";
+import Seat from "../seats/Seat";
 import React from "react";
 
 /**

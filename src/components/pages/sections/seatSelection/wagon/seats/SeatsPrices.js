@@ -1,4 +1,4 @@
-import AvailableFeatures from "./AvailableFeatures";
+import AvailableFeatures from "../../AvailableFeatures";
 import React from "react";
 
 export default function SeatsPrices(props) {

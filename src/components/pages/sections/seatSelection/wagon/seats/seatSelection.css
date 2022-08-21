@@ -1,8 +1,8 @@
-@import url("../seatSelection/getBack/getback.css");
-@import url("../seatSelection/train_info/trainInfo.css");
-@import url("../seatSelection/tickets_number/ticketsNumber.css");
-@import url("./wagon/css/type.css");
-@import url("./wagon/css/wagonInfo.css");
+@import url("../../getBack/getback.css");
+@import url("../../train_info/trainInfo.css");
+@import url("../../tickets_number/ticketsNumber.css");
+@import url("../css/type.css");
+@import url("../css/wagonInfo.css");
 
 .seats-selection-wrapper {
     display: flex;

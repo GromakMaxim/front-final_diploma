@@ -1,8 +1,8 @@
-import Wagon1 from "../Wagon1";
+import Wagon1 from "./types/Wagon1";
 import React from "react";
-import Wagon4 from "../Wagon4";
-import Wagon2 from "../Wagon2";
-import Wagon3 from "../Wagon3";
+import Wagon4 from "./types/Wagon4";
+import Wagon2 from "./types/Wagon2";
+import Wagon3 from "./types/Wagon3";
 
 export default function WagonPicture(props) {
     let classes = '';

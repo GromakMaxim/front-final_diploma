@@ -9,7 +9,7 @@ import DefaultWidget from "./sections/findTickets/progress/DefaultWidget";
 import HorizontalWidget from "./sections/findTickets/progress/HorizontalWidget";
 import FilterWrapper from "./sections/ticketResults/filter/FilterWrapper";
 import Offers from "./sections/ticketResults/Offers";
-import SeatSelection from "./sections/seatSelection/SeatSelection";
+import SeatSelection from "./sections/seatSelection/wagon/seats/SeatSelection";
 import AddPassangerWidget from "./sections/passengers/AddPassangerWidget";
 import Payment from "./sections/payment/Payment";
 import Confirm from "./sections/confirmation/Confirm";
@@ -25,6 +25,7 @@ export default function MainPage(props) {
     const [selectedWagon, setSelectedWagon] = useState();
     const [selectedSeatsData, setSelectedSeats] = useState(new Set());
     const [selectedPassengers, setPassengers] = useState(new Set());
+    const [paymentData, setPaymentData] = useState();
 
     const [display, setDisplay] = useState();
 

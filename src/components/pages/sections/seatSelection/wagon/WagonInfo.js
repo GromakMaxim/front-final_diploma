@@ -1,6 +1,6 @@
 import WagonPicture from "./WagonPicture";
 import React from "react";
-import SeatsPrices from "../SeatsPrices";
+import SeatsPrices from "./seats/SeatsPrices";
 
 export default function WagonInfo(props) {
     let data = props.data;

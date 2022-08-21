@@ -1,8 +1,8 @@
 import React, {useState} from "react";
-import GetBack from "./getBack/GetBack";
-import TrainInfo from "./train_info/TrainInfo";
-import TicketsNumber from "./tickets_number/TicketsNumber";
-import WagonSection from "./wagon/WagonSection";
+import GetBack from "../../getBack/GetBack";
+import TrainInfo from "../../train_info/TrainInfo";
+import TicketsNumber from "../../tickets_number/TicketsNumber";
+import WagonSection from "../WagonSection";
 
 /**
  * экран выбора мест
