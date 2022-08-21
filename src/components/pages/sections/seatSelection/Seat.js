@@ -1,14 +1,20 @@
 import React, {useState} from 'react';
 
-export default function Seat (props) {
-    function clickHandler(){
+export default function Seat(props) {
+    const [isSelected, selectSeat] = useState(false);
+
+    let classes = "railway-seat available ";
+
+
+
+    function clickHandler() {
         let set = props.selectedSeatsData;
         set.add(props.number);
         props.selectSeatFunc(set);
+        console.log('number clicked: ' + props.number);
+
+        selectSeat(!isSelected);
     }
-
-
-    let classes = "railway-seat available "
 
     switch (props.wagonType) {
         case '1':
@@ -28,7 +34,9 @@ export default function Seat (props) {
             break;
     }
 
-    return (
-        <div className={classes} aria-hidden="true" onClick={clickHandler}>{props.number}</div>
-    )
+    if (isSelected){
+        return <div className={classes + ' selected'} aria-hidden="true" onClick={clickHandler}>{props.number}</div>;
+    } else {
+        return <div className={classes} aria-hidden="true" onClick={clickHandler}>{props.number}</div>;
+    }
 }

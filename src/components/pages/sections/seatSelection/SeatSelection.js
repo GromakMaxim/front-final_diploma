@@ -9,10 +9,6 @@ import WagonSection from "./wagon/WagonSection";
  */
 export default function SeatSelection(props) {
 
-    function selectSeat(e){
-        console.log(e.target())
-    }
-
     console.log('seats selection');
     console.log(props.data)
 
