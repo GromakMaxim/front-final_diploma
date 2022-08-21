@@ -16,6 +16,7 @@ import Confirm from "./sections/confirmation/Confirm";
 import ThanksPage from "./sections/thanksPage/ThanksPage";
 import ThnxWidget from "./sections/findTickets/progress/ThnxWidget";
 import ApiClient from "../../service/ApiClient";
+import UserPaymentData from "./sections/payment/dataObject/UserPaymentData";
 
 export default function MainPage(props) {
 
@@ -25,7 +26,7 @@ export default function MainPage(props) {
     const [selectedWagon, setSelectedWagon] = useState();
     const [selectedSeatsData, setSelectedSeats] = useState(new Set());
     const [selectedPassengers, setPassengers] = useState(new Set());
-    const [paymentData, setPaymentData] = useState();
+    const [paymentData, setPaymentData] = useState(new UserPaymentData());
 
     const [display, setDisplay] = useState();
 
@@ -162,7 +163,9 @@ export default function MainPage(props) {
                 <HorizontalWidget/>
                 <div className='ticket-results'>
                     <FilterWrapper/>
-                    <Payment goTo={openConfirm}/>
+                    <Payment paymentData={paymentData}
+                             setPaymentData={setPaymentData}
+                             goTo={openConfirm}/>
                 </div>
             </>
             break;
