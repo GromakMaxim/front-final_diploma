@@ -47,15 +47,15 @@ export default function MainPage(props) {
     }
 
     function openPayment() {
-        setDisplay('payment');
+        if (selectedPassengers.size !== 0 && selectedSeatsData.size !== 0) {
+            if (selectedPassengers.size === selectedSeatsData.size) {
+                setDisplay('payment');
+            }
+        }
     }
 
     function openConfirm() {
-        if (selectedPassengers.size !== 0 && selectedSeatsData.size !== 0){
-            if (selectedPassengers.size === selectedSeatsData.size){
-                setDisplay('confirm');
-            }
-        }
+        setDisplay('confirm');
     }
 
     function openThnx() {

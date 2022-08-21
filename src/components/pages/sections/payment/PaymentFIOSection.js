@@ -1,9 +1,9 @@
+import FIOField from "../passengers/formSections/FIOField";
 import React from "react";
-import FIOField from "./FIOField";
 
-export default function PassengerFIOSection(props) {
+export default function PaymentFIOSection(props){
     return (
-        <div className="passenger-form-section passenger-name-section">
+        <div className="payment-section payment-user">
             <FIOField htmlFor='last_name'
                       label='Фамилия'
                       id='last_name'

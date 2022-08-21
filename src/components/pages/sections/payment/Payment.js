@@ -1,4 +1,5 @@
 import React from "react";
+import PaymentFIOSection from "./PaymentFIOSection";
 
 export default function Payment(props) {
     return (
@@ -7,27 +8,7 @@ export default function Payment(props) {
                 <form className="payment-form">
                     <div className="payment-user-section">
                         <div className="payment-form-title">Персональные данные</div>
-                        <div className="payment-section payment-user">
-                            <div>
-                                <label htmlFor="last_name">Фамилия</label>
-                                <input id="last_name" name="last_name"
-                                       type="text" required=""
-                                       pattern="[a-zA-Zёа-яЁА-Я]+"/>
-                            </div>
-                            <div>
-                                <label htmlFor="first_name">Имя</label>
-                                <input id="first_name" name="first_name"
-                                       type="text" required=""
-                                       pattern="[a-zA-Zёа-яЁА-Я]+"/>
-                            </div>
-                            <div>
-                                <label htmlFor="patronymic">Отчество</label>
-                                <input id="patronymic" name="patronymic"
-                                       type="text" required=""
-                                       pattern="[a-zA-Zёа-яЁА-Я]+"
-                                />
-                            </div>
-                        </div>
+                        <PaymentFIOSection/>
                         <div className="payment-contact-section">
                             <div className="payment-section payment-phone">
                                 <label htmlFor="phone">Контактный
