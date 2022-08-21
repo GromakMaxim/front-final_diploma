@@ -17,6 +17,7 @@ import ThanksPage from "./sections/thanksPage/ThanksPage";
 import ThnxWidget from "./sections/findTickets/progress/ThnxWidget";
 import ApiClient from "../../service/ApiClient";
 import UserPaymentData from "./sections/payment/dataObject/UserPaymentData";
+import Progressbar from "./sections/findTickets/progress/Progressbar";
 
 export default function MainPage(props) {
 
@@ -119,6 +120,7 @@ export default function MainPage(props) {
         case 'offers':
             displayThis = <>
                 <HorizontalWidget/>
+                <Progressbar stage='1'/>
                 <div className='ticket-results'>
                     <FilterWrapper/>
                     <Offers data={offersData} search={searchSeats} goTo={openSeats}/>
@@ -129,6 +131,7 @@ export default function MainPage(props) {
         case 'seats':
             displayThis = <>
                 <HorizontalWidget/>
+                <Progressbar stage='1'/>
                 <div className='ticket-results'>
                     <FilterWrapper/>
                     <SeatSelection data={seatsData} train={selectedTrain}
@@ -147,6 +150,7 @@ export default function MainPage(props) {
         case 'passengers':
             displayThis = <>
                 <HorizontalWidget/>
+                <Progressbar stage='2'/>
                 <div className='ticket-results'>
                     <FilterWrapper/>
                     <AddPassangerWidget
@@ -161,6 +165,7 @@ export default function MainPage(props) {
         case 'payment':
             displayThis = <>
                 <HorizontalWidget/>
+                <Progressbar stage='3'/>
                 <div className='ticket-results'>
                     <FilterWrapper/>
                     <Payment paymentData={paymentData}
@@ -173,6 +178,7 @@ export default function MainPage(props) {
         case 'confirm':
             displayThis = <>
                 <HorizontalWidget/>
+                <Progressbar stage='4'/>
                 <div className='ticket-results'>
                     <FilterWrapper/>
                     <Confirm
