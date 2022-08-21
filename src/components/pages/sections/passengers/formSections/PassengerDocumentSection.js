@@ -4,6 +4,7 @@ export default function PassengerDocumentSection(props) {
     const [docType, selectDocs] = useState('');
 
     function selectHandle(e) {
+        props.func(e.target.value);
         selectDocs(e.target.value);
     }
 
@@ -17,7 +18,9 @@ export default function PassengerDocumentSection(props) {
                            name="document_series" type="text"
                            placeholder="_ _ _ _" required=""
                            pattern="[0-9]+" minLength="4"
-                           maxLength="4" defaultValue=''/>
+                           maxLength="4" defaultValue=''
+                           onChange={props.setPassportSeries}
+                    />
                 </div>
                 <div>
                     <label htmlFor="document_number">Номер</label>
@@ -25,11 +28,12 @@ export default function PassengerDocumentSection(props) {
                            name="document_number" type="text"
                            placeholder="_ _ _ _ _ _" required=""
                            pattern="[0-9]+" minLength="6"
-                           maxLength="6" defaultValue=''/>
+                           maxLength="6" defaultValue=''
+                           onChange={props.setPassportNumber}/>
                 </div>
             </>
         )
-    } else if (docType === 'certificate'){
+    } else if (docType === 'certificate') {
         showThis = (
             <div>
                 <label htmlFor="document_number">Номер</label>
@@ -37,7 +41,8 @@ export default function PassengerDocumentSection(props) {
                        type="text" placeholder="VII-АП-123456"
                        required=""
                        pattern="^[IVX]{1,4}[- ]*[а-яёА-ЯЁ]{2}[- ]*[0-9]{6}$"
-                       minLength="" maxLength="" defaultValue=''/>
+                       minLength="" maxLength="" defaultValue=''
+                       onChange={props.setCertificateNumber}/>
             </div>
         );
     }

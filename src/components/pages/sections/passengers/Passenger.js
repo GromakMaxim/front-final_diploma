@@ -4,6 +4,8 @@ import PassengerGenderSection from "./formSections/PassengerGenderSection";
 import PassengerFIOSection from "./formSections/PassengerFIOSection";
 import PassengerLimitedMobilitySection from "./formSections/PassengerLimitedMobilitySection";
 import PassengerDocumentSection from "./formSections/PassengerDocumentSection";
+import Passport from "./dataObject/Passport";
+import BirthCertificate from "./dataObject/BirthCertificate";
 
 export default function Passenger(props) {
     const [gender, setGender] = useState();
@@ -50,9 +52,48 @@ export default function Passenger(props) {
         console.log(user);
     }
 
-    function setUserMobility(bool){
+    function setUserMobility(bool) {
         let obj = user;
         obj.limitedMobility = bool;
+        setUserData(obj);
+        console.log(user);
+    }
+
+    function setPapers(docType) {
+        let obj = user;
+        switch (docType) {
+            case 'passport':
+                obj.document = new Passport();
+                break;
+            case 'certificate':
+                obj.document = new BirthCertificate();
+                break;
+            default:
+                obj.document = null;
+                break;
+        }
+
+        setUserData(obj);
+        console.log(user);
+    }
+
+    function setPassportSeries(e) {
+        let obj = user;
+        obj.document.series = e.target.value;
+        setUserData(obj);
+        console.log(user);
+    }
+
+    function setPassportNumber(e) {
+        let obj = user;
+        obj.document.number = e.target.value;
+        setUserData(obj);
+        console.log(user);
+    }
+
+    function setCertificateNumber(e) {
+        let obj = user;
+        obj.document.number = e.target.value;
         setUserData(obj);
         console.log(user);
     }
@@ -90,12 +131,19 @@ export default function Passenger(props) {
                             <option name="person_type" value="is_child">Детский</option>
                         </select>
                     </div>
+
                     <PassengerFIOSection funcName={nameInputHandle} funcSurname={surnameInputHandle}
                                          funcPatronymic={patronymicInputHandle}/>
 
-                    <PassengerGenderSection selectBirthdate={dateInputHandler} selectedGender={gender} func={genderInputHandle}/>
+                    <PassengerGenderSection selectBirthdate={dateInputHandler} selectedGender={gender}
+                                            func={genderInputHandle}/>
+
                     <PassengerLimitedMobilitySection func={setUserMobility}/>
-                    <PassengerDocumentSection/>
+
+                    <PassengerDocumentSection func={setPapers}
+                                              setPassportSeries={setPassportSeries}
+                                              setPassportNumber={setPassportNumber}
+                                              setCertificateNumber={setCertificateNumber}/>
 
                     <div className="next-passenger-form-btn false">
                         <input type="submit" defaultValue='Следующий пассажир'/>
