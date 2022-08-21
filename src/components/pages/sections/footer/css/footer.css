@@ -1,12 +1,12 @@
 
-footer{
+footer {
     background-color: #2D2B2F;
     padding-top: 50px;
 
 
 }
 
-footer > div{
+footer > div {
     display: flex;
     flex-direction: row;
 
@@ -14,14 +14,14 @@ footer > div{
     margin: 0 auto 50px;
 }
 
-.contact-us > h3, .subscribe > h3{
+.contact-us > h3, .subscribe > h3 {
     color: #fff;
     font-size: 30px;
     font-weight: 500;
     font-style: normal;
 }
 
-.contact-us-item{
+.contact-us-item {
     display: flex;
     flex-direction: row;
 
@@ -29,19 +29,20 @@ footer > div{
     cursor: pointer;
 }
 
-.contact-us-item > img{
+.contact-us-item > img {
     margin-right: 40px;
     width: 30px;
     height: 30px;
 }
-.contact-us-item:last-child > img{
+
+.contact-us-item:last-child > img {
     width: 25px;
     height: 30px;
     margin-right: 40px;
 }
 
 
-.contact-us-item > div{
+.contact-us-item > div {
     color: #E5E5E5;
     font-size: 24px;
     font-weight: 400;
@@ -121,44 +122,44 @@ footer > div{
     overflow: hidden;
 }
 
-.social-link-youtube{
+.social-link-youtube {
     background-image: url("../../footer/img/youtube.png");
 }
 
-.social-link-youtube:hover{
-     background-image: url("../../footer/img/youtube-active.png");
- }
+.social-link-youtube:hover {
+    background-image: url("../../footer/img/youtube-active.png");
+}
 
-.social-link-linkedin{
+.social-link-linkedin {
     background-image: url("../../footer/img/in.png");
 }
 
-.social-link-linkedin:hover{
-     background-image: url("../../footer/img/in-active.png");
- }
+.social-link-linkedin:hover {
+    background-image: url("../../footer/img/in-active.png");
+}
 
-.social-link-google{
+.social-link-google {
     background-image: url("../../footer/img/google.png");
     width: 48px;
 }
 
-.social-link-google:hover{
+.social-link-google:hover {
     background-image: url("../../footer/img/google-active.png");
     width: 48px;
 }
 
-.social-link-facebook{
+.social-link-facebook {
     background-image: url("../../footer/img/fb.png");
 }
 
-.social-link-facebook:hover{
+.social-link-facebook:hover {
     background-image: url("../../footer/img/fb-active.png");
 }
 
-.social-link-twitter{
+.social-link-twitter {
     background-image: url("../../footer/img/tw.png");
 }
 
-.social-link-twitter:hover{
+.social-link-twitter:hover {
     background-image: url("../../footer/img/tw-active.png");
 }

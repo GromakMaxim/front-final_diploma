@@ -14,7 +14,7 @@ export default function TimeSlider(props) {
         }
     };
 
-    const rails  = {
+    const rails = {
         backgroundColor: 'transparent',
         height: 15,
         borderStyle: 'solid',
@@ -36,7 +36,7 @@ export default function TimeSlider(props) {
 
     return (
         <div className='time-slider'>
-            <div className= {'slider-title ' + props.align}>
+            <div className={'slider-title ' + props.align}>
                 <span>{props.title}</span>
             </div>
             <Slider

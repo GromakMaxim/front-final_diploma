@@ -30,7 +30,7 @@ export default function DefaultWidget(props) {
         setEndDate(e.target.value);
     }
 
-    function clickHandle(){
+    function clickHandle() {
         props.searchTickets(fromCity, toCity)
     }
 

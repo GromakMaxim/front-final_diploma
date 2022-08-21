@@ -4,7 +4,7 @@ import TimeSlider from "./TimeSlider";
 export default function TimeFilter(props) {
     const [opened, setOpened] = useState(false);
 
-    function handler(){
+    function handler() {
         console.log('clicked')
         if (opened) setOpened(false);
         if (!opened) setOpened(true);
@@ -20,7 +20,7 @@ export default function TimeFilter(props) {
         <div className="time-filter-btn" onClick={handler}/>
     </div>;
 
-    if (opened){
+    if (opened) {
         return (
             <div className="time-filter">
                 {commonPart}

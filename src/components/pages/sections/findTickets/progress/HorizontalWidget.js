@@ -41,6 +41,6 @@ export default function HorizontalWidget(props) {
                 <button type="submit" className="form-search-btn">Найти билет</button>
             </form>
         </div>
-);
+    );
 
 }

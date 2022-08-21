@@ -21,9 +21,11 @@
 .wagons-sort-list > li.selected {
     color: #fff;
 }
+
 .wagons-sort-list > li:not(:last-of-type) {
     margin-right: 5px;
 }
+
 .wagons-sort-list > li {
     font-weight: 700;
     cursor: pointer;
@@ -61,7 +63,7 @@
     font-size: 72px;
 }
 
-.wagon-number-2{
+.wagon-number-2 {
     font-size: 24px;
 }
 
@@ -176,7 +178,7 @@
     background-position: center center;
 }
 
-.railway.fourth{
+.railway.fourth {
     background-image: url("../img/fourth-railway.png");
 }
 
@@ -206,6 +208,7 @@
     justify-content: space-between;
     align-items: flex-start;
 }
+
 .railway-seats-list {
     padding-bottom: 2px;
     display: flex;
@@ -215,7 +218,7 @@
     width: 26px;
 }
 
-.fourth .top-row:first-child{
+.fourth .top-row:first-child {
     margin-top: 2px;
     margin-bottom: 5px;
 }

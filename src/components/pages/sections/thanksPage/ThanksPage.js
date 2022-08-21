@@ -1,4 +1,4 @@
-export default function ThanksPage(props){
+export default function ThanksPage(props) {
     return (
         <div className="successful-order-page">
             <section className="successful-order-page_header">

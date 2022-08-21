@@ -69,5 +69,5 @@
     backface-visibility: hidden;
     will-change: transform;
     top: -3px;
-    transition: border .15s ease,transform .15s ease-in-out;
+    transition: border .15s ease, transform .15s ease-in-out;
 }

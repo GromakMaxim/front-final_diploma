@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function WagonTypePicture(props){
+export default function WagonTypePicture(props) {
     return (
         <li className="seat-type-item">
             <div>

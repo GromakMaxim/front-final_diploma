@@ -31,7 +31,7 @@
     margin-right: 100px;
 }
 
-.widget-search-ticket.horizontal{
+.widget-search-ticket.horizontal {
     display: flex;
     flex-direction: row;
     width: auto;

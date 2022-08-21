@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function ActionButton(props){
+export default function ActionButton(props) {
     let cssStyle = {
         textAlign: "center",
         color: "#fff",
@@ -13,7 +13,7 @@ export default function ActionButton(props){
         padding: "6px 13px 9px 9px",
     }
 
-    return(
+    return (
         <button style={cssStyle} className="action-btn" onClick={props.goTo}>{props.title}</button>
     )
 }

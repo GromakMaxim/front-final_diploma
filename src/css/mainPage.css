@@ -1,4 +1,4 @@
-.main-page{
+.main-page {
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -9,15 +9,15 @@
     background-color: #000000;
 }
 
-.bgr1{
+.bgr1 {
     background-image: url("../../public/train_header.png");
 }
 
-.bgr2{
+.bgr2 {
     background-image: url("../../public/train_header2.png");
 }
 
 
-.bgr3{
+.bgr3 {
     background-image: url("../../public/thnx.png");
 }

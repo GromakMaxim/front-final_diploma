@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function AvailableFeatures(props){
+export default function AvailableFeatures(props) {
     let wifi = "icon wi-fi tooltip";
     let conditioning = "icon conditioning tooltip";
     let linens = "icon linens tooltip";

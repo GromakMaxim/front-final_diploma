@@ -1,4 +1,4 @@
-.seat-selection-wagons-info{
+.seat-selection-wagons-info {
     display: flex;
     flex-direction: column;
 }
@@ -34,11 +34,11 @@
     box-sizing: border-box;
 }
 
-.railway-seat.wagon1{
+.railway-seat.wagon1 {
     height: 56px;
 }
 
-.railway-seat.wagon4{
+.railway-seat.wagon4 {
     padding-top: 0;
     margin-bottom: 3px;
     height: 18px;

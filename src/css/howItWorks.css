@@ -9,7 +9,7 @@
     position: relative;
 }
 
-.features-container{
+.features-container {
     width: 1350px;
     margin: 0 auto;
 }
@@ -72,6 +72,7 @@
 .features-office::before {
     background: url("../../public/office.png") no-repeat center center;
 }
+
 .features-world::before {
     background: url("../../public/world.png") no-repeat center center;
 }

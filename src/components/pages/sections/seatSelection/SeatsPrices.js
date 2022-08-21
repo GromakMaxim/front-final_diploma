@@ -1,7 +1,7 @@
 import AvailableFeatures from "./AvailableFeatures";
 import React from "react";
 
-export default function SeatsPrices(props){
+export default function SeatsPrices(props) {
     return (
         <table className="wagon-info-table">
             <thead>

@@ -4,7 +4,7 @@
 @import url("./wagon/css/type.css");
 @import url("./wagon/css/wagonInfo.css");
 
-.seats-selection-wrapper{
+.seats-selection-wrapper {
     display: flex;
     flex-direction: column;
     width: 900px;
@@ -15,6 +15,7 @@
 .next-page-btn:hover {
     box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
 }
+
 .next-page-btn {
     display: flex;
 

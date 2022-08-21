@@ -18,14 +18,14 @@ export default function Payment(props) {
                                 <label htmlFor="first_name">Имя</label>
                                 <input id="first_name" name="first_name"
                                        type="text" required=""
-                                       pattern="[a-zA-Zёа-яЁА-Я]+" />
+                                       pattern="[a-zA-Zёа-яЁА-Я]+"/>
                             </div>
                             <div>
                                 <label htmlFor="patronymic">Отчество</label>
                                 <input id="patronymic" name="patronymic"
                                        type="text" required=""
                                        pattern="[a-zA-Zёа-яЁА-Я]+"
-                                       />
+                                />
                             </div>
                         </div>
                         <div className="payment-contact-section">
@@ -34,14 +34,14 @@ export default function Payment(props) {
                                     телефон</label>
                                 <input id="phone" name="phone" type="phone" required=""
                                        pattern="^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$"
-                                       placeholder="+7_ _ _ _ _ _ _ _ _ _" />
+                                       placeholder="+7_ _ _ _ _ _ _ _ _ _"/>
                             </div>
                             <div className="payment-section payment-email">
                                 <label htmlFor="email">E-mail</label>
                                 <input
                                     id="email" name="email" type="email" required=""
                                     pattern="^(([^<>()[\]\\.,;:\s@&quot;]+(\.[^<>()[\]\\.,;:\s@&quot;]+)*)|(&quot;.+&quot;))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$"
-                                    placeholder="inbox@gmail.ru" />
+                                    placeholder="inbox@gmail.ru"/>
                             </div>
                         </div>
                     </div>

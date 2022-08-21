@@ -5,7 +5,8 @@ export default function Offers(props) {
 
     let offers = [];
     props.data.items.forEach(item => {
-        offers.push(<Offer id={item.departure._id} key={item.departure._id} data={item} goTo={props.goTo} search={props.search}/>);
+        offers.push(<Offer id={item.departure._id} key={item.departure._id} data={item} goTo={props.goTo}
+                           search={props.search}/>);
     })
 
     return (

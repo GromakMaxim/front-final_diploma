@@ -1,7 +1,7 @@
 import React from "react";
 
-export default function FooterBottom(props){
-    return(
+export default function FooterBottom(props) {
+    return (
         <section className="footer-bottom">
             <div className="footer-line"></div>
             <div className="copyrights-container">

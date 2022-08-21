@@ -37,7 +37,8 @@ export default function TrainInfo(props) {
             </div>
             <div className="departure-info">
                 <div className="train-departure">
-                    <span className="departure-from-datetime datetime">{getTime(props.trainData.departure.from.datetime)}</span>
+                    <span
+                        className="departure-from-datetime datetime">{getTime(props.trainData.departure.from.datetime)}</span>
                     <span className="departure-from-city">{cityFrom}</span>
                     <span className="departure-from-railway_station railway_station">{stationFrom}</span>
                 </div>
@@ -45,7 +46,8 @@ export default function TrainInfo(props) {
                     <img src="/images/arrow-gold-right.png" alt="arrow"/>
                 </div>
                 <div className="train-arrival">
-                    <span className="arrival-from-datetime datetime">{getTime(props.trainData.departure.from.datetime)}</span>
+                    <span
+                        className="arrival-from-datetime datetime">{getTime(props.trainData.departure.from.datetime)}</span>
                     <span className="arrival-from-city">{cityTo}</span>
                     <span className="arrival-from-railway_station railway_station">{stationTo}</span>
                 </div>
@@ -59,5 +61,5 @@ export default function TrainInfo(props) {
                 </div>
             </div>
         </div>
-);
+    );
 }

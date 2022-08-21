@@ -4,7 +4,7 @@ import 'rc-slider/assets/index.css';
 
 export default function DoubleSlider(props) {
 
-    const rails  = {
+    const rails = {
         backgroundColor: 'transparent',
         height: 25,
         borderStyle: 'solid',
@@ -23,7 +23,6 @@ export default function DoubleSlider(props) {
         marginTop: 1,
         backgroundColor: 'white',
     };
-
 
 
     return (

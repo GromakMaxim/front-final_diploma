@@ -7,11 +7,11 @@
     text-align: left;
 }
 
-.info-container{
+.info-container {
     margin: 0 auto;
 }
 
-.info-title{
+.info-title {
     text-transform: uppercase;
     color: #292929;
     font-weight: 500;
@@ -47,6 +47,7 @@
 .info-text p {
     margin-top: 0;
 }
+
 .info-text p:last-of-type {
     margin-bottom: 0;
 }

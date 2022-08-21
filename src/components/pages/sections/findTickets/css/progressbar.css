@@ -13,7 +13,7 @@
     background-color: #3e3c41;
 }
 
-.stage.active{
+.stage.active {
     background-color: #FFA800;
 }
 
@@ -30,12 +30,12 @@
     border-left: 37px solid white;
 }
 
-.stage-arrow.active{
+.stage-arrow.active {
     border-left: 37px solid #FFA800;
     background-color: #3e3c41;
 }
 
-.number{
+.number {
     display: flex;
 
     width: 60px;
@@ -46,7 +46,7 @@
     font-weight: 700;
 }
 
-.number > span{
+.number > span {
     margin: auto;
 }
 

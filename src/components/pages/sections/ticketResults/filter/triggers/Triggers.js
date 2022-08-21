@@ -1,7 +1,7 @@
 import Trigger from "./Trigger";
 import React from "react";
 
-export default function Triggers(props){
+export default function Triggers(props) {
     return (
         <div className='triggers'>
             <Trigger name='купе' pic='/images/icon-second-class.png'/>

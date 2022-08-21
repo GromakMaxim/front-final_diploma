@@ -6,10 +6,9 @@ export default function Seat(props) {
     let classes = "railway-seat available ";
 
 
-
     function clickHandler() {
         let set = props.selectedSeatsData;
-        if (set.has(props.number)){
+        if (set.has(props.number)) {
             set.delete(props.number);
             console.log('turn off number:' + props.number);
         } else {
@@ -43,7 +42,7 @@ export default function Seat(props) {
             break;
     }
 
-    if (isSelected){
+    if (isSelected) {
         return <div className={classes + ' selected'} aria-hidden="true" onClick={clickHandler}>{props.number}</div>;
     } else {
         return <div className={classes} aria-hidden="true" onClick={clickHandler}>{props.number}</div>;

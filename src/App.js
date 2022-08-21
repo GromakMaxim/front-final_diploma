@@ -1,7 +1,7 @@
 import './App.css';
 import MainPage from "./components/pages/MainPage";
 import React from "react";
-import {BrowserRouter as Router, Route, Switch, Redirect} from "react-router-dom";
+import {BrowserRouter as Router} from "react-router-dom";
 import '../src/css/main.css';
 
 function App() {

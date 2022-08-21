@@ -4,7 +4,7 @@
     padding-top: 10px;
 }
 
-.time-slider > .slider-title{
+.time-slider > .slider-title {
     font-size: 25px;
     line-height: 35px;
     color: #fff;
@@ -12,10 +12,10 @@
     padding: 10px;
 }
 
-.time-slider > .slider-title.left{
+.time-slider > .slider-title.left {
     margin-right: auto;
 }
 
-.time-slider > .slider-title.right{
+.time-slider > .slider-title.right {
     margin-left: auto;
 }

@@ -31,6 +31,7 @@
     display: inline-block;
     width: 100%;
 }
+
 .date-filter-form input {
     width: 295px;
     border: none;
@@ -43,6 +44,7 @@
     background-size: 20px 22px;
     border-radius: 3px;
 }
+
 .form-input_date input {
     width: 320px;
     box-sizing: border-box;
@@ -51,6 +53,6 @@
     background-repeat: no-repeat;
 }
 
-fieldset{
+fieldset {
     border: none;
 }
