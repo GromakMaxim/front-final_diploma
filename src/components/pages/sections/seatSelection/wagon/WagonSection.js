@@ -7,7 +7,8 @@ export default function WagonSection(props) {
         <>
             <WagonType selected={props.selected}/>
 
-            <WagonInfo selectSeatFunc={props.selectSeatFunc}
+            <WagonInfo goNext={props.goNext}
+                       selectSeatFunc={props.selectSeatFunc}
                        selectedSeatsData={props.selectedSeatsData}
                        selected={props.selected}
                        selectWagon={props.selectWagon}

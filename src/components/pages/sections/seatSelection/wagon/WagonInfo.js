@@ -53,7 +53,8 @@ export default function WagonInfo(props) {
                             <span>19 </span>
                             человек выбирают места в этом поезде
                         </div>
-                        <WagonPicture selectSeatFunc={props.selectSeatFunc}
+                        <WagonPicture goNext={props.goNext}
+                                      selectSeatFunc={props.selectSeatFunc}
                                       selectedSeatsData={props.selectedSeatsData}
                                       wagonType={props.selected.coach.class_type}/>
                     </li>

@@ -8,10 +8,10 @@ import WagonSection from "./wagon/WagonSection";
  * экран выбора мест
  */
 export default function SeatSelection(props) {
+    const [isActive, setNext] = useState(false);
 
-    console.log('seats selection');
-    console.log(props.data)
-
+    let btnNext = <button type="button" className="next-page-btn " onClick={props.goTo}>Далее</button>;
+    if (isActive) btnNext = <button type="button" className="next-page-btn active" onClick={props.goTo}>Далее</button>
 
     return (
         <div className='seats-selection-wrapper'>
@@ -23,8 +23,9 @@ export default function SeatSelection(props) {
                           selectedSeatsData={props.selectedSeatsData}
                           selected={props.selected}
                           selectWagon={props.selectWagon}
+                          goNext={setNext}
                           data={props.data}/>
-            <button type="button" className="next-page-btn false" onClick={props.goTo}>Далее</button>
+            {btnNext}
         </div>
     );
 }

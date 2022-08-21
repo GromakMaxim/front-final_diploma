@@ -9,11 +9,20 @@ export default function Seat(props) {
 
     function clickHandler() {
         let set = props.selectedSeatsData;
-        set.add(props.number);
-        props.selectSeatFunc(set);
-        console.log('number clicked: ' + props.number);
+        if (set.has(props.number)){
+            set.delete(props.number);
+            console.log('turn off number:' + props.number);
+        } else {
+            set.add(props.number);
+            console.log('turn on number: ' + props.number);
+        }
 
+
+        props.selectSeatFunc(set);
         selectSeat(!isSelected);
+
+        if (set.size !== 0) props.goNext(true);
+        if (set.size === 0) props.goNext(false);
     }
 
     switch (props.wagonType) {
