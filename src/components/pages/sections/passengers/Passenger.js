@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import UserObject from "./dataObject/UserObject";
-import PassengerGenderSection from "./PassengerGenderSection";
+import PassengerGenderSection from "./formSections/PassengerGenderSection";
+import PassengerFIOSection from "./formSections/PassengerFIOSection";
 
 export default function Passenger(props) {
     const [gender, setGender] = useState();
@@ -40,6 +41,13 @@ export default function Passenger(props) {
         console.log(user);
     }
 
+    function dateInputHandler(e) {
+        let obj = user;
+        obj.birthdate = e.target.value;
+        setUserData(obj);
+        console.log(user);
+    }
+
 
     if (!detailsIsDisplayed) {
         return (
@@ -73,28 +81,10 @@ export default function Passenger(props) {
                             <option name="person_type" value="is_child">Детский</option>
                         </select>
                     </div>
-                    <div className="passenger-form-section passenger-name-section">
-                        <div>
-                            <label htmlFor="last_name">Фамилия</label>
-                            <input id="last_name" name="last_name"
-                                   type="text" required=""
-                                   pattern="[a-zA-Zёа-яЁА-Я]+" defaultValue='' onChange={surnameInputHandle}/>
-                        </div>
-                        <div>
-                            <label htmlFor="first_name">Имя</label>
-                            <input id="first_name" name="first_name" type="text"
-                                   required="" pattern="[a-zA-Zёа-яЁА-Я]+"
-                                   defaultValue=''
-                                   onChange={nameInputHandle}/>
-                        </div>
-                        <div>
-                            <label htmlFor="patronymic">Отчество</label>
-                            <input id="patronymic" name="patronymic"
-                                   type="text" required=""
-                                   pattern="[a-zA-Zёа-яЁА-Я]+" defaultValue='' onChange={patronymicInputHandle}/>
-                        </div>
-                    </div>
-                    <PassengerGenderSection selectedGender={gender} func={genderInputHandle}/>
+                    <PassengerFIOSection funcName={nameInputHandle} funcSurname={surnameInputHandle}
+                                         funcPatronymic={patronymicInputHandle}/>
+
+                    <PassengerGenderSection selectBirthdate={dateInputHandler} selectedGender={gender} func={genderInputHandle}/>
 
                     <div className="passenger-form-section passenger-invalid-section">
                         <input id="isInvalid" name="isInvalid" type="checkbox"/>
