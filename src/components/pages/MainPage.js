@@ -24,6 +24,7 @@ export default function MainPage(props) {
     const [selectedTrain, setSelectedTrain] = useState();
     const [selectedWagon, setSelectedWagon] = useState();
     const [selectedSeatsData, setSelectedSeats] = useState(new Set());
+    const [selectedPassengers, setPassengers] = useState();
 
     const [display, setDisplay] = useState();
 
@@ -142,7 +143,10 @@ export default function MainPage(props) {
                 <HorizontalWidget/>
                 <div className='ticket-results'>
                     <FilterWrapper/>
-                    <AddPassangerWidget goTo={openPayment}/>
+                    <AddPassangerWidget
+                        selectedSeatsData={selectedSeatsData}
+                        selectPassengersFunc={setPassengers}
+                        goTo={openPayment}/>
                 </div>
             </>
             break;

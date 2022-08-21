@@ -1,10 +1,33 @@
 import React, {useState} from "react";
+import UserObject from "./dataObject/UserObject";
 
 export default function Passenger(props) {
     const [detailsIsDisplayed, showDetails] = useState(false);
+    const [user, setUserData] = useState(new UserObject());
 
     function show() {
         showDetails(!detailsIsDisplayed);
+    }
+
+    function surnameInputHandle(e) {
+        let obj = user;
+        obj.lastname = e.target.value;
+        setUserData(obj);
+        console.log(user);
+    }
+
+    function nameInputHandle(e) {
+        let obj = user;
+        obj.firstname = e.target.value;
+        setUserData(obj);
+        console.log(user);
+    }
+
+    function patronymicInputHandle(e){
+        let obj = user;
+        obj.patronymic = e.target.value;
+        setUserData(obj);
+        console.log(user);
     }
 
     if (!detailsIsDisplayed) {
@@ -13,7 +36,7 @@ export default function Passenger(props) {
                 <div className="passenger-item-top">
                     <div>
                         <div className="passenger-item-top_btn passenger-open" aria-hidden="true" onClick={show}/>
-                        <div className="passenger-item-top_title">Пассажир 1</div>
+                        <div className="passenger-item-top_title">Пассажир {props.number}</div>
                     </div>
                 </div>
             </div>
@@ -25,7 +48,7 @@ export default function Passenger(props) {
             <div className="passenger-item-top open">
                 <div>
                     <div className="passenger-item-top_btn passenger-close" aria-hidden="true" onClick={show}/>
-                    <div className="passenger-item-top_title">Пассажир 1</div>
+                    <div className="passenger-item-top_title">Пассажир {props.number}</div>
                 </div>
                 <div className="delete-passenger-btn" aria-hidden="true"/>
             </div>
@@ -44,19 +67,20 @@ export default function Passenger(props) {
                             <label htmlFor="last_name">Фамилия</label>
                             <input id="last_name" name="last_name"
                                    type="text" required=""
-                                   pattern="[a-zA-Zёа-яЁА-Я]+" value=""/>
+                                   pattern="[a-zA-Zёа-яЁА-Я]+" defaultValue='' onChange={surnameInputHandle}/>
                         </div>
                         <div>
                             <label htmlFor="first_name">Имя</label>
                             <input id="first_name" name="first_name" type="text"
                                    required="" pattern="[a-zA-Zёа-яЁА-Я]+"
-                                   value=""/>
+                                   defaultValue=''
+                                   onChange={nameInputHandle}/>
                         </div>
                         <div>
                             <label htmlFor="patronymic">Отчество</label>
                             <input id="patronymic" name="patronymic"
                                    type="text" required=""
-                                   pattern="[a-zA-Zёа-яЁА-Я]+" value=""/>
+                                   pattern="[a-zA-Zёа-яЁА-Я]+" defaultValue='' onChange={patronymicInputHandle}/>
                         </div>
                     </div>
                     <div className="passenger-form-section passenger-gender-section">
@@ -70,7 +94,7 @@ export default function Passenger(props) {
                         <div className="gender-section-datepicker">
                             <label htmlFor="birthday">Дата рождения</label>
                             <input id="birthday" name="birthday" type="date" placeholder="ДД/ММ/ГГ" required=""
-                                   value=""/>
+                                   defaultValue=''/>
                         </div>
                     </div>
                     <div className="passenger-form-section passenger-invalid-section">
@@ -91,7 +115,7 @@ export default function Passenger(props) {
                                    name="document_series" type="text"
                                    placeholder="_ _ _ _" required=""
                                    pattern="[0-9]+" minLength="4"
-                                   maxLength="4" value=""/>
+                                   maxLength="4" defaultValue=''/>
                         </div>
                         <div>
                             <label htmlFor="document_number">Номер</label>
@@ -99,11 +123,11 @@ export default function Passenger(props) {
                                    name="document_number" type="text"
                                    placeholder="_ _ _ _ _ _" required=""
                                    pattern="[0-9]+" minLength="6"
-                                   maxLength="6" value=""/>
+                                   maxLength="6" defaultValue=''/>
                         </div>
                     </div>
                     <div className="next-passenger-form-btn false">
-                        <input type="submit" value="Следующий пассажир"/>
+                        <input type="submit" defaultValue='Следующий пассажир'/>
                     </div>
                 </form>
             </div>
