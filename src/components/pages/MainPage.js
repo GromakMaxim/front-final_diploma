@@ -126,7 +126,14 @@ export default function MainPage(props) {
                     <Offers data={offersData} search={searchSeats} goTo={openSeats}/>
                 </div>
             </>
-            break;
+            return (
+                <div className={classes}>
+                    <Logo/>
+                    <NavigationMenu/>
+                    {displayThis}
+                    <Footer/>
+                </div>
+            );
 
         case 'seats':
             displayThis = <>
@@ -145,7 +152,14 @@ export default function MainPage(props) {
                     />
                 </div>
             </>
-            break;
+            return (
+                <div className={classes}>
+                    <Logo/>
+                    <NavigationMenu/>
+                    {displayThis}
+                    <Footer/>
+                </div>
+            );
 
         case 'passengers':
             displayThis = <>
@@ -160,7 +174,14 @@ export default function MainPage(props) {
                         goTo={openPayment}/>
                 </div>
             </>
-            break;
+            return (
+                <div className={classes}>
+                    <Logo/>
+                    <NavigationMenu/>
+                    {displayThis}
+                    <Footer/>
+                </div>
+            );
 
         case 'payment':
             displayThis = <>
@@ -173,7 +194,14 @@ export default function MainPage(props) {
                              goTo={openConfirm}/>
                 </div>
             </>
-            break;
+            return (
+                <div className={classes}>
+                    <Logo/>
+                    <NavigationMenu/>
+                    {displayThis}
+                    <Footer/>
+                </div>
+            );
 
         case 'confirm':
             displayThis = <>
@@ -187,7 +215,14 @@ export default function MainPage(props) {
                         goTo={openThnx}/>
                 </div>
             </>
-            break;
+            return (
+                <div className={classes}>
+                    <Logo/>
+                    <NavigationMenu/>
+                    {displayThis}
+                    <Footer/>
+                </div>
+            );
 
         case 'thnx':
             displayThis = <>
