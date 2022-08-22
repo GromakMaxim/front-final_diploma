@@ -2,7 +2,7 @@ import NavigationMenu from "./sections/navigation_menu/NavigationMenu";
 import React, {useState} from "react";
 import HowItWorks from "./sections/how_it_works/HowItWorks";
 import Logo from "./sections/logo/Logo";
-import AboutUs from "../sections/aboutUs/AboutUs";
+import AboutUs from "./sections/about_us/AboutUs";
 import FeedbackWidget from "../sections/feedback/FeedbackWidget";
 import Footer from "../sections/footer/Footer";
 import DefaultWidget from "../sections/findTickets/progress/DefaultWidget";
