@@ -1,6 +1,6 @@
 .features-section {
     background-color: #000;
-    background-image: url("../../public/rails.png");
+    background-image: url("../img/rails.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -48,7 +48,6 @@
     border-color: #FFCA62;
 }
 
-
 .features-list {
     display: flex;
     flex-direction: row;
@@ -66,15 +65,15 @@
 }
 
 .features-order::before {
-    background: url("../../public/order.png") no-repeat center center;
+    background: url("../img/order.png") no-repeat center center;
 }
 
 .features-office::before {
-    background: url("../../public/office.png") no-repeat center center;
+    background: url("../img/office.png") no-repeat center center;
 }
 
 .features-world::before {
-    background: url("../../public/world.png") no-repeat center center;
+    background: url("../img/world.png") no-repeat center center;
 }
 
 .features-item::before {

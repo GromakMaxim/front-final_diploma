@@ -1,23 +1,23 @@
-import NavigationMenu from "./sections/NavigationMenu";
+import NavigationMenu from "./sections/navigation_menu/NavigationMenu";
 import React, {useState} from "react";
-import HowItWorks from "./sections/HowItWorks";
-import Logo from "./sections/Logo";
-import AboutUs from "./sections/aboutUs/AboutUs";
-import FeedbackWidget from "./sections/feedback/FeedbackWidget";
-import Footer from "./sections/footer/Footer";
-import DefaultWidget from "./sections/findTickets/progress/DefaultWidget";
-import HorizontalWidget from "./sections/findTickets/progress/HorizontalWidget";
-import FilterWrapper from "./sections/ticketResults/filter/FilterWrapper";
-import Offers from "./sections/ticketResults/Offers";
-import SeatSelection from "./sections/seatSelection/wagon/seats/SeatSelection";
-import AddPassangerWidget from "./sections/passengers/AddPassangerWidget";
-import Payment from "./sections/payment/Payment";
-import Confirm from "./sections/confirmation/Confirm";
-import ThanksPage from "./sections/thanksPage/ThanksPage";
-import ThnxWidget from "./sections/findTickets/progress/ThnxWidget";
-import ApiClient from "../../service/ApiClient";
-import UserPaymentData from "./sections/payment/dataObject/UserPaymentData";
-import Progressbar from "./sections/findTickets/progress/Progressbar";
+import HowItWorks from "./sections/how_it_works/HowItWorks";
+import Logo from "./sections/logo/Logo";
+import AboutUs from "../sections/aboutUs/AboutUs";
+import FeedbackWidget from "../sections/feedback/FeedbackWidget";
+import Footer from "../sections/footer/Footer";
+import DefaultWidget from "../sections/findTickets/progress/DefaultWidget";
+import HorizontalWidget from "../sections/findTickets/progress/HorizontalWidget";
+import FilterWrapper from "../sections/ticketResults/filter/FilterWrapper";
+import Offers from "../sections/ticketResults/Offers";
+import SeatSelection from "../sections/seatSelection/wagon/seats/SeatSelection";
+import AddPassangerWidget from "../sections/passengers/AddPassangerWidget";
+import Payment from "../sections/payment/Payment";
+import Confirm from "../sections/confirmation/Confirm";
+import ThanksPage from "../sections/thanksPage/ThanksPage";
+import ThnxWidget from "../sections/findTickets/progress/ThnxWidget";
+import ApiClient from "../../../service/ApiClient";
+import UserPaymentData from "../sections/payment/dataObject/UserPaymentData";
+import Progressbar from "../sections/findTickets/progress/Progressbar";
 
 export default function MainPage(props) {
 
