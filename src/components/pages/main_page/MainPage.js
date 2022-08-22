@@ -3,7 +3,7 @@ import React, {useState} from "react";
 import HowItWorks from "./sections/how_it_works/HowItWorks";
 import Logo from "./sections/logo/Logo";
 import AboutUs from "./sections/about_us/AboutUs";
-import FeedbackWidget from "../sections/feedback/FeedbackWidget";
+import FeedbackWidget from "./sections/feedback/FeedbackWidget";
 import Footer from "../sections/footer/Footer";
 import DefaultWidget from "../sections/findTickets/progress/DefaultWidget";
 import HorizontalWidget from "../sections/findTickets/progress/HorizontalWidget";

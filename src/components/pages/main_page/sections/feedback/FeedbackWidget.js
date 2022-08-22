@@ -1,7 +1,9 @@
 import React from "react";
 import FeedItem from "./FeedItem";
-import avatar1 from './user_avatar1.png'
-import avatar2 from './user_avatar2.png'
+import avatar1 from './img/user_avatar1.png'
+import avatar2 from './img/user_avatar2.png'
+
+import './css/style.css';
 
 export default function FeedbackWidget(props) {
     let array = [
