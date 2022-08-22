@@ -1,8 +1,8 @@
 import React, {useState} from "react";
-import ApiClient from "../../../../../service/ApiClient";
+
+import './css/style.css';
 
 export default function DefaultWidget(props) {
-    const [display, setDisplay] = useState('default');
 
     const [fromCity, setFromCity] = useState('');
 
@@ -10,8 +10,6 @@ export default function DefaultWidget(props) {
 
     const [startDate, setStartDate] = useState('');
     const [endDate, setEndDate] = useState('');
-
-    let apiClient = new ApiClient();
 
 
     function onInputFromCity(e) {

@@ -5,7 +5,7 @@ import Logo from "./sections/logo/Logo";
 import AboutUs from "./sections/about_us/AboutUs";
 import FeedbackWidget from "./sections/feedback/FeedbackWidget";
 import Footer from "./sections/footer/Footer";
-import DefaultWidget from "../sections/findTickets/progress/DefaultWidget";
+import DefaultWidget from "./sections/search_offers/DefaultWidget";
 import HorizontalWidget from "../sections/findTickets/progress/HorizontalWidget";
 import FilterWrapper from "../sections/ticketResults/filter/FilterWrapper";
 import Offers from "../sections/ticketResults/Offers";

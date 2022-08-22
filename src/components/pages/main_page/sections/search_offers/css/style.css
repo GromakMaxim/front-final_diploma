@@ -40,7 +40,7 @@
 .pic-refresh {
     width: 30px;
     height: 30px;
-    background-image: url("../../../../../../public/images/reload.png");
+    background-image: url("../img/reload.png");
     filter: invert(100%);
     background-size: 30px;
 }
