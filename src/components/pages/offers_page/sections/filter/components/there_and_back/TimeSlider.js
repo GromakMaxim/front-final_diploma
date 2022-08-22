@@ -1,6 +1,9 @@
 import React from "react";
 import Slider from 'rc-slider';
 
+import './timeSlider.css';
+
+
 export default function TimeSlider(props) {
 
     const marks = {

@@ -1,7 +1,10 @@
-import Offer from "./offer/Offer";
+import Offer from "./sections/offer/Offer";
 import React from "react";
 
-export default function Offers(props) {
+import './sections/offer/css/offer.css';
+import './css/style.css';
+
+export default function OffersPage(props) {
 
     let offers = [];
     props.data.items.forEach(item => {

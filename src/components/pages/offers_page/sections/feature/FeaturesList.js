@@ -1,7 +1,9 @@
 import Feature from "./Feature";
 import React from "react";
 
-export default function Features(props) {
+import './css/feature.css';
+
+export default function FeaturesList(props) {
     /**
      * have_first_class - В поезде есть вагон класса «Люкс» (СВ)
      have_second_class - В поезде есть вагон класса «Купе»

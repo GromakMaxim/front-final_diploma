@@ -1,6 +1,8 @@
 import React from "react";
 import DoubleSlider from "./slider/DoubleSlider";
 
+import './costFilter.css';
+
 export default function CostFilter(props) {
     return (
         <div className="cost-filter"><h3>Стоимость </h3>

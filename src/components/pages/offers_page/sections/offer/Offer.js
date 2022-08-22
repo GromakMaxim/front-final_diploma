@@ -1,6 +1,6 @@
 import React from "react";
 import {format, intervalToDuration} from 'date-fns'
-import Features from "./Features";
+import FeaturesList from "../feature/FeaturesList";
 
 export default function Offer(props) {
 
@@ -54,7 +54,7 @@ export default function Offer(props) {
 
             </div>
             <div className='right'>
-                <Features data={props.data.departure}/>
+                <FeaturesList data={props.data.departure}/>
                 <button className="btn-seat-selection" onClick={clickHandler}>Выбрать места</button>
             </div>
         </div>

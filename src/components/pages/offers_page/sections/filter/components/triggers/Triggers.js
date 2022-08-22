@@ -1,6 +1,8 @@
 import Trigger from "./Trigger";
 import React from "react";
 
+import './slider.css';
+
 export default function Triggers(props) {
     return (
         <div className='triggers'>

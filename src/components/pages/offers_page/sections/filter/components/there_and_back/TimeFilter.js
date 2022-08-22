@@ -1,6 +1,8 @@
 import React, {useState} from "react";
 import TimeSlider from "./TimeSlider";
 
+import './timeFilter.css';
+
 export default function TimeFilter(props) {
     const [opened, setOpened] = useState(false);
 

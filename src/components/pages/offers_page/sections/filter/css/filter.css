@@ -1,9 +1,3 @@
-@import url("./triggers/slider.css");
-@import url("./dateFilter/date-filter.css");
-@import url("./costFilter/costFilter.css");
-@import url("./costFilter/slider/slider.css");
-@import url("./there_and_back/timeFilter.css");
-@import url("./there_and_back/timeSlider.css");
 
 .filter {
     display: flex;

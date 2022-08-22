@@ -1,5 +1,7 @@
 import React from "react";
 
+import './date-filter.css';
+
 export default function DateFilter(props) {
     return (
         <div className="date-filter">
