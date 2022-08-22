@@ -1,5 +1,7 @@
 import React from "react";
 
+import './css/progressbar.css';
+
 export default function Progressbar(props) {
 
     switch (props.stage) {

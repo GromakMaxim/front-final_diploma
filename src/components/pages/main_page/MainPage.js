@@ -17,7 +17,7 @@ import ThanksPage from "../sections/thanksPage/ThanksPage";
 import ThnxWidget from "../sections/findTickets/progress/ThnxWidget";
 import ApiClient from "../../../service/ApiClient";
 import UserPaymentData from "../sections/payment/dataObject/UserPaymentData";
-import Progressbar from "../sections/findTickets/progress/Progressbar";
+import Progressbar from "../../commons/progressbar/Progressbar";
 
 import './css/mainPage.css';
 
