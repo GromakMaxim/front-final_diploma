@@ -1,11 +1,13 @@
 import React from "react";
-import ContactUsItem from "./ContactUsItem";
-import phone_img from '../footer/img/phone.png';
-import email_img from '../footer/img/email.png';
-import skype_img from '../footer/img/skype.png';
-import address_img from '../footer/img/search.png';
-import SocialItem from "./SocialItem";
-import FooterBottom from "./FooterBottom";
+import ContactUsItem from "./components/ContactUsItem";
+import phone_img from './img/phone.png';
+import email_img from './img/email.png';
+import skype_img from './img/skype.png';
+import address_img from './img/search.png';
+import SocialItem from "./components/SocialItem";
+import FooterBottom from "./components/FooterBottom";
+
+import './css/footer.css';
 
 
 export default function Footer(props) {
