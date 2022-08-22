@@ -6,7 +6,7 @@ import AboutUs from "./sections/about_us/AboutUs";
 import FeedbackWidget from "./sections/feedback/FeedbackWidget";
 import Footer from "./sections/footer/Footer";
 import DefaultWidget from "./sections/search_offers/DefaultWidget";
-import HorizontalWidget from "../sections/findTickets/progress/HorizontalWidget";
+import HorizontalWidget from "../../commons/horizontalSearch/HorizontalWidget";
 import FilterWrapper from "../offers_page/sections/filter/FilterWrapper";
 import OffersPage from "../offers_page/OffersPage";
 import SeatSelection from "../sections/seatSelection/wagon/seats/SeatSelection";

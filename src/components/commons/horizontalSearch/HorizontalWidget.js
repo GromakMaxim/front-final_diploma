@@ -1,5 +1,7 @@
 import React from "react";
 
+import './css/horizontalWidget.css';
+
 export default function HorizontalWidget(props) {
     return (
         <div className="form-search">
