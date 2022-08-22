@@ -10,14 +10,14 @@
 }
 
 .bgr1 {
-    background-image: url("../../public/train_header.png");
+    background-image: url("../img/train_header.png");
 }
 
 .bgr2 {
-    background-image: url("../../public/train_header2.png");
+    background-image: url("../img/train_header2.png");
 }
 
 
 .bgr3 {
-    background-image: url("../../public/thnx.png");
+    background-image: url("../img/thnx.png");
 }

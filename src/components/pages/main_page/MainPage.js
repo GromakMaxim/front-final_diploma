@@ -19,6 +19,8 @@ import ApiClient from "../../../service/ApiClient";
 import UserPaymentData from "../sections/payment/dataObject/UserPaymentData";
 import Progressbar from "../sections/findTickets/progress/Progressbar";
 
+import './css/mainPage.css';
+
 export default function MainPage(props) {
 
     const [offersData, setOffersData] = useState();
