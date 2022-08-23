@@ -1,6 +1,8 @@
 import React from "react";
 import {format, intervalToDuration} from "date-fns";
 
+import './css/style.css';
+
 export default function TrainInfo(props) {
     let cityFrom = props.trainData.departure.train.name;
     let stationFrom = props.trainData.departure.from.railway_station_name;

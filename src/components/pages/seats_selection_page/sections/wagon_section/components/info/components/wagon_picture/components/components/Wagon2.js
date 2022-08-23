@@ -1,5 +1,7 @@
-import Seat from "../seats/Seat";
+import Seat from "../Seat";
 import React from "react";
+
+import './css/style.css';
 
 /**
  * купе

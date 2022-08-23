@@ -1,6 +1,8 @@
 import Wagon2 from "./Wagon2";
 import React from "react";
-import Seat from "../seats/Seat";
+import Seat from "../Seat";
+
+import './css/style.css';
 
 /**
  * плацкарт

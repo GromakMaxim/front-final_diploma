@@ -1,5 +1,7 @@
-import AvailableFeatures from "../../AvailableFeatures";
+import AvailableFeatures from "./components/AvailableFeatures";
 import React from "react";
+
+import '../wagon_picture/css/style.css';
 
 export default function SeatsPrices(props) {
     return (

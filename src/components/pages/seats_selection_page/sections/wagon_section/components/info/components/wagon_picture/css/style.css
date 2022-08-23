@@ -1,6 +1,3 @@
-@import url("seat.css");
-@import url('block.css');
-
 .wagons-sort {
     display: flex;
     align-items: center;

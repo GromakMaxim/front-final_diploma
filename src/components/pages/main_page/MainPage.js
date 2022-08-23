@@ -9,7 +9,7 @@ import DefaultWidget from "./sections/search_offers/DefaultWidget";
 import HorizontalWidget from "../../commons/horizontalSearch/HorizontalWidget";
 import FilterWrapper from "../offers_page/sections/filter/FilterWrapper";
 import OffersPage from "../offers_page/OffersPage";
-import SeatSelection from "../sections/seatSelection/wagon/seats/SeatSelection";
+import SeatSelectionPage from "../seats_selection_page/SeatSelectionPage";
 import AddPassangerWidget from "../sections/passengers/AddPassangerWidget";
 import Payment from "../sections/payment/Payment";
 import Confirm from "../sections/confirmation/Confirm";
@@ -143,14 +143,14 @@ export default function MainPage(props) {
                 <Progressbar stage='1'/>
                 <div className='ticket-results'>
                     <FilterWrapper/>
-                    <SeatSelection data={seatsData} train={selectedTrain}
-                                   searchSeats={searchSeats}
-                                   goTo={openPassengers}
-                                   selectWagon={selectAnyWagon}
-                                   selected={selectedWagon}
-                                   getBack={openOffers}
-                                   selectSeatsFunc={selectSeats}
-                                   selectedSeatsData={selectedSeatsData}
+                    <SeatSelectionPage data={seatsData} train={selectedTrain}
+                                       searchSeats={searchSeats}
+                                       goTo={openPassengers}
+                                       selectWagon={selectAnyWagon}
+                                       selected={selectedWagon}
+                                       getBack={openOffers}
+                                       selectSeatsFunc={selectSeats}
+                                       selectedSeatsData={selectedSeatsData}
                     />
                 </div>
             </>

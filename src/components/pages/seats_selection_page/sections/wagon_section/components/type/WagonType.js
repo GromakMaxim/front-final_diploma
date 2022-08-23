@@ -1,5 +1,7 @@
 import React from "react";
-import WagonTypePicture from "./WagonTypePicture";
+import WagonTypePicture from "./components/WagonTypePicture";
+
+import './css/type.css';
 
 export default function WagonType(props) {
     let first = <WagonTypePicture img={"/images/icon-first-class-grey.png"}/>

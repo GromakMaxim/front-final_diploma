@@ -1,13 +1,15 @@
 import React, {useState} from "react";
-import GetBack from "../../getBack/GetBack";
-import TrainInfo from "../../train_info/TrainInfo";
-import TicketsNumber from "../../tickets_number/TicketsNumber";
-import WagonSection from "../WagonSection";
+import GetBack from "./sections/getBack/GetBack";
+import TrainInfo from "./sections/train_info/TrainInfo";
+import TicketsNumber from "./sections/tickets_number/TicketsNumber";
+import WagonSection from "./sections/wagon_section/WagonSection";
+
+import './css/style.css';
 
 /**
  * экран выбора мест
  */
-export default function SeatSelection(props) {
+export default function SeatSelectionPage(props) {
     const [isActive, setNext] = useState(false);
 
     let btnNext = <button type="button" className="next-page-btn " onClick={props.goTo}>Далее</button>;

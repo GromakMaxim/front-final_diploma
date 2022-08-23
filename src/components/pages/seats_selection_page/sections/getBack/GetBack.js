@@ -1,5 +1,7 @@
 import React from "react";
 
+import './css/style.css';
+
 export default function GetBack(props) {
     function clickHandle() {
         props.selectSeatFunc(new Set())

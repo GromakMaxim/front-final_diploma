@@ -1,6 +1,6 @@
 import React from "react";
-import WagonInfo from "./WagonInfo";
-import WagonType from "../WagonType";
+import WagonInfo from "./components/info/WagonInfo";
+import WagonType from "./components/type/WagonType";
 
 export default function WagonSection(props) {
     return (
