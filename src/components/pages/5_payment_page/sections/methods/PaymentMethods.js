@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import Method from "./Method";
+import Method from "./components/Method";
 
 export default function PaymentMethods(props) {
     const [selected, setType] = useState();

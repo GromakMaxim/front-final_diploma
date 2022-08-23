@@ -1,6 +1,6 @@
-import PaymentFIOSection from "../PaymentFIOSection";
-import PhoneField from "../fields/PhoneField";
-import EmailField from "../fields/EmailField";
+import PaymentFIOSection from "./components/PaymentFIOSection";
+import PhoneField from "./components/PhoneField";
+import EmailField from "./components/EmailField";
 import React from "react";
 
 export default function PersonalData(props) {

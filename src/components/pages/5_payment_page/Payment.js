@@ -1,6 +1,8 @@
 import React from "react";
-import PersonalData from "./sections/PersonalData";
-import PaymentMethods from "./sections/PaymentMethods";
+import PersonalData from "./sections/personal_data/PersonalData";
+import PaymentMethods from "./sections/methods/PaymentMethods";
+
+import './css/style.css';
 
 export default function Payment(props) {
     return (

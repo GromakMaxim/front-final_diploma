@@ -1,4 +1,4 @@
-import FIOField from "../../passengers_page/components/formSections/FIOField";
+import FIOField from "../../../../4_passengers_page/components/formSections/FIOField";
 import React from "react";
 
 export default function PaymentFIOSection(props){
