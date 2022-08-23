@@ -12,7 +12,7 @@ import OffersPage from "../2_offers_page/OffersPage";
 import SeatSelectionPage from "../3_seats_selection_page/SeatSelectionPage";
 import AddPassangerWidget from "../4_passengers_page/AddPassangerWidget";
 import Payment from "../5_payment_page/Payment";
-import Confirm from "../sections/confirmation/Confirm";
+import Confirm from "../6_confirm_page/Confirm";
 import ThanksPage from "../sections/thanksPage/ThanksPage";
 import ThnxWidget from "../sections/findTickets/progress/ThnxWidget";
 import ApiClient from "../../../service/ApiClient";
