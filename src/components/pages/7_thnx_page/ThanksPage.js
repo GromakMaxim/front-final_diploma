@@ -1,5 +1,7 @@
 import React from "react";
-import Steps from "./Steps";
+import Steps from "./components/Steps";
+
+import './css/style.css';
 
 export default function ThanksPage(props) {
     return (
