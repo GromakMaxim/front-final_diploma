@@ -10,7 +10,7 @@ import HorizontalWidget from "../../commons/horizontalSearch/HorizontalWidget";
 import FilterWrapper from "../offers_page/sections/filter/FilterWrapper";
 import OffersPage from "../offers_page/OffersPage";
 import SeatSelectionPage from "../seats_selection_page/SeatSelectionPage";
-import AddPassangerWidget from "../sections/passengers/AddPassangerWidget";
+import AddPassangerWidget from "../passengers_page/AddPassangerWidget";
 import Payment from "../sections/payment/Payment";
 import Confirm from "../sections/confirmation/Confirm";
 import ThanksPage from "../sections/thanksPage/ThanksPage";

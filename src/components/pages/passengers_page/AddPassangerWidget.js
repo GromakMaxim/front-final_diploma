@@ -1,5 +1,7 @@
-import Passenger from "./Passenger";
+import Passenger from "./components/Passenger";
 import React from "react";
+
+import './css/style.css';
 
 export default function AddPassengerWidget(props) {
     let arr = [];
