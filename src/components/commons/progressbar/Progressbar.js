@@ -41,7 +41,12 @@ export default function Progressbar(props) {
                     {buildActiveStage(1, 'Билеты')}
                     {buildActiveStage(2, 'Пассажиры')}
                     {buildActiveStage(3, 'Оплата')}
-                    {buildActiveStage(4, 'Проверка')}
+                    <div className='stage active'>
+                        <div className='number'>
+                            <span>4</span>
+                        </div>
+                        <span className='stage-title'>Проверка</span>
+                    </div>
                 </div>
             );
     }
@@ -53,7 +58,6 @@ export default function Progressbar(props) {
                     <span>{number}</span>
                 </div>
                 <span className='stage-title'>{title}</span>
-                <div className='stage-arrow inactive'/>
             </div>
 
         </>
