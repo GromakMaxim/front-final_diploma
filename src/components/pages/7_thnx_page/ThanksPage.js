@@ -12,7 +12,7 @@ export default function ThanksPage(props) {
                     <span>сумма</span>
                     <div className="summary-value">1028</div>
                     <div className="value-image">
-                        <img src="/images/icon-value.png" alt="icon value"/>
+                        <img src="/src/components/pages/2_offers_page/sections/feature/img/icon-value.png" alt="icon value"/>
                     </div>
                 </div>
             </section>

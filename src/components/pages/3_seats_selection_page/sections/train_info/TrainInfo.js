@@ -31,7 +31,7 @@ export default function TrainInfo(props) {
                     <div className="train-departure-city">
                         <div className="departure-select-city">
                             <span>{cityFrom}</span>
-                            <img src="/images/arrow-black.png" alt="arrow"/>
+                            <img src="/src/components/pages/2_offers_page/sections/offer/img/arrow-black.png" alt="arrow"/>
                         </div>
                     </div>
                     <div className="train-arrival-city">{cityTo}</div>
@@ -45,7 +45,7 @@ export default function TrainInfo(props) {
                     <span className="departure-from-railway_station railway_station">{stationFrom}</span>
                 </div>
                 <div className="departure-arrow">
-                    <img src="/images/arrow-gold-right.png" alt="arrow"/>
+                    <img src="/src/components/pages/2_offers_page/sections/offer/img/arrow-gold-right.png" alt="arrow"/>
                 </div>
                 <div className="train-arrival">
                     <span

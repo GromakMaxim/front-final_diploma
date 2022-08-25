@@ -19,7 +19,7 @@ export default function SeatsPrices(props) {
                     <span>10</span>
                 </td>
                 <td className="wagon-seat-price">{props.selected.coach.top_price}
-                    <img src="/images/icon-value.png" alt="icon price" width="14" height="17"/>
+                    <img src="/src/components/pages/2_offers_page/sections/feature/img/icon-value.png" alt="icon price" width="14" height="17"/>
                 </td>
                 <AvailableFeatures selected={props.selected}/>
             </tr>
@@ -28,7 +28,7 @@ export default function SeatsPrices(props) {
                     <span>11</span>
                 </td>
                 <td className="wagon-seat-price">{props.selected.coach.bottom_price}
-                    <img src="/images/icon-value.png" alt="icon price" width="14" height="17"/>
+                    <img src="/src/components/pages/2_offers_page/sections/feature/img/icon-value.png" alt="icon price" width="14" height="17"/>
                 </td>
                 <td></td>
             </tr>

@@ -1,5 +1,7 @@
 import React from "react";
 
+import rub_pic from './img/icon-value.png';
+
 export default function Feature(props) {
     let descr = null;
     if (props.type === '1') descr = 'Люкс';
@@ -22,7 +24,7 @@ export default function Feature(props) {
 
             </div>
             <div>
-                <img src="/images/icon-value.png" alt="russian ruble"/>
+                <img src={rub_pic} alt="russian ruble"/>
             </div>
         </div>
     );

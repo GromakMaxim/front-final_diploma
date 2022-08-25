@@ -2,6 +2,10 @@ import React from "react";
 import {format, intervalToDuration} from 'date-fns'
 import FeaturesList from "../feature/FeaturesList";
 
+import train_pic from './img/train.png';
+import arrow_b_pic from './img/arrow-black.png';
+import arrow_g_pic from './img/arrow-gold-right.png';
+
 export default function Offer(props) {
 
     async function clickHandler() {
@@ -22,11 +26,11 @@ export default function Offer(props) {
     return (
         <div className='offer'>
             <div className='left'>
-                <img src='/images/train.png'/>
+                <img src={train_pic}/>
                 <div className='train-name'>{props.data.departure.train.name}</div>
                 <div className='from-to-wrap'>
                     <div className='from-station'>{props.data.departure.from.railway_station_name}
-                        <img src="/images/arrow-black.png" alt="arrow"/>
+                        <img src={arrow_b_pic} alt="arrow"/>
                     </div>
 
                     <div className='to-station'>{props.data.departure.to.railway_station_name}</div>
@@ -42,7 +46,7 @@ export default function Offer(props) {
                 </div>
                 <div className='wrap'>
                     <div className='diff'>{getDuration()}</div>
-                    <img src="/images/arrow-gold-right.png" alt="arrow"/>
+                    <img src={arrow_g_pic} alt="arrow"/>
                 </div>
                 <div className='offer-to'>
                     <div className='time'>{getTime(props.data.departure.to.datetime)}</div>
