@@ -1,0 +1,32 @@
+
+.show_partition {
+    display: flex;
+    flex-direction: row;
+}
+
+.show_partition > label{
+    margin-right: 3px;
+    align-self: center;
+}
+
+.show_options {
+    display: flex;
+    flex-direction: row;
+}
+
+.show_option {
+    margin-left: 3px;
+    margin-right: 3px;
+    cursor: pointer;
+    font-size: 17px;
+    align-self: center;
+}
+
+.show_option:hover{
+    font-weight: 600;
+}
+
+.show_option.active{
+    color: black;
+    font-weight: 600;
+}

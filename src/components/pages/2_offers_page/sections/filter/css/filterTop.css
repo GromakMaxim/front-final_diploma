@@ -1,0 +1,24 @@
+.filter_top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    color: #928F94;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.offers_sort {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.sort_by > label {
+    margin-right: 5px;
+}
+
+.found_total{
+    align-self: center;
+}
