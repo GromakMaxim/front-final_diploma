@@ -7,8 +7,7 @@ import FeedbackWidget from "./sections/feedback/FeedbackWidget";
 import Footer from "./sections/footer/Footer";
 import DefaultWidget from "./sections/search_offers/DefaultWidget";
 import HorizontalWidget from "../../commons/horizontalSearch/HorizontalWidget";
-import FilterWrapper from "../2_offers_page/sections/filter/FilterWrapper";
-import OffersPage from "../2_offers_page/OffersPage";
+import OffersSection from "../2_offers_page/OffersSection";
 import SeatSelectionPage from "../3_seats_selection_page/SeatSelectionPage";
 import AddPassangerWidget from "../4_passengers_page/AddPassangerWidget";
 import Payment from "../5_payment_page/Payment";
@@ -132,7 +131,11 @@ export default function MainPage(props) {
                 <HorizontalWidget/>
                 <Progressbar stage='1'/>
                 <MiddleSection>
-                    <OffersPage data={offersData} search={searchSeats} goTo={openSeats}/>
+                    <OffersSection
+                        setOffersData={setOffersData}
+                        offersData={offersData}
+                        search={searchSeats}
+                        goTo={openSeats}/>
                 </MiddleSection>
             </>
             return (
@@ -156,8 +159,7 @@ export default function MainPage(props) {
                                        selected={selectedWagon}
                                        getBack={openOffers}
                                        selectSeatsFunc={selectSeats}
-                                       selectedSeatsData={selectedSeatsData}
-                    />
+                                       selectedSeatsData={selectedSeatsData}/>
                 </MiddleSection>
             </>
             return (

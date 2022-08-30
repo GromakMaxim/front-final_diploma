@@ -18,7 +18,7 @@ export default function ShowPartition(props) {
         } else {
             classes = 'show_option';
         }
-        arr.push(<div className={classes} onClick={clickHandle}>{item}</div>);
+        arr.push(<div key={arr.length} className={classes} onClick={clickHandle}>{item}</div>);
     })
 
     return (

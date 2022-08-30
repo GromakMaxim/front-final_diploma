@@ -10,11 +10,13 @@ export default function FilterTop(props) {
             <div className='offers_sort'>
                 <div className='sort_by'>
                     <label>сортировать по:</label>
-                    <CustomSelectTag/>
+                    <CustomSelectTag setSort={props.setSort}
+                                     offersData={props.offersData}
+                                     setOffersData={props.setOffersData}/>
                 </div>
                 <div className='show_partition'>
                     <label>показывать по:</label>
-                    <ShowPartition items={['5','10','15']}/>
+                    <ShowPartition items={['5', '10', '15']}/>
                 </div>
             </div>
         </div>
