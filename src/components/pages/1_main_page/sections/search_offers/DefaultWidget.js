@@ -29,7 +29,13 @@ export default function DefaultWidget(props) {
     }
 
     function clickHandle() {
-        props.searchTickets(fromCity, toCity)
+        let findThis = {
+            fromCity: fromCity,
+            toCity: toCity,
+            startDate: startDate,
+            endDate: endDate
+        }
+        props.searchTickets(findThis)
     }
 
     return <section className='widget-search-wrapper'>

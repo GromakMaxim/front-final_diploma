@@ -80,16 +80,16 @@ export default function MainPage(props) {
     }
 
 
-    async function searchOffers(fromCity, toCity, startDate, endDate) {
+    async function searchOffers(findThisObj) {
 
-        let fromId = await apiClient.getCityId(fromCity);
-        let toId = await apiClient.getCityId(toCity);
+        let fromId = await apiClient.getCityId(findThisObj.fromCity);
+        let toId = await apiClient.getCityId(findThisObj.toCity);
 
         const stateForSubmit = {
             from_city_id: fromId,
             to_city_id: toId,
-            date_start: startDate ? startDate : '',
-            date_end: endDate ? endDate : '',
+            date_start: findThisObj.startDate ? findThisObj.startDate : '',
+            date_end: findThisObj.endDate ? findThisObj.endDate : '',
         }
 
         let results = await apiClient.getRoutes(stateForSubmit);
