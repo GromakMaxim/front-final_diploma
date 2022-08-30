@@ -20,8 +20,11 @@ import UserPaymentData from "../5_payment_page/dataObject/UserPaymentData";
 import Progressbar from "../../commons/progressbar/Progressbar";
 
 import './css/mainPage.css';
+import MiddleSection from "../2_offers_page/sections/wrapper/MiddleSection";
 
 export default function MainPage(props) {
+
+    const [filterData, setFilterData] = useState();
 
     const [offersData, setOffersData] = useState();
     const [seatsData, setSeatsData] = useState();
@@ -35,7 +38,9 @@ export default function MainPage(props) {
 
 
     let classes = null;
-    let displayThis = <DefaultWidget searchTickets={searchOffers} goTo={openOffers}/>
+    let displayThis = <DefaultWidget setFilter={setFilterData}
+                                     searchOffers={searchOffers}
+                                     goTo={openOffers}/>
 
     let apiClient = new ApiClient();
 
@@ -81,6 +86,9 @@ export default function MainPage(props) {
 
 
     async function searchOffers(findThisObj) {
+        if (findThisObj === null || findThisObj === undefined) {
+            findThisObj = filterData;
+        }
 
         let fromId = await apiClient.getCityId(findThisObj.fromCity);
         let toId = await apiClient.getCityId(findThisObj.toCity);
@@ -123,10 +131,9 @@ export default function MainPage(props) {
             displayThis = <>
                 <HorizontalWidget/>
                 <Progressbar stage='1'/>
-                <div className='ticket-results'>
-                    <FilterWrapper/>
+                <MiddleSection>
                     <OffersPage data={offersData} search={searchSeats} goTo={openSeats}/>
-                </div>
+                </MiddleSection>
             </>
             return (
                 <div className={classes}>
@@ -141,8 +148,7 @@ export default function MainPage(props) {
             displayThis = <>
                 <HorizontalWidget/>
                 <Progressbar stage='1'/>
-                <div className='ticket-results'>
-                    <FilterWrapper/>
+                <MiddleSection>
                     <SeatSelectionPage data={seatsData} train={selectedTrain}
                                        searchSeats={searchSeats}
                                        goTo={openPassengers}
@@ -152,7 +158,7 @@ export default function MainPage(props) {
                                        selectSeatsFunc={selectSeats}
                                        selectedSeatsData={selectedSeatsData}
                     />
-                </div>
+                </MiddleSection>
             </>
             return (
                 <div className={classes}>
@@ -167,14 +173,13 @@ export default function MainPage(props) {
             displayThis = <>
                 <HorizontalWidget/>
                 <Progressbar stage='2'/>
-                <div className='ticket-results'>
-                    <FilterWrapper/>
+                <MiddleSection>
                     <AddPassangerWidget
                         selectedSeatsData={selectedSeatsData}
                         selectPassengersFunc={setPassengers}
                         selectedPassengersData={selectedPassengersData}
                         goTo={openPayment}/>
-                </div>
+                </MiddleSection>
             </>
             return (
                 <div className={classes}>
@@ -189,12 +194,11 @@ export default function MainPage(props) {
             displayThis = <>
                 <HorizontalWidget/>
                 <Progressbar stage='3'/>
-                <div className='ticket-results'>
-                    <FilterWrapper/>
+                <MiddleSection>
                     <Payment paymentData={paymentData}
                              setPaymentData={setPaymentData}
                              goTo={openConfirm}/>
-                </div>
+                </MiddleSection>
             </>
             return (
                 <div className={classes}>
@@ -209,13 +213,12 @@ export default function MainPage(props) {
             displayThis = <>
                 <HorizontalWidget/>
                 <Progressbar stage='4'/>
-                <div className='ticket-results'>
-                    <FilterWrapper/>
+                <MiddleSection>
                     <Confirm
                         paymentData={paymentData}
                         selectedPassengersData={selectedPassengersData}
                         goTo={openThnx}/>
-                </div>
+                </MiddleSection>
             </>
             return (
                 <div className={classes}>

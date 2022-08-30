@@ -28,14 +28,15 @@ export default function DefaultWidget(props) {
         setEndDate(e.target.value);
     }
 
-    function clickHandle() {
+    async function clickHandle() {
         let findThis = {
             fromCity: fromCity,
             toCity: toCity,
             startDate: startDate,
             endDate: endDate
         }
-        props.searchTickets(findThis)
+        await props.setFilter(findThis);
+        props.searchOffers(findThis)
     }
 
     return <section className='widget-search-wrapper'>
