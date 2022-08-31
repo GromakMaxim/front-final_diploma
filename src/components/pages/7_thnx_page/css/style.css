@@ -115,7 +115,8 @@
     display: flex;
     flex-direction: column;
     padding: 95px 111px 130px 205px;
-    align-items: start;
+
+    align-items: flex-start;
 }
 
 
