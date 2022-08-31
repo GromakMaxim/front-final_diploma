@@ -4,27 +4,23 @@ import React, {useState} from "react";
 import './sections/offer/css/offer.css';
 import './css/style.css';
 import FilterTop from "./sections/filter/FilterTop";
+import ApiClient from "../../../service/ApiClient";
 
 export default function OffersSection(props) {
-    const [sort, setSort] = useState();
+    const [sort, setSort] = useState(props.state.filter.sort);
+
+    let apiClient = new ApiClient();
 
     let offers = [];
-    switch (sort) {
-        case 'cost':
-            offers = sortByCost();
-            break
-        case 'duration':
-            offers = sortByDuration();
-            break;
-        case 'time':
-            offers = sortByTime();
-            break;
-        default:
-            offers = getOffers(props.state.routes.items);
-
+    if (sort === null || sort === undefined) {
+        offers = getOffers(props.state.routes.items);
+    } else {
+        offers = sortBy(sort);
     }
 
+
     function getOffers(arr) {
+        console.log(arr)
         if (arr === null || arr === undefined) return null;
         let offers = [];
         arr.forEach(item => {
@@ -35,41 +31,22 @@ export default function OffersSection(props) {
 
     }
 
-    function sortByCost() {
-        console.log('sorted by cost: desc');
-        let sorted = props.routes.items.sort((item1, item2) => (item1.departure.min_price > item2.departure.min_price) ? 1 : (item1.departure.min_price < item2.departure.min_price) ? -1 : 0);
-        let obj = props.routes;
-        obj.items = sorted;
-        props.setOffersData(obj);
+    function sortBy(value) {
+        let sortFilter = props.state.filter;
+        sortFilter.sort = value;
 
-        return getOffers(sorted);
-    }
+        console.log('sorted routes by: ' + value);
+        let routes = apiClient.getRoutes(sortFilter);
 
-    function sortByDuration() {
-        console.log('sorted by duration: desc');
-        let sorted = props.routes.items.sort((item1, item2) => item1.departure.duration > item2.departure.duration ? 1 : item1.departure.duration < item2.departure.duration ? -1 : 0);
-        let obj = props.routes;
-        obj.items = sorted;
-        props.setOffersData(obj);
 
-        return getOffers(sorted);
-    }
-
-    function sortByTime() {
-        console.log('sorted by time: desc');
-        let sorted = props.routes.items.sort((item1, item2) => item1.departure.from.datetime > item2.departure.from.datetime ? 1 : item1.departure.from.datetime < item2.departure.from.datetime ? -1 : 0);
-        let obj = props.routes;
-        obj.items = sorted;
-        props.setOffersData(obj);
-
-        return getOffers(sorted);
+        return getOffers(routes.items);
     }
 
     return (
         <div className='offers_wrap'>
             <FilterTop
                 setSort={setSort}
-                routes={props.routes}/>
+                routes={props.state.routes}/>
             <div className='offers-list'>
                 {offers}
             </div>

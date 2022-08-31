@@ -1,6 +1,4 @@
 import React, {useState} from "react";
-import DefaultWidget from "./sections/search_offers/DefaultWidget";
-import ApiClient from "../../../service/ApiClient";
 import UserPaymentData from "../5_payment_page/dataObject/UserPaymentData";
 
 import './css/mainPage.css';
@@ -11,9 +9,9 @@ import LowSection from "./sections/LowSection";
 export default function MainPage(props) {
     const [state, setState] = useState(
         {
-            display: '',
-            routes: '',
-            filter: '',
+            display: null,
+            routes: null,
+            filter: null,
         }
     )
 

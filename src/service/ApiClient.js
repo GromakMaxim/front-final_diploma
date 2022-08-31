@@ -29,7 +29,7 @@ export default class ApiClient {
 
         let fromId;
         let toId;
-        if (body.from_city_id === null || body.from_city_id === undefined){
+        if (body.from_city_id === null || body.from_city_id === undefined) {
             fromId = await this.getCityId(body.fromCity);
             toId = await this.getCityId(body.toCity);
         }
@@ -39,6 +39,7 @@ export default class ApiClient {
             to_city_id: toId,
             date_start: body.startDate ? body.startDate : '',
             date_end: body.endDate ? body.endDate : '',
+            sort: body.sort ? body.sort : '',
         }
 
         let bodyString = [];

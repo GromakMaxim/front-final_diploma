@@ -54,22 +54,6 @@ export default function DefaultWidget(props) {
 
     }
 
-    async function searchOffers(findThisObj) {
-
-        let fromId = await apiClient.getCityId(findThisObj.fromCity);
-        let toId = await apiClient.getCityId(findThisObj.toCity);
-
-        const stateForSubmit = {
-            from_city_id: fromId,
-            to_city_id: toId,
-            date_start: findThisObj.startDate ? findThisObj.startDate : '',
-            date_end: findThisObj.endDate ? findThisObj.endDate : '',
-        }
-
-        console.log('offers');
-        return await apiClient.getRoutes(stateForSubmit);
-    }
-
     return <section className='widget-search-wrapper'>
         <div className='motto'>
             <span>Вся жизнь - </span>

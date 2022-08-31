@@ -7,6 +7,8 @@ export default function FilterTop(props) {
     let totalFound;
     if (props.routes === null || props.routes === undefined) {
         totalFound = '-'
+    } else {
+        totalFound = props.routes.items.length;
     }
 
     return (
