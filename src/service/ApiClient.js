@@ -25,22 +25,40 @@ export default class ApiClient {
     }
 
     async getRoutes(body) {
-        // console.log(body);
+        console.log(body);
+
+        let fromId;
+        let toId;
+        if (body.from_city_id === null || body.from_city_id === undefined){
+            fromId = await this.getCityId(body.fromCity);
+            toId = await this.getCityId(body.toCity);
+        }
+
+        const stateForSubmit = {
+            from_city_id: fromId,
+            to_city_id: toId,
+            date_start: body.startDate ? body.startDate : '',
+            date_end: body.endDate ? body.endDate : '',
+        }
 
         let bodyString = [];
 
-        for (let key in body) {
+        for (let key in stateForSubmit) {
 
-            if (body[key]) {
-                if (key == 'from_city_id') {
-                    bodyString.push(`${[key]}=${body[key]}`);
+            if (stateForSubmit[key]) {
+                if (key === 'from_city_id') {
+                    bodyString.push(`${[key]}=${stateForSubmit[key]}`);
                 } else {
-                    bodyString.push(`&${[key]}=${body[key]}`);
+                    bodyString.push(`&${[key]}=${stateForSubmit[key]}`);
                 }
             }
         }
+        let endpoint = `/routes/?${bodyString.join('')}`;
+        console.log('endpoint: ' + endpoint);
 
-        return this.getResource(`/routes/?${bodyString.join('')}`);
+        let result = await this.getResource(endpoint);
+        console.log(result);
+        return result;
 
     }
 

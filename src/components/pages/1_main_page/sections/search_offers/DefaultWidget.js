@@ -1,6 +1,8 @@
 import React, {useState} from "react";
 
 import './css/style.css';
+import ApiClient from "../../../../../service/ApiClient";
+import cloneFunc from "../../../../../service/CloneFunc";
 
 export default function DefaultWidget(props) {
 
@@ -10,6 +12,8 @@ export default function DefaultWidget(props) {
 
     const [startDate, setStartDate] = useState('');
     const [endDate, setEndDate] = useState('');
+
+    let apiClient = new ApiClient();
 
 
     function onInputFromCity(e) {
@@ -29,14 +33,41 @@ export default function DefaultWidget(props) {
     }
 
     async function clickHandle() {
+        let temp;
+
         let findThis = {
             fromCity: fromCity,
             toCity: toCity,
             startDate: startDate,
             endDate: endDate
         }
-        await props.setFilter(findThis);
-        props.searchOffers(findThis)
+
+        let routes = await apiClient.getRoutes(findThis);
+
+        temp = props.state;
+        temp.display = 'offers';
+        temp.routes = routes;
+        temp.filter = findThis;
+
+        let newState = await cloneFunc(temp);
+        props.setState(newState);
+
+    }
+
+    async function searchOffers(findThisObj) {
+
+        let fromId = await apiClient.getCityId(findThisObj.fromCity);
+        let toId = await apiClient.getCityId(findThisObj.toCity);
+
+        const stateForSubmit = {
+            from_city_id: fromId,
+            to_city_id: toId,
+            date_start: findThisObj.startDate ? findThisObj.startDate : '',
+            date_end: findThisObj.endDate ? findThisObj.endDate : '',
+        }
+
+        console.log('offers');
+        return await apiClient.getRoutes(stateForSubmit);
     }
 
     return <section className='widget-search-wrapper'>
