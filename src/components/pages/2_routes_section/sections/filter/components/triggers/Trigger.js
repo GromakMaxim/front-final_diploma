@@ -1,7 +1,12 @@
-import React, {useState} from "react";
+import React from "react";
 import ApiClient from "../../../../../../../service/ApiClient";
 import cloneFunc from "../../../../../../../service/CloneFunc";
 
+
+/**
+ * переключатель в фильтре слева (при выборе направления):
+ * купе/плацкарт/сидячий/люкс/wifi/экспресс
+ */
 export default function Trigger(props) {
 
     let apiClient = new ApiClient();

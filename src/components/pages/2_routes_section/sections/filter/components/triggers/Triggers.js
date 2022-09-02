@@ -3,6 +3,10 @@ import React from "react";
 
 import './slider.css';
 
+/**
+ * группа переключателей в фильтре слева (при выборе направления):
+ * купе/плацкарт/сидячий/люкс/wifi/экспресс
+ */
 export default function Triggers(props) {
 
     return (
