@@ -18,7 +18,6 @@ export default function RoutesSection(props) {
                            search={props.search}/>);
     });
 
-
     async function sort(value) {
         let sortFilter = props.state.filter;
         sortFilter.sort = value;
@@ -28,6 +27,7 @@ export default function RoutesSection(props) {
 
         let temp = props.state;
         temp.routes = routes;
+        temp.filter = sortFilter;
 
         let newState = await cloneFunc(temp);
         props.setState(newState);

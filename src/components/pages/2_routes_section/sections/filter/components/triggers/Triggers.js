@@ -4,14 +4,39 @@ import React from "react";
 import './slider.css';
 
 export default function Triggers(props) {
+
     return (
         <div className='triggers'>
-            <Trigger name='купе' pic='/images/icon-second-class.png'/>
-            <Trigger name='плацкарт' pic='/images/icon-third-class.png'/>
-            <Trigger name='сидячий' pic='/images/icon-fourth-class.png'/>
-            <Trigger name='люкс' pic='/images/icon-first-class.png'/>
-            <Trigger name='Wi-Fi' pic='/images/icon-wifi.png'/>
-            <Trigger name='экспресс' pic='/images/icon-express.png'/>
+            <Trigger state={props.state}
+                     setState={props.setState}
+                     name='купе'
+                     pic='/images/icon-second-class.png'
+                     filterCriteria='have_second_class'/>
+            <Trigger state={props.state}
+                     setState={props.setState}
+                     name='плацкарт'
+                     pic='/images/icon-third-class.png'
+                     filterCriteria='have_third_class'/>
+            <Trigger state={props.state}
+                     setState={props.setState}
+                     name='сидячий'
+                     pic='/images/icon-fourth-class.png'
+                     filterCriteria='have_fourth_class'/>
+            <Trigger state={props.state}
+                     setState={props.setState}
+                     name='люкс'
+                     pic='/images/icon-first-class.png'
+                     filterCriteria='have_first_class'/>
+            <Trigger state={props.state}
+                     setState={props.setState}
+                     name='Wi-Fi'
+                     pic='/images/icon-wifi.png'
+                     filterCriteria='have_wifi'/>
+            <Trigger state={props.state}
+                     setState={props.setState}
+                     name='экспресс'
+                     pic='/images/icon-express.png'
+                     filterCriteria='have_express'/>
         </div>
     )
 }

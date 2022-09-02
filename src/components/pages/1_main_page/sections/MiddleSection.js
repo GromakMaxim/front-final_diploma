@@ -50,7 +50,7 @@ export default function MiddleSection(props) {
 
     let filter = null;
     if (showLeftFilter) {
-        filter = <FilterWrapper/>
+        filter = <FilterWrapper state={props.state} setState={props.setState}/>
     }
 
     return (

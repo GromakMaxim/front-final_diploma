@@ -17,9 +17,7 @@ export default function FilterTop(props) {
             <div className='offers_sort'>
                 <div className='sort_by'>
                     <label>сортировать по:</label>
-                    <CustomSelectTag sort={props.sort}
-                                     offersData={props.offersData}
-                                     setOffersData={props.s}/>
+                    <CustomSelectTag sort={props.sort}/>
                 </div>
                 <div className='show_partition'>
                     <label>показывать по:</label>

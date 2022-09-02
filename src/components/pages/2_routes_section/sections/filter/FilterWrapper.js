@@ -7,10 +7,12 @@ import ThereAndBack from "./components/there_and_back/ThereAndBack";
 import './css/filter.css';
 
 export default function FilterWrapper(props) {
+
+
     return (
         <div className='filter'>
             <DateFilter/>
-            <Triggers/>
+            <Triggers state={props.state} setState={props.setState}/>
             <CostFilter/>
             <ThereAndBack/>
         </div>

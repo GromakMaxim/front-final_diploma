@@ -40,6 +40,15 @@ export default class ApiClient {
             date_start: body.startDate ? body.startDate : '',
             date_end: body.endDate ? body.endDate : '',
             sort: body.sort ? body.sort : '',
+            have_first_class: body.have_first_class ? body.have_first_class : '',
+            have_second_class: body.have_second_class ? body.have_second_class : '',
+            have_third_class: body.have_third_class ? body.have_third_class : '',
+            have_fourth_class: body.have_fourth_class ? body.have_fourth_class : '',
+
+            have_wifi: body.have_wifi ? body.have_wifi : '',
+            have_express: body.have_express ? body.have_express : '',
+            have_air_conditioning: body.have_air_conditioning ? body.have_air_conditioning : '',
+
         }
 
         let bodyString = [];
