@@ -37,7 +37,7 @@ export default function RoutesSection(props) {
         <div className='offers_wrap'>
             <FilterTop
                 sort={sort}
-                routes={props.state.routes}/>
+                state={props.state}/>
             <div className='offers-list'>
                 {offers}
             </div>

@@ -5,10 +5,10 @@ import ShowPartition from "./components/showPartition/ShowPartition";
 
 export default function FilterTop(props) {
     let totalFound;
-    if (props.routes === null || props.routes === undefined) {
+    if (props.state.routes === null || props.state.routes === undefined) {
         totalFound = '-'
     } else {
-        totalFound = props.routes.items.length;
+        totalFound = props.state.routes.total_count;
     }
 
     return (
