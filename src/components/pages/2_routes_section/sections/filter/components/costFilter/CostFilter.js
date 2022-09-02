@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 
 import './costFilter.css';
 import MultiRangeSlider from "../../../../../../commons/mySlider/MultiRangeSlider";
@@ -26,7 +26,7 @@ export default function CostFilter(props) {
             <MultiRangeSlider state={props.state} setState={props.setState}
                               min={0}
                               max={valueMax}
-                              onChange={({ min, max }) => console.log(`min = ${min}, max = ${max}`)}/>
+                              onChange={() => console.log()}/>
         </div>
     );
 }

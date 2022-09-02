@@ -49,6 +49,8 @@ export default class ApiClient {
             have_express: body.have_express ? body.have_express : '',
             have_air_conditioning: body.have_air_conditioning ? body.have_air_conditioning : '',
 
+            price_from: body.price_from ? body.price_from : '',
+            price_to: body.price_to ? body.price_to : '',
         }
 
         let bodyString = [];

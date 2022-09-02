@@ -1,13 +1,17 @@
 import React, {useCallback, useEffect, useRef, useState} from "react";
 import "./custom.css";
+import ApiClient from "../../../service/ApiClient";
+import cloneFunc from "../../../service/CloneFunc";
 
-export default function MultiRangeSlider({min, max, onChange}) {
+export default function MultiRangeSlider({state, setState, min, max, onChange}) {
 
     const [minVal, setMinVal] = useState(min);
     const [maxVal, setMaxVal] = useState(max);
     const minValRef = useRef(null);
     const maxValRef = useRef(null);
     const range = useRef(null);
+
+    let apiClient = new ApiClient();
 
     // Convert to percentage
     const getPercent = useCallback(
@@ -31,7 +35,7 @@ export default function MultiRangeSlider({min, max, onChange}) {
     // Set width of the range to decrease from the right side
     useEffect(() => {
         if (minValRef.current) {
-            const minPercent = getPercent(+minValRef.current.value);
+            const minPercent = getPercent(parseInt(minValRef.current.value));
             const maxPercent = getPercent(maxVal);
 
             if (range.current) {
@@ -44,6 +48,22 @@ export default function MultiRangeSlider({min, max, onChange}) {
     useEffect(() => {
         onChange({min: minVal, max: maxVal});
     }, [minVal, maxVal, onChange]);
+
+
+    async function selectRange() {
+        let filter = state.filter;
+        filter.price_from = minVal;
+        filter.price_to = maxVal;
+
+        console.log('filtered routes by price: ' + minVal + '/' + maxVal);
+        let routes = await apiClient.getRoutes(filter);
+        let temp = state;
+        temp.routes = routes;
+        temp.filter = filter;
+
+        let newState = await cloneFunc(temp);
+        setState(newState);
+    }
 
     return (
         <div className="custom_container">
@@ -58,6 +78,7 @@ export default function MultiRangeSlider({min, max, onChange}) {
                        setMinVal(value);
                        event.target.value = value.toString();
                    }}
+                   onMouseUp={selectRange}
 
             />
             <input className='thumb'
@@ -71,6 +92,7 @@ export default function MultiRangeSlider({min, max, onChange}) {
                        setMaxVal(value);
                        event.target.value = value.toString();
                    }}
+                   onMouseUp={selectRange}
             />
 
             <div className="custom_slider">
