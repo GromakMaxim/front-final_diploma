@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from 'rc-slider';
 
-import './timeSlider.css';
+import './css/timeSlider.css';
 
 
 export default function TimeSlider(props) {
