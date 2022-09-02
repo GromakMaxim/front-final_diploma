@@ -13,7 +13,7 @@ export default function FilterWrapper(props) {
         <div className='filter'>
             <DateFilter/>
             <Triggers state={props.state} setState={props.setState}/>
-            <CostFilter/>
+            <CostFilter state={props.state} setState={props.setState}/>
             <ThereAndBack/>
         </div>
     )

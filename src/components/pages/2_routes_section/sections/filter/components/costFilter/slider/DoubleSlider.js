@@ -26,22 +26,64 @@ export default function DoubleSlider(props) {
         backgroundColor: 'white',
     };
 
+    const dotStyle = {
+        display: 'none'
+    }
+
+
+    let maxvalue = props.valueMax;
+    let minvalue = props.valueMin;
+    const marksProps ={
+        minvalue: {
+            style:{
+                color: 'white',
+                left: 0,
+                top: 15,
+                fontSize: 15
+            },
+            label: <strong>{props.valueMin}</strong>
+        },
+
+
+        maxvalue: {
+            style: {
+                color: 'white',
+                right: -30,
+                top: 15,
+                fontSize: 15
+            },
+            label: <strong>{props.valueMax}</strong>,
+        },
+    }
+
+
+    function changeHandler(e){
+
+        console.log(e)
+    }
+
+    function workaround(e){
+        console.log(e)
+    }
 
     return (
         <>
             <Slider
                 range
+
                 allowCross={false}
                 draggableTrack={true}
-                defaultValue={[500, 800]}
+                defaultValue={[props.valueMin, props.valueMax]}
 
-                step='1'
                 min={parseInt(props.valueMin)}
                 max={parseInt(props.valueMax)}
-
                 railStyle={rails}
                 trackStyle={track}
                 handleStyle={dots}
+                marks={marksProps}
+                dotStyle={dotStyle}
+
+                onAfterChange={changeHandler}
             />
         </>
     );
