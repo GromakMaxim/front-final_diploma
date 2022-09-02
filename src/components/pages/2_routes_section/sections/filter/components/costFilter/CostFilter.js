@@ -1,7 +1,7 @@
 import React from "react";
-import DoubleSlider from "./slider/DoubleSlider";
 
 import './costFilter.css';
+import MultiRangeSlider from "../../../../../../commons/mySlider/MultiRangeSlider";
 
 /**
  * фильтр по цене
@@ -15,7 +15,7 @@ export default function CostFilter(props) {
     let routeWithMaxPrice = props.state.routes.items
         .sort((a, b) => a.min_price < b.min_price ? 1 : a.min_price > b.min_price ? -1 : 0)[0];
 
-    if (routeWithMinPrice !== null && routeWithMinPrice !== undefined){
+    if (routeWithMinPrice !== null && routeWithMinPrice !== undefined) {
         valueMin = routeWithMinPrice.min_price;
         valueMax = routeWithMaxPrice.min_price;
     }
@@ -23,7 +23,10 @@ export default function CostFilter(props) {
     return (
         <div className="cost-filter"><h3>Стоимость </h3>
             <div className="from-to-wrapper"><span>от</span><span>до</span></div>
-            <DoubleSlider valueMin={valueMin} valueMax={valueMax}/>
+            <MultiRangeSlider state={props.state} setState={props.setState}
+                              min={0}
+                              max={valueMax}
+                              onChange={({ min, max }) => console.log(`min = ${min}, max = ${max}`)}/>
         </div>
     );
 }
