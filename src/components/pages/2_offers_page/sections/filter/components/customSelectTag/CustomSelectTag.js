@@ -4,7 +4,7 @@ export default function CustomSelectTag(props) {
 
     async function clickHandle(e) {
         let chosenValue = e.target.value;
-        props.setSort(chosenValue);
+        props.sort(chosenValue);
     }
 
     //wtf? api не понимает sort=price, зато понимает sort=cost

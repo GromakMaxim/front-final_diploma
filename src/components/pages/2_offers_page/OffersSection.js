@@ -5,47 +5,38 @@ import './sections/offer/css/offer.css';
 import './css/style.css';
 import FilterTop from "./sections/filter/FilterTop";
 import ApiClient from "../../../service/ApiClient";
+import cloneFunc from "../../../service/CloneFunc";
 
 export default function OffersSection(props) {
-    const [sort, setSort] = useState(props.state.filter.sort);
+    console.log(props.state.routes)
 
     let apiClient = new ApiClient();
 
     let offers = [];
-    if (sort === null || sort === undefined) {
-        offers = getOffers(props.state.routes.items);
-    } else {
-        offers = sortBy(sort);
-    }
+    props.state.routes.items.forEach(item => {
+        offers.push(<Offer id={item.departure._id} key={item.departure._id} data={item} goTo={props.goTo}
+                           search={props.search}/>);
+    });
 
 
-    function getOffers(arr) {
-        console.log(arr)
-        if (arr === null || arr === undefined) return null;
-        let offers = [];
-        arr.forEach(item => {
-            offers.push(<Offer id={item.departure._id} key={item.departure._id} data={item} goTo={props.goTo}
-                               search={props.search}/>);
-        });
-        return offers;
-
-    }
-
-    function sortBy(value) {
+    async function sort(value) {
         let sortFilter = props.state.filter;
         sortFilter.sort = value;
 
         console.log('sorted routes by: ' + value);
-        let routes = apiClient.getRoutes(sortFilter);
+        let routes = await apiClient.getRoutes(sortFilter);
 
+        let temp = props.state;
+        temp.routes = routes;
 
-        return getOffers(routes.items);
+        let newState = await cloneFunc(temp);
+        props.setState(newState);
     }
 
     return (
         <div className='offers_wrap'>
             <FilterTop
-                setSort={setSort}
+                sort={sort}
                 routes={props.state.routes}/>
             <div className='offers-list'>
                 {offers}

@@ -16,7 +16,7 @@ export default function MiddleSection(props) {
     switch (props.state.display) {
         case 'offers':
             showLeftFilter = true;
-            showThis = <OffersSection state={props.state}/>
+            showThis = <OffersSection state={props.state} setState={props.setState}/>
             break;
 
         case 'seats':

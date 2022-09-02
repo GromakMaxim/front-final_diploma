@@ -17,7 +17,7 @@ export default function FilterTop(props) {
             <div className='offers_sort'>
                 <div className='sort_by'>
                     <label>сортировать по:</label>
-                    <CustomSelectTag setSort={props.setSort}
+                    <CustomSelectTag sort={props.sort}
                                      offersData={props.offersData}
                                      setOffersData={props.s}/>
                 </div>

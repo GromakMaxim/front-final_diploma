@@ -3,8 +3,11 @@ import React, {useState} from "react";
 import './css/style.css';
 import ApiClient from "../../../../../service/ApiClient";
 import cloneFunc from "../../../../../service/CloneFunc";
+import StorageService from "../../../../../service/StorageService";
 
 export default function DefaultWidget(props) {
+
+    let storageHandler = new StorageService();
 
     const [fromCity, setFromCity] = useState('');
 
@@ -42,6 +45,9 @@ export default function DefaultWidget(props) {
             endDate: endDate
         }
 
+        storageHandler.put('fromCity', fromCity);
+        storageHandler.put('toCity', toCity);
+
         let routes = await apiClient.getRoutes(findThis);
 
         temp = props.state;
@@ -49,8 +55,9 @@ export default function DefaultWidget(props) {
         temp.routes = routes;
         temp.filter = findThis;
 
-        let newState = await cloneFunc(temp);
-        props.setState(newState);
+        let resultObject = new Object();
+        Object.assign(resultObject, temp);
+        props.setState(resultObject);
 
     }
 
@@ -63,9 +70,9 @@ export default function DefaultWidget(props) {
             <div className='direction'>
                 <h3>Направление</h3>
                 <div>
-                    <input className='from' type='text' placeholder='Откуда' onChange={onInputFromCity}/>
+                    <input className='from' type='text' placeholder='Откуда' onChange={onInputFromCity} defaultValue={storageHandler.get('fromCity') }/>
                     <div className='pic-refresh'/>
-                    <input className='to' type='text' placeholder='Куда' onChange={onInputToCity}/>
+                    <input className='to' type='text' placeholder='Куда' onChange={onInputToCity} defaultValue={storageHandler.get('toCity')}/>
                 </div>
             </div>
             <div className='date'>
