@@ -1,5 +1,5 @@
-import FilterWrapper from "../../2_offers_page/sections/filter/FilterWrapper";
-import OffersSection from "../../2_offers_page/OffersSection";
+import FilterWrapper from "../../2_routes_section/sections/filter/FilterWrapper";
+import RoutesSection from "../../2_routes_section/RoutesSection";
 import SeatSelectionPage from "../../3_seats_selection_page/SeatSelectionPage";
 import AddPassengerWidget from "../../4_passengers_page/AddPassangerWidget";
 import Payment from "../../5_payment_page/Payment";
@@ -16,7 +16,7 @@ export default function MiddleSection(props) {
     switch (props.state.display) {
         case 'offers':
             showLeftFilter = true;
-            showThis = <OffersSection state={props.state} setState={props.setState}/>
+            showThis = <RoutesSection state={props.state} setState={props.setState}/>
             break;
 
         case 'seats':

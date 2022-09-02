@@ -7,7 +7,7 @@ import FilterTop from "./sections/filter/FilterTop";
 import ApiClient from "../../../service/ApiClient";
 import cloneFunc from "../../../service/CloneFunc";
 
-export default function OffersSection(props) {
+export default function RoutesSection(props) {
     console.log(props.state.routes)
 
     let apiClient = new ApiClient();

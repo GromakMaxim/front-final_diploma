@@ -4,18 +4,21 @@ import FeedbackWidget from "./feedback/FeedbackWidget";
 import Footer from "./footer/Footer";
 
 export default function LowSection(props) {
-    let showThis =
-        <>
-            <AboutUs/>
-            <HowItWorks/>
-            <FeedbackWidget/>
-            <Footer/>
-        </>;
+    let showThis;
 
-    if (props.page === 'thnx') {
-        showThis = <Footer/>
+    switch (props.state.display) {
+        case "default":
+            showThis = <>
+                <AboutUs/>
+                <HowItWorks/>
+                <FeedbackWidget/>
+                <Footer/>
+            </>;
+            break;
+
+        default:
+            showThis = <Footer/>
     }
-
 
     return (
         showThis

@@ -1,5 +1,5 @@
 import React from "react";
-import Offer from "../2_offers_page/sections/offer/Offer";
+import Offer from "../2_routes_section/sections/offer/Offer";
 import ActionButton from "../../commons/ActionButton";
 import PassengersSection from "./components/PassengersSection";
 

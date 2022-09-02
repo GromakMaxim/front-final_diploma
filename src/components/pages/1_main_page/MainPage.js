@@ -9,8 +9,20 @@ import LowSection from "./sections/LowSection";
 export default function MainPage(props) {
     const [state, setState] = useState(
         {
-            display: null,
+            /**
+             * default -> offers -> seats -> passengers - > payment -> confirm -> thnx
+             * (defines what actually to display in middle section)
+             */
+            display: 'default',
+
+            /**
+             * available routes according current sorting/filters
+             */
             routes: null,
+
+            /**
+             * current sort type/filters
+             */
             filter: null,
         }
     )

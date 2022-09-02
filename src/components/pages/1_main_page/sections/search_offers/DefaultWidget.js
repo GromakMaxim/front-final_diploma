@@ -9,9 +9,9 @@ export default function DefaultWidget(props) {
 
     let storageHandler = new StorageService();
 
-    const [fromCity, setFromCity] = useState('');
+    const [fromCity, setFromCity] = useState(storageHandler.get('fromCity'));
 
-    const [toCity, setToCity] = useState('');
+    const [toCity, setToCity] = useState(storageHandler.get('toCity'));
 
     const [startDate, setStartDate] = useState('');
     const [endDate, setEndDate] = useState('');
