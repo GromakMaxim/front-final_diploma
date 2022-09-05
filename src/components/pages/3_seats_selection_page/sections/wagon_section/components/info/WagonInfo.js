@@ -11,7 +11,7 @@ import './css/seat.css';
 export default function WagonInfo(props) {
 
     let array = [];
-    for (let i = 1; i <= props.state.wagon.seats.length; i++) {
+    for (let i = 1; i <= props.state.wagons.length; i++) {
         let index;
         if (i < 10) index = "0" + i;
         if (i === 1) {

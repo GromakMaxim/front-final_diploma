@@ -9,7 +9,6 @@ import './css/type.css';
  * (экран выбора мест)
  */
 export default function WagonType(props) {
-    console.log(props.state);
     let first = <WagonTypePicture classType='1'/>
     let second = <WagonTypePicture classType='2'/>
     let third = <WagonTypePicture classType='3'/>
@@ -17,13 +16,13 @@ export default function WagonType(props) {
 
     let coach = props.state.wagon.coach;
     if (coach.class_type === "first") {
-        first = <WagonTypePicture classType='1' descr="Люкс"/>
+        first = <WagonTypePicture classType='1' active={true} descr="Люкс"/>
     } else if (coach.class_type === "second") {
-        second = <WagonTypePicture classType='2' descr="Купе"/>
+        second = <WagonTypePicture classType='2' active={true} descr="Купе"/>
     } else if (coach.class_type === "third") {
-        third = <WagonTypePicture classType='3' descr="Плацкарт"/>
+        third = <WagonTypePicture classType='3' active={true} descr="Плацкарт"/>
     } else if (coach.class_type === "fourth") {
-        fourth = <WagonTypePicture classType='4' descr="Сидячий"/>
+        fourth = <WagonTypePicture classType='4' active={true} descr="Сидячий"/>
     }
 
     return (

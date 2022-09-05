@@ -16,8 +16,9 @@ export default function Offer(props) {
         console.log(foundSeats);
         let temp = props.state;
         temp.route = props.data;
-        temp.seats = foundSeats;
+        temp.wagons = foundSeats;
         temp.wagon = foundSeats[0];
+        temp.seats = foundSeats[0].seats;
         temp.display = 'seats';
 
         let newState = await cloneFunc(temp);

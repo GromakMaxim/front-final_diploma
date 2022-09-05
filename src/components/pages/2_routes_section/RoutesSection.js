@@ -8,7 +8,7 @@ import ApiClient from "../../../service/ApiClient";
 import cloneFunc from "../../../service/CloneFunc";
 
 export default function RoutesSection(props) {
-    console.log(props.state.routes)
+    console.log(props.state)
 
     let apiClient = new ApiClient();
 

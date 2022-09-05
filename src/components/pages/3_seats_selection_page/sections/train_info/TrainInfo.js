@@ -14,7 +14,6 @@ import './css/style.css';
  */
 export default function TrainInfo(props) {
     let route = props.state.route;
-    console.log(route);
     let cityFrom = route.departure.train.name;
     let stationFrom = route.departure.from.railway_station_name;
 

@@ -19,10 +19,25 @@ import fourth_class_y from '../img/icon-fourth-class-yellow.png';
 export default function WagonTypePicture(props) {
 
     let picture;
-    if (props.classType === '1') picture = first_class_g;
-    if (props.classType === '2') picture = second_class_g;
-    if (props.classType === '3') picture = third_class_g;
-    if (props.classType === '4') picture = fourth_class_g;
+    if (props.classType === '1') {
+        picture = first_class_g;
+        if (props.active) picture = first_class_y;
+    }
+
+    if (props.classType === '2') {
+        picture = second_class_g;
+        if (props.active) picture = second_class_y;
+    }
+
+    if (props.classType === '3') {
+        picture = third_class_g;
+        if (props.active) picture = third_class_y;
+    }
+
+    if (props.classType === '4') {
+        picture = fourth_class_g;
+        if (props.active) picture = fourth_class_y;
+    }
     return (
         <li className="seat-type-item">
             <div>

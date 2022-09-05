@@ -10,7 +10,7 @@ import './css/style.css';
  * экран выбора мест
  */
 export default function SeatSelectionPage(props) {
-    console.log(props.state.route);
+    console.log(props.state);
     const [isActive, setNext] = useState(false);
 
     let btnNext = <button type="button" className="next-page-btn " onClick={props.goTo}>Далее</button>;

@@ -26,6 +26,11 @@ export default function MainPage(props) {
             route: null,
 
             /**
+             * available wagons
+             */
+            wagons: null,
+
+            /**
              * selected wagon
              */
             wagon: null,
