@@ -34,7 +34,7 @@ export default function MiddleSection(props) {
             break;
 
         case 'confirm':
-            showThis = <Confirm/>
+            showThis = <Confirm state={props.state} setState={props.setState}/>
             break;
 
         case 'thnx':

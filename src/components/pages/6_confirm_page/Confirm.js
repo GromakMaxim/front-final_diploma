@@ -78,7 +78,7 @@ export default function Confirm(props) {
                     <Offer key={item.departure._id} data={item} goTo={props.goTo}/>
                 </ul>
             </section>
-            <PassengersSection selectedPassengersData={props.selectedPassengersData}/>
+            <PassengersSection state={props.state} setState={props.setState}/>
 
             <section className="verification verification-payment">
                 <div className="verification-title">Способ оплаты</div>
