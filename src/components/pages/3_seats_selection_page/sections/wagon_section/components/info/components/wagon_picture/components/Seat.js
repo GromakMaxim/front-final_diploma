@@ -3,8 +3,15 @@ import React, {useState} from 'react';
 export default function Seat(props) {
     const [isSelected, selectSeat] = useState(false);
 
-    let classes = "railway-seat available ";
+    let classes = "railway-seat ";
 
+    let isExists = props.state.seats[props.number-1];
+    if (isExists){
+        let isAvailable = props.state.seats[props.number-1].available;
+        if (isAvailable){
+            classes = classes + ' available ';
+        }
+    }
 
     function clickHandler() {
         let set = props.state.selectedSeats;
