@@ -19,10 +19,20 @@ export default function SeatSelectionPage(props) {
     return (
         <div className='seats-selection-wrapper'>
             <h2>Выбор мест</h2>
+
+            {/*кнопка `выбрать другой поезд`*/}
             <GetBack selectSeatFunc={props.selectSeatsFunc} func={props.getBack}/>
+
+            {/*краткое инфо о выбранном направлении */}
             <TrainInfo state={props.state} setState={props.setState}/>
+
+            {/*количество билетов*/}
             <TicketsNumber/>
+
+            {/*секция `тип вагона` и выбор мест*/}
             <WagonSection state={props.state} setState={props.setState}/>
+
+
             {btnNext}
         </div>
     );

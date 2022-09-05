@@ -3,6 +3,10 @@ import React from "react";
 import arrow_white_icon from './img/arrow-white-next.png';
 import './css/style.css';
 
+/**
+ * кнопка `выбрать другой поезд`
+ * (экран выбора мест)
+ */
 export default function GetBack(props) {
     function clickHandle() {
         props.selectSeatFunc(new Set())

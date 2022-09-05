@@ -4,6 +4,10 @@ import SeatsPrices from "./components/seats_prices/SeatsPrices";
 
 import './css/seat.css';
 
+/**
+ * инфо о вагоне
+ * (экран выбора мест)
+ */
 export default function WagonInfo(props) {
 
     let array = [];

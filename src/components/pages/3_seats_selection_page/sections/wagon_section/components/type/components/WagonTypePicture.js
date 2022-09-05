@@ -12,6 +12,10 @@ import third_class_y from '../img/icon-third-class-yellow.png';
 import fourth_class_g from '../img/icon-fourth-class-grey.png';
 import fourth_class_y from '../img/icon-fourth-class-yellow.png';
 
+/**
+ * иконка типов вагонов
+ * (экран выбора мест)
+ */
 export default function WagonTypePicture(props) {
 
     let picture;

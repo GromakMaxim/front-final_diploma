@@ -3,6 +3,11 @@ import WagonTypePicture from "./components/WagonTypePicture";
 
 import './css/type.css';
 
+
+/**
+ * иконки типов вагонов
+ * (экран выбора мест)
+ */
 export default function WagonType(props) {
     console.log(props.state);
     let first = <WagonTypePicture classType='1'/>

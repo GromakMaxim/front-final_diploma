@@ -2,6 +2,10 @@ import React from "react";
 
 import './css/style.css';
 
+/**
+ * количество билетов
+ * (экран выбора мест)
+ */
 export default function TicketsNumber(props) {
     return (
         <section className="seat-selection-ticket-count">

@@ -6,6 +6,10 @@ import Wagon3 from "./components/components/Wagon3";
 
 import './css/style.css';
 
+/**
+ * изображение вагона и кликабельные места
+ * (экран выбора мест)
+ */
 export default function WagonPicture(props) {
     let classes = '';
     let showThisWagon = null;

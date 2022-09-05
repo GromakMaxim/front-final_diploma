@@ -8,6 +8,10 @@ import clock_pic from './img/icon-clock.png';
 
 import './css/style.css';
 
+/**
+ * краткое инфо о выбранном направлении
+ * (экран выбора мест)
+ */
 export default function TrainInfo(props) {
     let route = props.state.route;
     console.log(route);
