@@ -1,20 +1,22 @@
 import WagonPicture from "./components/wagon_picture/WagonPicture";
-import React from "react";
+import React, {useState} from "react";
 import SeatsPrices from "./components/seats_prices/SeatsPrices";
 
 import './css/seat.css';
+import cloneFunc from "../../../../../../../service/CloneFunc";
 
 /**
  * инфо о вагоне
  * (экран выбора мест)
  */
 export default function WagonInfo(props) {
+    const [selectedIndex, setSelectedIndex]= useState('01');
 
     let array = [];
     for (let i = 1; i <= props.state.wagons.length; i++) {
         let index;
         if (i < 10) index = "0" + i;
-        if (i === 1) {
+        if (i === parseInt(selectedIndex)) {
             array.push(<li key={i} onClick={clickWagonHandle} className="selected" aria-hidden="true">{index}</li>);
         } else {
             array.push(<li key={i} onClick={clickWagonHandle} className="" aria-hidden="true">{index}</li>);
@@ -25,12 +27,13 @@ export default function WagonInfo(props) {
      * клик, выбор вагона
      */
     async function clickWagonHandle(e) {
-        let selectedIndex = e.target.textContent;
-        props.selectWagon(selectedIndex);
+        let selectedIndex = parseInt(e.target.textContent)-1;
+        setSelectedIndex(e.target.textContent);
+        let temp = props.state;
+        temp.wagon = temp.wagons[selectedIndex];
 
-        console.log('current: ' + props.selected);
-
-        await props.selectSeatFunc(new Set());
+        let newState = await cloneFunc(temp);
+        props.setState(newState);
     }
 
     return (
@@ -48,7 +51,7 @@ export default function WagonInfo(props) {
                     <li className="wagons-list-item">
                         <div className="wagon-main-info">
                             <div className="wagon-number">
-                                <span className="wagon-number-1">01</span>
+                                <span className="wagon-number-1">{selectedIndex}</span>
                                 <span className="wagon-number-2">вагон</span>
                             </div>
                             <SeatsPrices state={props.state} setState={props.setState}/>
