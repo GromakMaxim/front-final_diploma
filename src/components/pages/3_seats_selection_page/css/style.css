@@ -28,6 +28,7 @@
     float: right;
     margin-top: 90px;
     margin-left: auto;
+    cursor: pointer;
 }
 
 .next-page-btn.active {

@@ -5,6 +5,7 @@ import TicketsNumber from "./sections/tickets_number/TicketsNumber";
 import WagonSection from "./sections/wagon_section/WagonSection";
 
 import './css/style.css';
+import cloneFunc from "../../../service/CloneFunc";
 
 /**
  * экран выбора мест
@@ -13,10 +14,17 @@ export default function SeatSelectionPage(props) {
     console.log(props.state);
     const [isActive, setNext] = useState(false);
 
-    let btnNext = <button type="button" className="next-page-btn " onClick={props.goTo}>Далее</button>;
-    if (isActive) btnNext = <button type="button" className="next-page-btn active" onClick={props.goTo}>Далее</button>
+    async function goTo(){
+        let temp = props.state;
+        temp.display = 'passengers';
+        let newState = await cloneFunc(temp);
+        props.setState(newState);
+    }
 
-    function goNext(value){
+    let btnNext = <button type="button" className="next-page-btn ">Далее</button>;
+    if (isActive) btnNext = <button type="button" className="next-page-btn active" onClick={goTo}>Далее</button>
+
+    function turnOnNextButton(value){
         setNext(value);
     }
 
@@ -34,7 +42,7 @@ export default function SeatSelectionPage(props) {
             <TicketsNumber/>
 
             {/*секция `тип вагона` и выбор мест*/}
-            <WagonSection state={props.state} setState={props.setState} goNext={goNext}/>
+            <WagonSection state={props.state} setState={props.setState} goNext={turnOnNextButton}/>
 
 
             {btnNext}
