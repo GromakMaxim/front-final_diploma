@@ -1,20 +1,22 @@
 import React, {useState} from "react";
 import Method from "./components/Method";
+import cloneFunc from "../../../../../service/CloneFunc";
 
 export default function PaymentMethods(props) {
-    const [selected, setType] = useState();
+    console.log(props.paymentData)
 
-    function clickHandle(e) {
-        setType(e.target.value);
+    async function clickHandle(e) {
         let obj = props.paymentData;
         obj.paymentType = e.target.value;
-        props.setPaymentData(obj);
+
+        let newState = await cloneFunc(obj);
+        props.setPaymentData(newState);
     }
 
     let cashBtn = <Method classes='method cash false' clickHandle={clickHandle} value='offline' span='Наличными'/>;
     let onlineBtn = <Method classes='method false' clickHandle={clickHandle} value='online' span='Онлайн'/>;
 
-    switch (selected) {
+    switch (props.paymentData.paymentType) {
         case 'online':
             onlineBtn = <Method classes='method online active' clickHandle={clickHandle} value='online' span='Онлайн'
                                 checked={true}/>;

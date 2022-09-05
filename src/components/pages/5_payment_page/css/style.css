@@ -187,7 +187,10 @@
     margin-top: 115px;
 }
 
-.payment-form-btn button {
+button.payment-form-btn{
+    display: flex;
+    margin-left: auto;
+
     align-self: flex-end;
     font-family: inherit;
     font-style: normal;
@@ -197,9 +200,15 @@
     text-transform: uppercase;
     color: #fff;
     padding: 15px 70px;
-    background-color: #FFA800;
-    border: 1px solid #FFA800;
+    background-color: #928F94;
+    border: 1px solid #928F94;
     border-radius: 5px;
     box-sizing: border-box;
     outline: none;
+}
+
+button.payment-form-btn.active{
+    background-color: #FFA800;
+    border: 1px solid #FFA800;
+    cursor: pointer;
 }

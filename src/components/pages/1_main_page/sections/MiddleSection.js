@@ -30,7 +30,7 @@ export default function MiddleSection(props) {
             break;
 
         case 'payment':
-            showThis = <Payment/>
+            showThis = <Payment state={props.state} setState={props.setState}/>
             break;
 
         case 'confirm':
