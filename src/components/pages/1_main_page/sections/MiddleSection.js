@@ -25,7 +25,8 @@ export default function MiddleSection(props) {
             break;
 
         case 'passengers':
-            showThis = <AddPassengerWidget/>
+            showLeftFilter = true;
+            showThis = <AddPassengerWidget state={props.state} setState={props.setState}/>
             break;
 
         case 'payment':

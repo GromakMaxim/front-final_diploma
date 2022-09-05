@@ -49,6 +49,11 @@ export default function MainPage(props) {
              * user-selected seats
              */
             selectedSeats: new Set(),
+
+            /**
+             * each passenger info
+             */
+            passengers: new Set(),
         }
     )
 

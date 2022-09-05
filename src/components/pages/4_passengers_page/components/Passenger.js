@@ -7,6 +7,7 @@ import PassengerDocumentSection from "./formSections/PassengerDocumentSection";
 import Passport from "./dataObject/Passport";
 import BirthCertificate from "./dataObject/BirthCertificate";
 import PassengerAgeSection from "./formSections/PassengerAgeSection";
+import cloneFunc from "../../../../service/CloneFunc";
 
 export default function Passenger(props) {
     const [gender, setGender] = useState();
@@ -106,11 +107,13 @@ export default function Passenger(props) {
         console.log(user);
     }
 
-    function sendFormHandle(e) {
+    async function nextPassengerClickHandle(e) {
         e.preventDefault();
-        let set = props.selectedPassengersData;
-        set.add(user);
-        props.selectPassengersFunc(set);
+        let temp = props.state;
+        temp.passengers.add(user);
+
+        let newState = await cloneFunc(temp);
+        props.setState(newState);
     }
 
 
@@ -154,7 +157,7 @@ export default function Passenger(props) {
                                               setCertificateNumber={setCertificateNumber}/>
 
                     <div className="next-passenger-form-btn false">
-                        <input type="submit" value='Следующий пассажир' onClick={sendFormHandle}/>
+                        <input type="submit" value='Следующий пассажир' onClick={nextPassengerClickHandle}/>
                     </div>
                 </form>
             </div>
