@@ -20,7 +20,7 @@ export default function MiddleSection(props) {
             break;
 
         case 'seats':
-            showThis = <SeatSelectionPage/>
+            showThis = <SeatSelectionPage state={props.state} setState={props.setState}/>
             break;
 
         case 'passengers':

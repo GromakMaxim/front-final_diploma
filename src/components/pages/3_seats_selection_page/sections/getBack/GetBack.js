@@ -1,5 +1,6 @@
 import React from "react";
 
+import arrow_white_icon from './img/arrow-white-next.png';
 import './css/style.css';
 
 export default function GetBack(props) {
@@ -12,7 +13,7 @@ export default function GetBack(props) {
         <div className='seats-selection'>
             <div className="seat-selection-button-wrapper">
                 <div>
-                    <img src="/images/arrow-white-next.png" alt="arrow-white" width="30" height="20"
+                    <img src={arrow_white_icon} alt="arrow-white" width="30" height="20"
                          onClick={props.func}/>
                 </div>
                 <button onClick={clickHandle}>Выбрать другой поезд</button>

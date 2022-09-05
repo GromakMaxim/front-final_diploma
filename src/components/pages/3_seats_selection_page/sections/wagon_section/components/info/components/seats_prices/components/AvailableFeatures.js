@@ -5,9 +5,9 @@ export default function AvailableFeatures(props) {
     let conditioning = "icon conditioning tooltip";
     let linens = "icon linens tooltip";
 
-    if (props.selected.coach.have_wifi) wifi = wifi + " selected";
-    if (props.selected.coach.have_air_conditioning) conditioning = conditioning + " selected";
-    if (props.selected.coach.is_linens_included) linens = linens + " selected";
+    if (props.state.wagon.coach.have_wifi) wifi = wifi + " selected";
+    if (props.state.wagon.coach.have_air_conditioning) conditioning = conditioning + " selected";
+    if (props.state.wagon.coach.is_linens_included) linens = linens + " selected";
 
     console.log(wifi)
     return (

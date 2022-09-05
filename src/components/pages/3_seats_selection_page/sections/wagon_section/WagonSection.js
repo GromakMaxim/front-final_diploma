@@ -5,14 +5,8 @@ import WagonType from "./components/type/WagonType";
 export default function WagonSection(props) {
     return (
         <>
-            <WagonType selected={props.selected}/>
-
-            <WagonInfo goNext={props.goNext}
-                       selectSeatFunc={props.selectSeatFunc}
-                       selectedSeatsData={props.selectedSeatsData}
-                       selected={props.selected}
-                       selectWagon={props.selectWagon}
-                       data={props.data}/>
+            <WagonType state={props.state} setState={props.setState}/>
+            <WagonInfo state={props.state} setState={props.setState}/>
         </>
     );
 }

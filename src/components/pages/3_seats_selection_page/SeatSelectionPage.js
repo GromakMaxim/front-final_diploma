@@ -10,6 +10,7 @@ import './css/style.css';
  * экран выбора мест
  */
 export default function SeatSelectionPage(props) {
+    console.log(props.state.route);
     const [isActive, setNext] = useState(false);
 
     let btnNext = <button type="button" className="next-page-btn " onClick={props.goTo}>Далее</button>;
@@ -19,14 +20,9 @@ export default function SeatSelectionPage(props) {
         <div className='seats-selection-wrapper'>
             <h2>Выбор мест</h2>
             <GetBack selectSeatFunc={props.selectSeatsFunc} func={props.getBack}/>
-            <TrainInfo trainData={props.train}/>
+            <TrainInfo state={props.state} setState={props.setState}/>
             <TicketsNumber/>
-            <WagonSection selectSeatFunc={props.selectSeatsFunc}
-                          selectedSeatsData={props.selectedSeatsData}
-                          selected={props.selected}
-                          selectWagon={props.selectWagon}
-                          goNext={setNext}
-                          data={props.data}/>
+            <WagonSection state={props.state} setState={props.setState}/>
             {btnNext}
         </div>
     );

@@ -1,21 +1,28 @@
 import React from "react";
 import {format, intervalToDuration} from "date-fns";
 
+import arrow_black_pic from './img/arrow-black.png'
+import arrow_gold_pic from './img/arrow-gold-right.png'
+import train_pic from './img/icon-train-small.png'
+import clock_pic from './img/icon-clock.png';
+
 import './css/style.css';
 
 export default function TrainInfo(props) {
-    let cityFrom = props.trainData.departure.train.name;
-    let stationFrom = props.trainData.departure.from.railway_station_name;
+    let route = props.state.route;
+    console.log(route);
+    let cityFrom = route.departure.train.name;
+    let stationFrom = route.departure.from.railway_station_name;
 
-    let cityTo = props.trainData.departure.to.city.name;
-    let stationTo = props.trainData.departure.to.railway_station_name;
+    let cityTo = route.departure.to.city.name;
+    let stationTo = route.departure.to.railway_station_name;
 
     function getTime(timestamp) {
         return format(new Date(timestamp), "hh:mm");
     }
 
     function getDuration() {
-        let seconds = props.trainData.departure.duration;
+        let seconds = route.departure.duration;
         let dateObj = intervalToDuration({start: 0, end: seconds * 1000})
         return dateObj.hours + ":" + dateObj.minutes;
     }
@@ -24,14 +31,14 @@ export default function TrainInfo(props) {
         <div className="seat-selection-ticket-info">
             <div className="train-info">
                 <div className="train-icon">
-                    <img src="/images/icon-train-small.png" alt="train icon" width="30" height="30"/>
+                    <img src={train_pic} alt="icon train small" width="30" height="30"/>
                 </div>
                 <div className="train-name">
-                    <div className="train-number">{props.trainData.departure.train.name}</div>
+                    <div className="train-number">{route.departure.train.name}</div>
                     <div className="train-departure-city">
                         <div className="departure-select-city">
                             <span>{cityFrom}</span>
-                            <img src="/src/components/pages/2_offers_page/sections/offer/img/arrow-black.png" alt="arrow"/>
+                            <img src={arrow_black_pic} alt="arrow"/>
                         </div>
                     </div>
                     <div className="train-arrival-city">{cityTo}</div>
@@ -40,23 +47,23 @@ export default function TrainInfo(props) {
             <div className="departure-info">
                 <div className="train-departure">
                     <span
-                        className="departure-from-datetime datetime">{getTime(props.trainData.departure.from.datetime)}</span>
+                        className="departure-from-datetime datetime">{getTime(route.departure.from.datetime)}</span>
                     <span className="departure-from-city">{cityFrom}</span>
                     <span className="departure-from-railway_station railway_station">{stationFrom}</span>
                 </div>
                 <div className="departure-arrow">
-                    <img src="/src/components/pages/2_offers_page/sections/offer/img/arrow-gold-right.png" alt="arrow"/>
+                    <img src={arrow_gold_pic} alt="arrow"/>
                 </div>
                 <div className="train-arrival">
                     <span
-                        className="arrival-from-datetime datetime">{getTime(props.trainData.departure.from.datetime)}</span>
+                        className="arrival-from-datetime datetime">{getTime(route.departure.from.datetime)}</span>
                     <span className="arrival-from-city">{cityTo}</span>
                     <span className="arrival-from-railway_station railway_station">{stationTo}</span>
                 </div>
             </div>
             <div className="duration-info">
                 <div className="duration-icon">
-                    <img src="/images/icon-clock.png" alt="icon-clock" width="30" height="30"/>
+                    <img src={clock_pic} alt="icon clock icon" width="30" height="30"/>
                 </div>
                 <div className="duration-formatting">
                     <div>{getDuration()}</div>

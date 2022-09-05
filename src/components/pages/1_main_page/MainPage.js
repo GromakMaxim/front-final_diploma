@@ -21,9 +21,24 @@ export default function MainPage(props) {
             routes: null,
 
             /**
+             * selected route
+             */
+            route: null,
+
+            /**
+             * selected wagon
+             */
+            wagon: null,
+
+            /**
              * current sort type/filters
              */
             filter: null,
+
+            /**
+             * available seats in selected route
+             */
+            seats: null,
         }
     )
 

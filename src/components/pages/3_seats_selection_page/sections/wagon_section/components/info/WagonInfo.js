@@ -5,11 +5,9 @@ import SeatsPrices from "./components/seats_prices/SeatsPrices";
 import './css/seat.css';
 
 export default function WagonInfo(props) {
-    let data = props.data;
-
 
     let array = [];
-    for (let i = 1; i <= data.length; i++) {
+    for (let i = 1; i <= props.state.wagon.seats.length; i++) {
         let index;
         if (i < 10) index = "0" + i;
         if (i === 1) {
@@ -49,7 +47,7 @@ export default function WagonInfo(props) {
                                 <span className="wagon-number-1">01</span>
                                 <span className="wagon-number-2">вагон</span>
                             </div>
-                            <SeatsPrices selected={props.selected}/>
+                            <SeatsPrices state={props.state} setState={props.setState}/>
                         </div>
                         <div className="random-peoples-watch">
                             <span>19 </span>
@@ -58,7 +56,7 @@ export default function WagonInfo(props) {
                         <WagonPicture goNext={props.goNext}
                                       selectSeatFunc={props.selectSeatFunc}
                                       selectedSeatsData={props.selectedSeatsData}
-                                      wagonType={props.selected.coach.class_type}/>
+                                      wagonType={props.state.wagon.coach.class_type}/>
                     </li>
                 </ul>
             </main>

@@ -5,7 +5,9 @@ export default class ApiClient {
     }
 
     async getResource(url) {
-        const res = await fetch(`${this._apiBase}${url}`);
+        let someUrl = `${this._apiBase}${url}`;
+        console.log(someUrl);
+        const res = await fetch(someUrl);
 
         if (!res.ok) {
             throw new Error(`Error ${res.status}`);

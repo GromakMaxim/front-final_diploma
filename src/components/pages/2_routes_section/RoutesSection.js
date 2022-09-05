@@ -1,5 +1,5 @@
 import Offer from "./sections/offer/Offer";
-import React, {useState} from "react";
+import React from "react";
 
 import './sections/offer/css/offer.css';
 import './css/style.css';
@@ -14,8 +14,12 @@ export default function RoutesSection(props) {
 
     let offers = [];
     props.state.routes.items.forEach(item => {
-        offers.push(<Offer id={item.departure._id} key={item.departure._id} data={item} goTo={props.goTo}
-                           search={props.search}/>);
+        offers.push(<Offer id={item.departure._id}
+                           key={item.departure._id}
+                           data={item}
+                           state={props.state}
+                           setState={props.setState}/>
+        );
     });
 
     async function sort(value) {

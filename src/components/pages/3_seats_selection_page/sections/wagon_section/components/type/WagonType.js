@@ -4,20 +4,21 @@ import WagonTypePicture from "./components/WagonTypePicture";
 import './css/type.css';
 
 export default function WagonType(props) {
-    let first = <WagonTypePicture img={"/images/icon-first-class-grey.png"}/>
-    let second = <WagonTypePicture img={"/images/icon-second-class-grey.png"}/>
-    let third = <WagonTypePicture img={"/images/icon-third-class-grey.png"}/>
-    let fourth = <WagonTypePicture img={"/images/icon-fourth-class-grey.png"}/>
+    console.log(props.state);
+    let first = <WagonTypePicture classType='1'/>
+    let second = <WagonTypePicture classType='2'/>
+    let third = <WagonTypePicture classType='3'/>
+    let fourth = <WagonTypePicture classType='4'/>
 
-
-    if (props.selected.coach.class_type === "first") {
-        first = <WagonTypePicture img={"/images/icon-first-class-yellow.png"} descr="Люкс"/>
-    } else if (props.selected.coach.class_type === "second") {
-        second = <WagonTypePicture img={"/images/icon-second-class-yellow.png"} descr="Купе"/>
-    } else if (props.selected.coach.class_type === "third") {
-        third = <WagonTypePicture img={"/images/icon-third-class-yellow.png"} descr="Плацкарт"/>
-    } else if (props.selected.coach.class_type === "fourth") {
-        fourth = <WagonTypePicture img={"/images/icon-fourth-class-yellow.png"} descr="Сидячий"/>
+    let coach = props.state.wagon.coach;
+    if (coach.class_type === "first") {
+        first = <WagonTypePicture classType='1' descr="Люкс"/>
+    } else if (coach.class_type === "second") {
+        second = <WagonTypePicture classType='2' descr="Купе"/>
+    } else if (coach.class_type === "third") {
+        third = <WagonTypePicture classType='3' descr="Плацкарт"/>
+    } else if (coach.class_type === "fourth") {
+        fourth = <WagonTypePicture classType='4' descr="Сидячий"/>
     }
 
     return (

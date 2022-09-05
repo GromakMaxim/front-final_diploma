@@ -5,12 +5,23 @@ import FeaturesList from "../feature/FeaturesList";
 import train_pic from './img/train.png';
 import arrow_b_pic from './img/arrow-black.png';
 import arrow_g_pic from './img/arrow-gold-right.png';
+import ApiClient from "../../../../../service/ApiClient";
+import cloneFunc from "../../../../../service/CloneFunc";
 
 export default function Offer(props) {
+    let apiClient = new ApiClient();
 
     async function clickHandler() {
-        await props.search(props.id);
-        await props.goTo();
+        let foundSeats = await apiClient.getSeats(props.id);
+        console.log(foundSeats);
+        let temp = props.state;
+        temp.route = props.data;
+        temp.seats = foundSeats;
+        temp.wagon = foundSeats[0];
+        temp.display = 'seats';
+
+        let newState = await cloneFunc(temp);
+        props.setState(newState);
     }
 
     function getTime(timestamp) {
@@ -26,7 +37,7 @@ export default function Offer(props) {
     return (
         <div className='offer'>
             <div className='left'>
-                <img src={train_pic}/>
+                <img src={train_pic} alt='some picture'/>
                 <div className='train-name'>{props.data.departure.train.name}</div>
                 <div className='from-to-wrap'>
                     <div className='from-station'>{props.data.departure.from.railway_station_name}
