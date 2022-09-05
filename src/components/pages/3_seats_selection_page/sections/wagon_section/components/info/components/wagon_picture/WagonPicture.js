@@ -14,33 +14,25 @@ export default function WagonPicture(props) {
     let classes = '';
     let showThisWagon = null;
 
-    switch (props.wagonType) {
+    switch (props.state.wagon.coach.class_type) {
         case 'first':
             classes = 'railway first';
-            showThisWagon = <Wagon1 goNext={props.goNext}
-                                    selectSeatFunc={props.selectSeatFunc}
-                                    selectedSeatsData={props.selectedSeatsData}/>
+            showThisWagon = <Wagon1 state={props.state} setState={props.setState} goNext={props.goNext}/>
             break;
 
         case 'second':
             classes = 'railway second';
-            showThisWagon = <Wagon2 goNext={props.goNext}
-                                    selectSeatFunc={props.selectSeatFunc}
-                                    selectedSeatsData={props.selectedSeatsData}/>
+            showThisWagon = <Wagon2 state={props.state} setState={props.setState} goNext={props.goNext}/>
             break;
 
         case 'third':
             classes = 'railway third';
-            showThisWagon = <Wagon3 goNext={props.goNext}
-                                    selectSeatFunc={props.selectSeatFunc}
-                                    selectedSeatsData={props.selectedSeatsData}/>
+            showThisWagon = <Wagon3 state={props.state} setState={props.setState} goNext={props.goNext}/>
             break;
 
         case 'fourth':
             classes = 'railway fourth';
-            showThisWagon = <Wagon4 goNext={props.goNext}
-                                    selectSeatFunc={props.selectSeatFunc}
-                                    selectedSeatsData={props.selectedSeatsData}/>
+            showThisWagon = <Wagon4 state={props.state} setState={props.setState} goNext={props.goNext}/>
             break;
     }
 

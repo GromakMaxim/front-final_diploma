@@ -27,9 +27,13 @@ export default function Wagon3(props) {
     function buildBlock(arr) {
         let obj = [];
         for (let i = 0; i < arr.length; i++) {
-            obj.push(<Seat key={i} wagonType='3' number={arr[i]} goNext={props.goNext}
-                           selectSeatFunc={props.selectSeatFunc}
-                           selectedSeatsData={props.selectedSeatsData}/>)
+            obj.push(<Seat key={i}
+                           wagonType='3'
+                           number={arr[i]}
+                           state={props.state}
+                           setState={props.setState}
+                           goNext={props.goNext}/>
+            );
         }
 
         return <div className='railway-seats-block'>

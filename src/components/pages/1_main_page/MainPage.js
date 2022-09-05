@@ -44,6 +44,11 @@ export default function MainPage(props) {
              * available seats in selected route
              */
             seats: null,
+
+            /**
+             * user-selected seats
+             */
+            selectedSeats: new Set(),
         }
     )
 

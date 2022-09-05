@@ -7,7 +7,7 @@ export default function Seat(props) {
 
 
     function clickHandler() {
-        let set = props.selectedSeatsData;
+        let set = props.state.selectedSeats;
         if (set.has(props.number)) {
             set.delete(props.number);
             console.log('turn off number:' + props.number);
@@ -16,8 +16,9 @@ export default function Seat(props) {
             console.log('turn on number: ' + props.number);
         }
 
+        let temp = props.state;
+        temp.selectedSeats = set;
 
-        props.selectSeatFunc(set);
         selectSeat(!isSelected);
 
         if (set.size !== 0) props.goNext(true);

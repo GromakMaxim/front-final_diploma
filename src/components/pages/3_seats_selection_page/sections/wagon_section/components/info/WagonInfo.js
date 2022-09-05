@@ -10,7 +10,7 @@ import cloneFunc from "../../../../../../../service/CloneFunc";
  * (экран выбора мест)
  */
 export default function WagonInfo(props) {
-    const [selectedIndex, setSelectedIndex]= useState('01');
+    const [selectedIndex, setSelectedIndex] = useState('01');
 
     let array = [];
     for (let i = 1; i <= props.state.wagons.length; i++) {
@@ -27,7 +27,7 @@ export default function WagonInfo(props) {
      * клик, выбор вагона
      */
     async function clickWagonHandle(e) {
-        let selectedIndex = parseInt(e.target.textContent)-1;
+        let selectedIndex = parseInt(e.target.textContent) - 1;
         setSelectedIndex(e.target.textContent);
         let temp = props.state;
         temp.wagon = temp.wagons[selectedIndex];
@@ -60,10 +60,7 @@ export default function WagonInfo(props) {
                             <span>19 </span>
                             человек выбирают места в этом поезде
                         </div>
-                        <WagonPicture goNext={props.goNext}
-                                      selectSeatFunc={props.selectSeatFunc}
-                                      selectedSeatsData={props.selectedSeatsData}
-                                      wagonType={props.state.wagon.coach.class_type}/>
+                        <WagonPicture state={props.state} setState={props.setState} goNext={props.goNext}/>
                     </li>
                 </ul>
             </main>

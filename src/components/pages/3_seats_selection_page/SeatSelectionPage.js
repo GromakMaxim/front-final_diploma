@@ -16,6 +16,10 @@ export default function SeatSelectionPage(props) {
     let btnNext = <button type="button" className="next-page-btn " onClick={props.goTo}>Далее</button>;
     if (isActive) btnNext = <button type="button" className="next-page-btn active" onClick={props.goTo}>Далее</button>
 
+    function goNext(value){
+        setNext(value);
+    }
+
     return (
         <div className='seats-selection-wrapper'>
             <h2>Выбор мест</h2>
@@ -30,7 +34,7 @@ export default function SeatSelectionPage(props) {
             <TicketsNumber/>
 
             {/*секция `тип вагона` и выбор мест*/}
-            <WagonSection state={props.state} setState={props.setState}/>
+            <WagonSection state={props.state} setState={props.setState} goNext={goNext}/>
 
 
             {btnNext}

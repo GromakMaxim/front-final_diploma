@@ -12,7 +12,7 @@ export default function WagonSection(props) {
             <WagonType state={props.state} setState={props.setState}/>
 
             {/*инфо о вагоне*/}
-            <WagonInfo state={props.state} setState={props.setState}/>
+            <WagonInfo state={props.state} setState={props.setState} goNext={props.goNext}/>
         </>
     );
 }

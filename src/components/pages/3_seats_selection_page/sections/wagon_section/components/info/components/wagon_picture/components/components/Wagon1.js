@@ -7,6 +7,7 @@ import './css/style.css';
  * люкс
  */
 export default function Wagon1(props) {
+    console.log(props.state);
     return (
         <>
             <div className='wagon1 railway-seats-list top-row'>
@@ -26,9 +27,13 @@ export default function Wagon1(props) {
     function buildBlock(arr) {
         let obj = [];
         for (let i = 0; i < arr.length; i++) {
-            obj.push(<Seat key={i} wagonType='1' number={arr[i]} goNext={props.goNext}
-                           selectSeatFunc={props.selectSeatFunc}
-                           selectedSeatsData={props.selectedSeatsData}/>)
+            obj.push(<Seat key={i}
+                           wagonType='1'
+                           number={arr[i]}
+                           state={props.state}
+                           setState={props.setState}
+                           goNext={props.goNext}/>
+            );
         }
 
         return <div className='railway-seats-block'>

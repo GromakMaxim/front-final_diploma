@@ -32,5 +32,5 @@
 
 .next-page-btn.active {
     background-color: #FFA800;
-    border: none;
+    border: 1px solid #FFA800;
 }
