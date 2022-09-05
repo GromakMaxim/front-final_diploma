@@ -54,6 +54,11 @@ export default function MainPage(props) {
              * each passenger info
              */
             passengers: new Set(),
+
+            /**
+             * user data from the payment page
+             */
+            paymentDetails: null,
         }
     )
 
