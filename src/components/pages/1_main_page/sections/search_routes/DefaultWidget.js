@@ -43,7 +43,9 @@ export default function DefaultWidget(props) {
             toCity: toCity,
             startDate: startDate,
             endDate: endDate,
-            limit: '5'
+            limit: '5', // отображать по 5 направлений
+            offset: '0', // смещение
+            pagination: '1' // страница пагинации
         }
 
         storageHandler.put('fromCity', fromCity);
