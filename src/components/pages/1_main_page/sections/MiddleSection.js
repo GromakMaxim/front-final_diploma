@@ -60,9 +60,11 @@ export default function MiddleSection(props) {
     }
 
     return (
-        <div className='ticket-results'>
-            {filter}
-            {showThis}
+        <div className='refreshing_area'>
+            <div className='middle_wrapper'>
+                {filter}
+                {showThis}
+            </div>
         </div>
     )
 }

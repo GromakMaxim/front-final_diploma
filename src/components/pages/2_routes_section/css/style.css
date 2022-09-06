@@ -1,22 +1,31 @@
-.ticket-results {
-    display: flex;
-    align-items: flex-start;
+.refreshing_area {
     background-color: #E5E5E5;
-    padding: 95px 256px 193px 258px;
 
     border: 1px solid black;
 
 }
+
+.middle_wrapper {
+    width: 1350px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 90px;
+    margin-bottom: 90px;
+}
+
+.routes_wrap {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
 
 .routes-list {
     display: flex;
     flex-direction: column;
 }
 
-.routes_wrap{
-    display: flex;
-    flex-direction: column;
-    width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}

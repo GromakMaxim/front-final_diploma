@@ -1,7 +1,6 @@
 .route {
     display: flex;
     flex-direction: row;
-
     background-color: white;
     border: 1px solid #C4C4C4;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 2px 0px;
