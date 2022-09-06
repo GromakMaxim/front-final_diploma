@@ -42,7 +42,8 @@ export default function DefaultWidget(props) {
             fromCity: fromCity,
             toCity: toCity,
             startDate: startDate,
-            endDate: endDate
+            endDate: endDate,
+            offset: '5'
         }
 
         storageHandler.put('fromCity', fromCity);
@@ -55,9 +56,8 @@ export default function DefaultWidget(props) {
         temp.routes = routes;
         temp.filter = findThis;
 
-        let resultObject = {};
-        Object.assign(resultObject, temp);
-        props.setState(resultObject);
+        let newState = await cloneFunc(temp);
+        props.setState(newState);
 
     }
 
