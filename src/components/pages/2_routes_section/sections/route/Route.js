@@ -11,7 +11,7 @@ import cloneFunc from "../../../../../service/CloneFunc";
 /**
  * one of the directions(routes) available for selection
  */
-export default function Offer(props) {
+export default function Route(props) {
     let apiClient = new ApiClient();
 
     async function clickHandler() {
@@ -39,7 +39,7 @@ export default function Offer(props) {
     }
 
     return (
-        <div className='offer'>
+        <div className='route'>
             <div className='left'>
                 <img src={train_pic} alt='some picture'/>
                 <div className='train-name'>{props.data.departure.train.name}</div>
@@ -52,7 +52,7 @@ export default function Offer(props) {
                 </div>
             </div>
             <div className='center'>
-                <div className='offer-from'>
+                <div className='route-from'>
                     <div className='time'>{getTime(props.data.departure.from.datetime)}</div>
                     <div className='wrap'>
                         <div className='city'>{props.data.departure.from.city.name}</div>
@@ -63,7 +63,7 @@ export default function Offer(props) {
                     <div className='diff'>{getDuration()}</div>
                     <img src={arrow_g_pic} alt="arrow"/>
                 </div>
-                <div className='offer-to'>
+                <div className='route-to'>
                     <div className='time'>{getTime(props.data.departure.to.datetime)}</div>
                     <div className='wrap'>
                         <div className='city'>{props.data.departure.to.city.name}</div>

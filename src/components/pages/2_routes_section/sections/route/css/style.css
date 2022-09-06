@@ -1,4 +1,4 @@
-.offer {
+.route {
     display: flex;
     flex-direction: row;
 
@@ -8,7 +8,7 @@
     margin-bottom: 50px;
 }
 
-.offer > .left {
+.route > .left {
     display: flex;
     flex-direction: column;
 
@@ -17,14 +17,14 @@
     background-color: #E4E0E9;
 }
 
-.offer > .left > img {
+.route > .left > img {
     margin-left: auto;
     margin-right: auto;
     width: 100px;
 
 }
 
-.offer > .center {
+.route > .center {
     display: flex;
     flex-direction: row;
 
@@ -33,19 +33,19 @@
     margin: auto;
 }
 
-.offer-from, .wrap, .offer-to {
+.route-from, .wrap, .route-to {
     margin-left: auto;
     margin-right: auto;
 }
 
-.offer > .center > .wrap > .diff {
+.route > .center > .wrap > .diff {
     color: #C4C4C4;
     font-size: 18px;
     font-weight: 400;
     margin-bottom: 7px;
 }
 
-.offer > .right {
+.route > .right {
     width: 30%;
     background-color: white;
     border-left: 1px solid black;
@@ -63,37 +63,37 @@
     height: 3px;
 }
 
-.offer > .center > .offer-from,
-.offer > .center > .offer-to {
+.route > .center > .route-from,
+.route > .center > .route-to {
     display: flex;
     flex-direction: column;
 }
 
 
-.offer > .center > .offer-from > .time,
-.offer > .center > .offer-to > .time {
+.route > .center > .route-from > .time,
+.route > .center > .route-to > .time {
     color: #2D2B2F;
     font-size: 24px;
     font-weight: 700;
     margin-right: auto;
 }
 
-.offer > .center > .offer-from > .wrap,
-.offer > .center > .offer-to > .wrap {
+.route > .center > .route-from > .wrap,
+.route > .center > .route-to > .wrap {
     display: flex;
     flex-direction: column;
 }
 
-.offer > .center > .offer-from > .wrap > .city,
-.offer > .center > .offer-to > .wrap > .city,
-.offer > .center > .offer-from > .wrap > .station,
-.offer > .center > .offer-to > .wrap > .station {
+.route > .center > .route-from > .wrap > .city,
+.route > .center > .route-to > .wrap > .city,
+.route > .center > .route-from > .wrap > .station,
+.route > .center > .route-to > .wrap > .station {
     text-transform: capitalize;
     margin-right: auto;
 }
 
-.offer > .center > .offer-from > .station,
-.offer > .center > .offer-to > .station {
+.route > .center > .route-from > .station,
+.route > .center > .route-to > .station {
     color: #928F94;
 }
 

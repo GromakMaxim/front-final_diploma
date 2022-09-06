@@ -1,5 +1,5 @@
 import React from "react";
-import Offer from "../2_routes_section/sections/offer/Offer";
+import Route from "../2_routes_section/sections/route/Route";
 import ActionButton from "../../commons/ActionButton";
 import PassengersSection from "./components/PassengersSection";
 
@@ -24,7 +24,7 @@ export default function Confirm(props) {
             <section className="verification verification-train">
                 <div className="verification-title">Поезд</div>
                 <ul className="found-routes-list">
-                    <Offer id={props.state.route.departure._id}
+                    <Route id={props.state.route.departure._id}
                            key={props.state.route.departure._id}
                            data={props.state.route}
                            state={props.state}

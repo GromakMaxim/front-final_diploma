@@ -51,11 +51,11 @@ export default function DefaultWidget(props) {
         let routes = await apiClient.getRoutes(findThis);
 
         temp = props.state;
-        temp.display = 'offers';
+        temp.display = 'routes';
         temp.routes = routes;
         temp.filter = findThis;
 
-        let resultObject = new Object();
+        let resultObject = {};
         Object.assign(resultObject, temp);
         props.setState(resultObject);
 

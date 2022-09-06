@@ -9,7 +9,7 @@ export default function MainPage(props) {
     const [state, setState] = useState(
         {
             /**
-             * default -> offers -> seats -> passengers - > payment -> confirm -> thnx
+             * default -> routes -> seats -> passengers - > payment -> confirm -> thnx
              * (defines what actually to display in middle section)
              */
             display: 'default',

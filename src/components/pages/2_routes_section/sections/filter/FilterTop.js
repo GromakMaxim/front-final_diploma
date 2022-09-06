@@ -18,7 +18,7 @@ export default function FilterTop(props) {
     return (
         <div className='filter_top'>
             <div className='found_total'>найдено {totalFound}</div>
-            <div className='offers_sort'>
+            <div className='routes_sort'>
                 <div className='sort_by'>
                     <label>сортировать по:</label>
                     <CustomSelectTag sort={props.sort}/>

@@ -1,7 +1,7 @@
-import Offer from "./sections/offer/Offer";
+import Route from "./sections/route/Route";
 import React from "react";
 
-import './sections/offer/css/offer.css';
+import './sections/route/css/style.css';
 import './css/style.css';
 import FilterTop from "./sections/filter/FilterTop";
 import ApiClient from "../../../service/ApiClient";
@@ -15,9 +15,9 @@ export default function RoutesSection(props) {
 
     let apiClient = new ApiClient();
 
-    let offers = [];
+    let routes = [];
     props.state.routes.items.forEach(item => {
-        offers.push(<Offer id={item.departure._id}
+        routes.push(<Route id={item.departure._id}
                            key={item.departure._id}
                            data={item}
                            state={props.state}
@@ -41,12 +41,12 @@ export default function RoutesSection(props) {
     }
 
     return (
-        <div className='offers_wrap'>
+        <div className='routes_wrap'>
             <FilterTop
                 sort={sort}
                 state={props.state}/>
-            <div className='offers-list'>
-                {offers}
+            <div className='routes-list'>
+                {routes}
             </div>
         </div>
     );

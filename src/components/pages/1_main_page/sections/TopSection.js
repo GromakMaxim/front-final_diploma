@@ -3,7 +3,7 @@ import Logo from "./logo/Logo";
 import NavigationMenu from "./navigation_menu/NavigationMenu";
 import HorizontalWidget from "../../../commons/horizontalSearch/HorizontalWidget";
 import Progressbar from "../../../commons/progressbar/Progressbar";
-import DefaultWidget from "./search_offers/DefaultWidget";
+import DefaultWidget from "./search_routes/DefaultWidget";
 
 export default function TopSection(props) {
     let showThis = null;
@@ -18,7 +18,7 @@ export default function TopSection(props) {
     }
 
     switch (props.state.display) {
-        case 'offers':
+        case 'routes':
         case 'seats':
             showThis = <>
                 <HorizontalWidget/>

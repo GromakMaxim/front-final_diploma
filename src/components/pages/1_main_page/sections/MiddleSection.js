@@ -11,14 +11,14 @@ import ThanksPage from "../../7_thnx_page/ThanksPage";
  */
 export default function MiddleSection(props) {
     /**
-     * default -> offers -> seats -> passengers - > payment -> confirm -> thnx
+     * default -> routes -> seats -> passengers - > payment -> confirm -> thnx
      * (defines what actually to display in middle section)
      */
 
     let showThis;
     let showLeftFilter = false;
     switch (props.state.display) {
-        case 'offers':
+        case 'routes':
             showLeftFilter = true;
             showThis = <RoutesSection state={props.state} setState={props.setState}/>
             break;
