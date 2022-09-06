@@ -8,6 +8,6 @@ export default function PaginationItem(props){
         classes = 'pagination_item active';
     }
 
-    let showThis = <div className={classes}>{props.number}</div>;
+    let showThis = <div className={classes} onClick={props.onClick}>{props.number}</div>;
     return showThis;
 }
