@@ -43,7 +43,7 @@ export default function DefaultWidget(props) {
             toCity: toCity,
             startDate: startDate,
             endDate: endDate,
-            offset: '5'
+            limit: '5'
         }
 
         storageHandler.put('fromCity', fromCity);
