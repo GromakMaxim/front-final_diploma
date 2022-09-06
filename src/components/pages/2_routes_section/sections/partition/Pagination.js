@@ -51,7 +51,14 @@ export default function Pagination(props) {
 
     let resultToShow = [];
 
-    for (let i = 1; i <= groups; i++) {
+    let startValue = number -1;
+    if (startValue <= 0) startValue = 1;
+
+    let endValue = parseInt(number) + 1;
+    console.log(startValue + "/" + endValue)
+    if (endValue > groups) endValue = groups;
+
+    for (let i = startValue; i <= endValue; i++) {
         if (i === parseInt(number)) {
             resultToShow.push(<PaginationItem key={i} number={i} isActive={true} onClick={paginationHandle}/>)
         } else {
