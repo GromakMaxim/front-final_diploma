@@ -6,6 +6,7 @@ import './css/style.css';
 import FilterTop from "./sections/filter/FilterTop";
 import ApiClient from "../../../service/ApiClient";
 import cloneFunc from "../../../service/CloneFunc";
+import Pagination from "./sections/partition/Pagination";
 
 /**
  * screen with a choice of directions(routes), according to the filter
@@ -49,6 +50,7 @@ export default function RoutesSection(props) {
             <div className='routes-list'>
                 {routes}
             </div>
+            <Pagination state={props.state} setState={props.setState}/>
         </div>
     );
 }
