@@ -37,7 +37,10 @@ export default function MainPage(props) {
             /**
              * current sort type/filters
              */
-            filter: {},
+            filter: {
+                pagination: '1',
+                offset: '0',
+            },
 
             /**
              * available seats in selected route

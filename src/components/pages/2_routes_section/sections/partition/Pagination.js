@@ -12,7 +12,6 @@ import cloneFunc from "../../../../../service/CloneFunc";
  * (routes section)
  */
 export default function Pagination(props) {
-    const [number, setNumber] = useState('1');
 
     let apiClient = new ApiClient();
 
@@ -27,7 +26,6 @@ export default function Pagination(props) {
 
     async function paginationHandle(e) {
         console.log(e.target.textContent);
-        setNumber(e.target.textContent);
 
         let paginationFilter = props.state.filter;
         paginationFilter.pagination = e.target.textContent;
@@ -51,15 +49,18 @@ export default function Pagination(props) {
 
     let resultToShow = [];
 
-    let startValue = number -1;
+    let startValue = props.state.filter.pagination -1;
     if (startValue <= 0) startValue = 1;
 
-    let endValue = parseInt(number) + 1;
-    console.log(startValue + "/" + endValue)
+    let endValue = parseInt(props.state.filter.pagination) + 1;
+    if (startValue === 1 && groups >= 3){
+        endValue = 3;
+    }
+
     if (endValue > groups) endValue = groups;
 
     for (let i = startValue; i <= endValue; i++) {
-        if (i === parseInt(number)) {
+        if (i === parseInt(props.state.filter.pagination)) {
             resultToShow.push(<PaginationItem key={i} number={i} isActive={true} onClick={paginationHandle}/>)
         } else {
             resultToShow.push(<PaginationItem key={i} number={i} isActive={false} onClick={paginationHandle}/>)

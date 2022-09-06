@@ -14,6 +14,8 @@ export default function ShowPartition(props) {
 
         let partitionFilter = props.state.filter;
         partitionFilter.limit = e.target.textContent;
+        partitionFilter.offset = '0';
+        partitionFilter.pagination = '1';
 
         let routes = await apiClient.getRoutes(partitionFilter);
         let temp = props.state;
