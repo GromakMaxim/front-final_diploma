@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 
 import './costFilter.css';
 import MultiRangeSlider from "../../../../../../commons/mySlider/MultiRangeSlider";

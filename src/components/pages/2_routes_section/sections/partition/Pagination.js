@@ -3,7 +3,6 @@ import './css/style.css';
 import arrow_l_pic from './img/left-chevron.png';
 import arrow_r_pic from './img/right-chevron.png';
 import PaginationItem from "./PaginationItem";
-import {useState} from "react";
 import ApiClient from "../../../../../service/ApiClient";
 import cloneFunc from "../../../../../service/CloneFunc";
 
@@ -19,7 +18,7 @@ export default function Pagination(props) {
     let groups;
 
 
-    if (totalCount % props.state.filter.limit !== 0){
+    if (totalCount % props.state.filter.limit !== 0) {
         groups = Math.floor(totalCount / props.state.filter.limit) + 1;
     }
 
@@ -49,11 +48,11 @@ export default function Pagination(props) {
 
     let resultToShow = [];
 
-    let startValue = props.state.filter.pagination -1;
+    let startValue = props.state.filter.pagination - 1;
     if (startValue <= 0) startValue = 1;
 
     let endValue = parseInt(props.state.filter.pagination) + 1;
-    if (startValue === 1 && groups >= 3){
+    if (startValue === 1 && groups >= 3) {
         endValue = 3;
     }
 

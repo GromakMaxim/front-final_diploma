@@ -1,5 +1,5 @@
-export default async function cloneFunc(someObjectToClone){
-    let resultObject = new Object();
+export default async function cloneFunc(someObjectToClone) {
+    let resultObject = {};
 
     await Object.assign(resultObject, someObjectToClone);
 

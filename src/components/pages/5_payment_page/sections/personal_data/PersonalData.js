@@ -28,14 +28,14 @@ export default function PersonalData(props) {
         console.log(props.paymentData);
     }
 
-    function phoneInputHandler(e){
+    function phoneInputHandler(e) {
         let obj = props.paymentData;
         obj.phone = e.target.value;
         props.setPaymentData(obj);
         console.log(props.paymentData);
     }
 
-    function emailInputHandler(e){
+    function emailInputHandler(e) {
         let obj = props.paymentData;
         obj.email = e.target.value;
         props.setPaymentData(obj);

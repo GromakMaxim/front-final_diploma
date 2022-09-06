@@ -72,9 +72,11 @@ export default function DefaultWidget(props) {
             <div className='direction'>
                 <h3>Направление</h3>
                 <div>
-                    <input className='from' type='text' placeholder='Откуда' onChange={onInputFromCity} defaultValue={storageHandler.get('fromCity') }/>
+                    <input className='from' type='text' placeholder='Откуда' onChange={onInputFromCity}
+                           defaultValue={storageHandler.get('fromCity')}/>
                     <div className='pic-refresh'/>
-                    <input className='to' type='text' placeholder='Куда' onChange={onInputToCity} defaultValue={storageHandler.get('toCity')}/>
+                    <input className='to' type='text' placeholder='Куда' onChange={onInputToCity}
+                           defaultValue={storageHandler.get('toCity')}/>
                 </div>
             </div>
             <div className='date'>

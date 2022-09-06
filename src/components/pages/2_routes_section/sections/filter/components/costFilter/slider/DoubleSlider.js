@@ -33,9 +33,9 @@ export default function DoubleSlider(props) {
 
     let maxvalue = props.valueMax;
     let minvalue = props.valueMin;
-    const marksProps ={
+    const marksProps = {
         minvalue: {
-            style:{
+            style: {
                 color: 'white',
                 left: 0,
                 top: 15,
@@ -57,12 +57,12 @@ export default function DoubleSlider(props) {
     }
 
 
-    function changeHandler(e){
+    function changeHandler(e) {
 
         console.log(e)
     }
 
-    function workaround(e){
+    function workaround(e) {
         console.log(e)
     }
 

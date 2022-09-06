@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function FIOField(props){
+export default function FIOField(props) {
     return (
         <div>
             <label htmlFor={props.htmlFor}>{props.label}</label>

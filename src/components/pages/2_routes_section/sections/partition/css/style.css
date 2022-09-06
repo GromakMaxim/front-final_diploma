@@ -19,19 +19,19 @@
     cursor: pointer;
 }
 
-.pagination_item:hover{
+.pagination_item:hover {
     border-color: #FFA800;
     border-width: 2px;
     color: #FFA800;
 }
 
-.pagination_arrow{
+.pagination_arrow {
     width: 30px;
     height: 30px;
     filter: grayscale(0.5);
 }
 
-.pagination_item.active{
+.pagination_item.active {
     border-color: #FFA800;
     background-color: #FFA800;
     color: white

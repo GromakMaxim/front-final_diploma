@@ -13,8 +13,8 @@ export default function Payment(props) {
     console.log(props.state);
     const [paymentData, setPaymentData] = useState(new UserPaymentData());
 
-    async function clickButTicketsHandle(){
-        if (paymentData){
+    async function clickButTicketsHandle() {
+        if (paymentData) {
             let temp = props.state;
             temp.paymentData = paymentData;
             temp.display = 'confirm';
@@ -25,8 +25,9 @@ export default function Payment(props) {
     }
 
     let btnNext = <button type="button" className='payment-form-btn'>Купить билеты</button>
-    if (paymentData){
-        btnNext = <button type="button" className='payment-form-btn active' onClick={clickButTicketsHandle}>Купить билеты</button>
+    if (paymentData) {
+        btnNext = <button type="button" className='payment-form-btn active' onClick={clickButTicketsHandle}>Купить
+            билеты</button>
     }
 
     return (

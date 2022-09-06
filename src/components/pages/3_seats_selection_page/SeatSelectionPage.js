@@ -14,7 +14,7 @@ export default function SeatSelectionPage(props) {
     console.log(props.state);
     const [isActive, setNext] = useState(false);
 
-    async function goTo(){
+    async function goTo() {
         let temp = props.state;
         temp.display = 'passengers';
         let newState = await cloneFunc(temp);
@@ -24,7 +24,7 @@ export default function SeatSelectionPage(props) {
     let btnNext = <button type="button" className="next-page-btn ">Далее</button>;
     if (isActive) btnNext = <button type="button" className="next-page-btn active" onClick={goTo}>Далее</button>
 
-    function turnOnNextButton(value){
+    function turnOnNextButton(value) {
         setNext(value);
     }
 

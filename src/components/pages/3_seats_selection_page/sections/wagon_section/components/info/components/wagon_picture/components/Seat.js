@@ -5,10 +5,10 @@ export default function Seat(props) {
 
     let classes = "railway-seat ";
 
-    let isExists = props.state.seats[props.number-1];
-    if (isExists){
-        let isAvailable = props.state.seats[props.number-1].available;
-        if (isAvailable){
+    let isExists = props.state.seats[props.number - 1];
+    if (isExists) {
+        let isAvailable = props.state.seats[props.number - 1].available;
+        if (isAvailable) {
             classes = classes + ' available ';
         }
     }

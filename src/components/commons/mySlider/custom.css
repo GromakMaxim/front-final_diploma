@@ -20,7 +20,7 @@
 }
 
 .custom_slider__track,
-.custom_slider__range{
+.custom_slider__range {
     height: 15px;
 }
 
@@ -102,6 +102,6 @@
     position: relative;
 }
 
-.custom_container input{
+.custom_container input {
     height: 30px;
 }

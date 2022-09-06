@@ -187,7 +187,7 @@
     margin-top: 115px;
 }
 
-button.payment-form-btn{
+button.payment-form-btn {
     display: flex;
     margin-left: auto;
 
@@ -207,7 +207,7 @@ button.payment-form-btn{
     outline: none;
 }
 
-button.payment-form-btn.active{
+button.payment-form-btn.active {
     background-color: #FFA800;
     border: 1px solid #FFA800;
     cursor: pointer;

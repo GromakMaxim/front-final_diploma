@@ -43,15 +43,16 @@
     font-weight: 700;
 }
 
-.stage-arrow.inactive{
+.stage-arrow.inactive {
     border-left: 40px solid #3e3c41;
 }
+
 .stage-arrow.active {
     border-left: 40px solid #FFA800;
 }
 
 
-.stage-arrow{
+.stage-arrow {
     width: 0;
     height: 0;
     border-top: 50px solid transparent;

@@ -21,7 +21,7 @@ export default function AddPassengerWidget(props) {
         passengerNumber++;
     });
 
-    async function goNextPage(){
+    async function goNextPage() {
         let temp = props.state;
         temp.display = 'payment';
         let newState = await cloneFunc(temp);
@@ -30,7 +30,7 @@ export default function AddPassengerWidget(props) {
 
 
     let btnNext = <button type="button" className="next-page-btn">Далее</button>;
-    if (props.state.selectedSeats.size === props.state.passengers.size){
+    if (props.state.selectedSeats.size === props.state.passengers.size) {
         btnNext = <button type="button" className="next-page-btn active" onClick={goNextPage}>Далее</button>
     }
 

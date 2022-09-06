@@ -4,7 +4,7 @@
     flex-direction: row;
 }
 
-.show_partition > label{
+.show_partition > label {
     margin-right: 3px;
     align-self: center;
 }
@@ -22,11 +22,11 @@
     align-self: center;
 }
 
-.show_option:hover{
+.show_option:hover {
     font-weight: 600;
 }
 
-.show_option.active{
+.show_option.active {
     color: black;
     font-weight: 600;
 }

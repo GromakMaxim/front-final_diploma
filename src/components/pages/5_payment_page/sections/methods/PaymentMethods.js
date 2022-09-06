@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import Method from "./components/Method";
 import cloneFunc from "../../../../../service/CloneFunc";
 

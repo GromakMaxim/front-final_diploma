@@ -21,7 +21,7 @@ export default function ThanksPage(props) {
                     </div>
                 </div>
             </section>
-            <Steps />
+            <Steps/>
             <section className="successful-order-page_text">
                 <span className="appeal">{props.state.paymentData.surname} {props.state.paymentData.name}!</span>
                 <span>Ваш заказ успешно оформлен.</span>

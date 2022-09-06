@@ -1,7 +1,7 @@
 /**
  * данные об оплате
  */
-export default class UserPaymentData{
+export default class UserPaymentData {
 
     constructor() {
         this.name = null;

@@ -12,7 +12,7 @@ import cloneFunc from "../../../service/CloneFunc";
 export default function Confirm(props) {
     console.log(props.state);
 
-    async function goToThnxPage(){
+    async function goToThnxPage() {
         let temp = props.state;
         temp.display = 'thnx';
         let newState = await cloneFunc(temp);

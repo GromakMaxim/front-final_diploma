@@ -7,7 +7,7 @@ export default class StorageService {
 
     get(key) {
         let result = localStorage.getItem(key);
-        if (result === null || undefined){
+        if (result === null || undefined) {
             return null;
         }
         return result;

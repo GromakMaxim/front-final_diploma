@@ -1,7 +1,7 @@
 import FIOField from "../../../../4_passengers_page/components/formSections/FIOField";
 import React from "react";
 
-export default function PaymentFIOSection(props){
+export default function PaymentFIOSection(props) {
     return (
         <div className="payment-section payment-user">
             <FIOField htmlFor='last_name'

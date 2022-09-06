@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function PassengerAgeSection(props){
+export default function PassengerAgeSection(props) {
     return (
         <div className="passenger-form-section passenger-type-section">
             <label htmlFor="person_type" className="hidden">Тип
