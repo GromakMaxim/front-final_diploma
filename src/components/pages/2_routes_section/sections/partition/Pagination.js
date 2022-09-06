@@ -10,7 +10,7 @@ export default function Pagination(props) {
                 <img className='pagination_left pagination_arrow' src={arrow_l_pic} alt='pagination left arrow'></img>
             </div>
 
-            <div className='pagination_item'>1</div>
+            <div className='pagination_item active'>1</div>
             <div className='pagination_item'>2</div>
             <div className='pagination_item'>3</div>
 
