@@ -17,6 +17,12 @@ export default function Pagination(props) {
     let apiClient = new ApiClient();
 
     let totalCount = props.state.routes.total_count;
+    let groups;
+
+
+    if (totalCount % props.state.filter.limit !== 0){
+        groups = Math.floor(totalCount / props.state.filter.limit) + 1;
+    }
 
 
     async function paginationHandle(e) {
@@ -43,15 +49,16 @@ export default function Pagination(props) {
         props.setState(newState);
     }
 
-    let arr = ['1', '2', '3'];
     let resultToShow = [];
-    arr.forEach(item => {
-        if (item === number) {
-            resultToShow.push(<PaginationItem number={item} isActive={true} onClick={paginationHandle}/>)
+
+    for (let i = 1; i <= groups; i++) {
+        if (i === parseInt(number)) {
+            resultToShow.push(<PaginationItem key={i} number={i} isActive={true} onClick={paginationHandle}/>)
         } else {
-            resultToShow.push(<PaginationItem number={item} isActive={false} onClick={paginationHandle}/>)
+            resultToShow.push(<PaginationItem key={i} number={i} isActive={false} onClick={paginationHandle}/>)
         }
-    })
+    }
+
 
     return (
         <div className='routes_pagination'>
