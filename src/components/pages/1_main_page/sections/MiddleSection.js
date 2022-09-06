@@ -40,7 +40,7 @@ export default function MiddleSection(props) {
         case 'thnx':
             showThis = <>
                 <div className='thnx'>
-                    <ThanksPage/>
+                    <ThanksPage state={props.state} setState={props.setState}/>
                 </div>
             </>
             break;
