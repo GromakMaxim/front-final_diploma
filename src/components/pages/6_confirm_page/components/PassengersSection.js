@@ -2,14 +2,16 @@ import PassengerSmall from "./PassengerSmall";
 import ActionButton from "../../../commons/ActionButton";
 import React from "react";
 
+import rub_pic from '../img/icon-value.png';
+
 export default function PassengersSection(props) {
     let arr = [];
 
     let index = 0;
-    props.selectedPassengersData.forEach(psngr => {
-        arr.push(<PassengerSmall data={psngr} key={index}/>);
+    props.state.passengers.forEach(passenger => {
+        arr.push(<PassengerSmall data={passenger} key={index}/>);
         index++;
-    })
+    });
 
     return (
         <section className="verification verification-passengers">
@@ -24,7 +26,7 @@ export default function PassengersSection(props) {
                         <div className="ticket-price">
                             <div className="summary-value">1028</div>
                             <div className="value-image">
-                                <img src="/src/components/pages/2_offers_page/sections/feature/img/icon-value.png" alt="icon value"/>
+                                <img src={rub_pic} alt="rub icon"/>
                             </div>
                         </div>
                     </div>
