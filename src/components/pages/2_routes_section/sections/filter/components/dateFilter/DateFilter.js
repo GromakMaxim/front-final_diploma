@@ -2,6 +2,9 @@ import React from "react";
 
 import './date-filter.css';
 
+/**
+ * filter by date
+ */
 export default function DateFilter(props) {
     return (
         <div className="date-filter">

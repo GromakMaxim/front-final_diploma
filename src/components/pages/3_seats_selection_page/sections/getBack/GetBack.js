@@ -4,7 +4,7 @@ import arrow_white_icon from './img/arrow-white-next.png';
 import './css/style.css';
 
 /**
- * кнопка `выбрать другой поезд`
+ * `choose another train` button
  * (экран выбора мест)
  */
 export default function GetBack(props) {

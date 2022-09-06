@@ -2,6 +2,9 @@ import React, {useState} from "react";
 import Method from "./components/Method";
 import cloneFunc from "../../../../../service/CloneFunc";
 
+/**
+ * block for choosing a payment method
+ */
 export default function PaymentMethods(props) {
     console.log(props.paymentData)
 

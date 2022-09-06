@@ -10,6 +10,10 @@ import ThanksPage from "../../7_thnx_page/ThanksPage";
  * изменяющаяся секция под прогрессбаром
  */
 export default function MiddleSection(props) {
+    /**
+     * default -> offers -> seats -> passengers - > payment -> confirm -> thnx
+     * (defines what actually to display in middle section)
+     */
 
     let showThis;
     let showLeftFilter = false;

@@ -3,6 +3,9 @@ import "./custom.css";
 import ApiClient from "../../../service/ApiClient";
 import cloneFunc from "../../../service/CloneFunc";
 
+/**
+ * scale with two sliders
+ */
 export default function MultiRangeSlider({state, setState, min, max, onChange}) {
 
     const [minVal, setMinVal] = useState(min);

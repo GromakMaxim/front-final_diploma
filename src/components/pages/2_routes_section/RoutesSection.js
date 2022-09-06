@@ -7,6 +7,9 @@ import FilterTop from "./sections/filter/FilterTop";
 import ApiClient from "../../../service/ApiClient";
 import cloneFunc from "../../../service/CloneFunc";
 
+/**
+ * screen with a choice of directions(routes), according to the filter
+ */
 export default function RoutesSection(props) {
     console.log(props.state)
 

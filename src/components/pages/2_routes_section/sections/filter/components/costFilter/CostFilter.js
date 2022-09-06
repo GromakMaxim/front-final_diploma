@@ -4,7 +4,7 @@ import './costFilter.css';
 import MultiRangeSlider from "../../../../../../commons/mySlider/MultiRangeSlider";
 
 /**
- * фильтр по цене
+ * filter by cost
  */
 export default function CostFilter(props) {
     let valueMin;

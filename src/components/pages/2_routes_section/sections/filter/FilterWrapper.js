@@ -6,6 +6,9 @@ import ThereAndBack from "./components/there_and_back/ThereAndBack";
 
 import './css/filter.css';
 
+/**
+ * changing section with filter on the left
+ */
 export default function FilterWrapper(props) {
 
 

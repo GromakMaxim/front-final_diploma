@@ -1,5 +1,8 @@
 import React from "react";
 
+/**
+ * one of the payment method options
+ */
 export default function Method(props){
     let btn = null;
     if (props.checked){

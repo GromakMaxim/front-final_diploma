@@ -8,7 +8,7 @@ import './css/style.css';
 import cloneFunc from "../../../service/CloneFunc";
 
 /**
- * экран выбора мест
+ * seat selection screen
  */
 export default function SeatSelectionPage(props) {
     console.log(props.state);

@@ -4,6 +4,9 @@ import React from "react";
 
 import rub_pic from '../img/icon-value.png';
 
+/**
+ * block with previously filled in data for all passengers
+ */
 export default function PassengersSection(props) {
     let arr = [];
 

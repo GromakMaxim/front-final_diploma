@@ -3,6 +3,10 @@ import CustomSelectTag from "./components/customSelectTag/CustomSelectTag";
 import ShowPartition from "./components/showPartition/ShowPartition";
 
 
+/**
+ * block with sorting/filter
+ * (экран выбора направлений)
+ */
 export default function FilterTop(props) {
     let totalFound;
     if (props.state.routes === null || props.state.routes === undefined) {

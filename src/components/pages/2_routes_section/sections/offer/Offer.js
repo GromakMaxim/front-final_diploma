@@ -8,6 +8,9 @@ import arrow_g_pic from './img/arrow-gold-right.png';
 import ApiClient from "../../../../../service/ApiClient";
 import cloneFunc from "../../../../../service/CloneFunc";
 
+/**
+ * one of the directions(routes) available for selection
+ */
 export default function Offer(props) {
     let apiClient = new ApiClient();
 

@@ -3,6 +3,9 @@ import PhoneField from "./components/PhoneField";
 import EmailField from "./components/EmailField";
 import React from "react";
 
+/**
+ * block for filling the payer's personal data
+ */
 export default function PersonalData(props) {
     function nameInputHandle(e) {
         let obj = props.paymentData;

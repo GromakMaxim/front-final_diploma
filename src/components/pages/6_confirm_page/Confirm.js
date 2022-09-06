@@ -6,6 +6,9 @@ import PassengersSection from "./components/PassengersSection";
 import './css/style.css';
 import cloneFunc from "../../../service/CloneFunc";
 
+/**
+ * confirmation screen for all completed information
+ */
 export default function Confirm(props) {
     console.log(props.state);
 

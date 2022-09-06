@@ -4,7 +4,7 @@ import React from "react";
 import './slider.css';
 
 /**
- * группа переключателей в фильтре слева (при выборе направления):
+ * group of switches in the filter on the left (when choosing a direction/routes):
  * купе/плацкарт/сидячий/люкс/wifi/экспресс
  */
 export default function Triggers(props) {

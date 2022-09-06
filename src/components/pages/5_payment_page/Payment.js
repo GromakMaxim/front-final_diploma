@@ -6,6 +6,9 @@ import './css/style.css';
 import cloneFunc from "../../../service/CloneFunc";
 import UserPaymentData from "./dataObject/UserPaymentData";
 
+/**
+ * payment data filling screen
+ */
 export default function Payment(props) {
     console.log(props.state);
     const [paymentData, setPaymentData] = useState(new UserPaymentData());

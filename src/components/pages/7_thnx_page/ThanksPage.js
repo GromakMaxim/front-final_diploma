@@ -5,6 +5,9 @@ import './css/style.css';
 
 import rub_pic from './img/icon-value.png';
 
+/**
+ * final screen
+ */
 export default function ThanksPage(props) {
     return (
         <div className="successful-order-page">

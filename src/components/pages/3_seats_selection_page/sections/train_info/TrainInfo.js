@@ -9,7 +9,7 @@ import clock_pic from './img/icon-clock.png';
 import './css/style.css';
 
 /**
- * краткое инфо о выбранном направлении
+ * brief information about the chosen direction
  * (экран выбора мест)
  */
 export default function TrainInfo(props) {

@@ -4,6 +4,9 @@ import TimeFilter from "./TimeFilter";
 import icon_arrival from './img/icon-arrival.png';
 import icon_departure from './img/icon-departure.png';
 
+/**
+ * reverse direction selection block
+ */
 export default function ThereAndBack(props) {
     return (
         <div className='time-filters'>

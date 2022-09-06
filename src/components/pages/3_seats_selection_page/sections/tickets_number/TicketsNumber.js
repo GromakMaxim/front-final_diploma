@@ -3,7 +3,7 @@ import React from "react";
 import './css/style.css';
 
 /**
- * количество билетов
+ * number of tickets
  * (экран выбора мест)
  */
 export default function TicketsNumber(props) {

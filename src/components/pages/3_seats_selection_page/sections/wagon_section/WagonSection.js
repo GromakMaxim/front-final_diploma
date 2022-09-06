@@ -3,7 +3,7 @@ import WagonInfo from "./components/info/WagonInfo";
 import WagonType from "./components/type/WagonType";
 
 /**
- * секция `тип вагона` и выбор мест
+ * section `type of wagon` and choice of seats
  */
 export default function WagonSection(props) {
     return (

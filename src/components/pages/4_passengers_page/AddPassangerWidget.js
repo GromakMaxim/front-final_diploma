@@ -4,6 +4,9 @@ import React from "react";
 import './css/style.css';
 import cloneFunc from "../../../service/CloneFunc";
 
+/**
+ * screen for adding passenger information
+ */
 export default function AddPassengerWidget(props) {
     console.log(props.state);
 

@@ -1,5 +1,8 @@
 import React from "react";
 
+/**
+ * any button that provides an action on the page
+ */
 export default function ActionButton(props) {
     let cssStyle = {
         textAlign: "center",
