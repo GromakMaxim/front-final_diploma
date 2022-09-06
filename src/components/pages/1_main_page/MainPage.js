@@ -37,7 +37,7 @@ export default function MainPage(props) {
             /**
              * current sort type/filters
              */
-            filter: null,
+            filter: {},
 
             /**
              * available seats in selected route

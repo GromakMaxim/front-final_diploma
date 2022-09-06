@@ -53,6 +53,8 @@ export default class ApiClient {
 
             price_from: body.price_from ? body.price_from : '',
             price_to: body.price_to ? body.price_to : '',
+
+            limit: body.limit ? body.limit : '',
             offset: body.offset ? body.offset : '',
         }
 

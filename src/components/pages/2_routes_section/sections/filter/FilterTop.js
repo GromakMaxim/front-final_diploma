@@ -25,7 +25,9 @@ export default function FilterTop(props) {
                 </div>
                 <div className='show_partition'>
                     <label>показывать по:</label>
-                    <ShowPartition items={['5', '10', '15']}/>
+                    <ShowPartition state={props.state}
+                                   setState={props.setState}
+                                   items={['5', '10', '15']}/>
                 </div>
             </div>
         </div>

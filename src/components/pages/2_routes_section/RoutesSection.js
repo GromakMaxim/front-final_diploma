@@ -44,7 +44,8 @@ export default function RoutesSection(props) {
         <div className='routes_wrap'>
             <FilterTop
                 sort={sort}
-                state={props.state}/>
+                state={props.state}
+                setState={props.setState}/>
             <div className='routes-list'>
                 {routes}
             </div>
