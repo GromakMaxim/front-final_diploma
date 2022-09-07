@@ -7,14 +7,13 @@
 
 .middle_wrapper {
     width: 1350px;
+    min-height: 850px;
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
+    position: relative;
 
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 90px;
-    margin-bottom: 90px;
+    margin: 90px auto;
 }
 
 .routes_wrap {
@@ -29,3 +28,7 @@
     flex-direction: column;
 }
 
+.thnx{
+    position: absolute;
+    top: -300px;
+}

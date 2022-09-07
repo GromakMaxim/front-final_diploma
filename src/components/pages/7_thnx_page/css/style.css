@@ -183,22 +183,31 @@
 }
 
 .header-main {
+    min-height: 90vh;
     display: flex;
-    justify-content: center;
-    margin-top: 250px;
-    margin-bottom: 250px;
+    flex-direction: column;
+    justify-content: flex-start
+}
+
+.header-main.logo{
+    margin-top: 0px;
 }
 
 .header-title {
-    color: #fff;
-    font-size: 72px;
-    font-weight: 200;
-    line-height: 84px;
+    width: 1350px;
     display: flex;
     flex-direction: column;
-    margin-right: 105px;
-    margin-left: 120px;
-    align-self: center;
+    align-items: flex-start;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 300px;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 84px;
+
+    color: #FFFFFF;
 }
 
 .successful-order-page_text span:last-of-type {

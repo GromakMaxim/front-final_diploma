@@ -41,10 +41,7 @@ export default function TopSection(props) {
             break;
 
         case 'thnx':
-            showThis = <>
-                <ThnxWidget/>
-            </>
-            break;
+            return <ThnxWidget/>
 
     }
 

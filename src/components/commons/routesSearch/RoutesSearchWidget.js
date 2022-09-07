@@ -2,8 +2,9 @@ import SearchRoutesButton from "./SearchRoutesButton";
 
 import './css/style.css';
 
-import bgr1 from './img/train_header.png'
-import bgr2 from './img/train_header2.png'
+import bgr1 from './img/train_header.png';
+import bgr2 from './img/train_header2.png';
+
 import Logo from "../../pages/1_main_page/sections/logo/Logo";
 import NavigationMenu from "../../pages/1_main_page/sections/navigation_menu/NavigationMenu";
 import StorageService from "../../../service/StorageService";
