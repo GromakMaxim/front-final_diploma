@@ -9,19 +9,11 @@ export default function TopSection(props) {
     let showThis = null;
     let progressbarStage = '1';
 
-
-    let classes;
-    if (props.state.display === 'default') {
-        classes = 'main-page bgr2';
-    } else {
-        classes = 'main-page bgr1';
-    }
-
     switch (props.state.display) {
         case 'routes':
         case 'seats':
             showThis = <>
-                <HorizontalWidget/>
+                <HorizontalWidget state={props.state}/>
                 <Progressbar stage={progressbarStage}/>
             </>
             break;
@@ -29,7 +21,7 @@ export default function TopSection(props) {
         case 'passengers':
             progressbarStage = '2'
             showThis = <>
-                <HorizontalWidget/>
+                <HorizontalWidget state={props.state}/>
                 <Progressbar stage={progressbarStage}/>
             </>
             break;
@@ -37,7 +29,7 @@ export default function TopSection(props) {
         case 'payment':
             progressbarStage = '3'
             showThis = <>
-                <HorizontalWidget/>
+                <HorizontalWidget state={props.state}/>
                 <Progressbar stage={progressbarStage}/>
             </>
             break;
@@ -45,7 +37,7 @@ export default function TopSection(props) {
         case 'confirm':
             progressbarStage = '4'
             showThis = <>
-                <HorizontalWidget/>
+                <HorizontalWidget state={props.state}/>
                 <Progressbar stage={progressbarStage}/>
             </>
             break;

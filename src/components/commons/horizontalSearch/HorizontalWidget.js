@@ -12,12 +12,12 @@ export default function HorizontalWidget(props) {
                         <div className="form-way">
                             <div className="form-way-from">
                                 <input name="fromCity" type="text" placeholder="Откуда" autoComplete="off" required=""
-                                       defaultValue=""/>
+                                       defaultValue={props.state.filter.fromCity}/>
                             </div>
                             <div className="change-input"/>
                             <div className="form-way-to">
                                 <input name="toCity" type="text" placeholder="Куда" autoComplete="off" required=""
-                                       defaultValue=""/>
+                                       defaultValue={props.state.filter.toCity}/>
                             </div>
                         </div>
                     </fieldset>
@@ -27,14 +27,14 @@ export default function HorizontalWidget(props) {
                             <div className="react-datepicker-wrapper">
                                 <div className="react-datepicker__input-container">
                                     <input type="text" name="startDate" placeholder="ДД/ММ/ГГ" autoComplete="off"
-                                           defaultValue=""/>
+                                           defaultValue={props.state.filter.startDate}/>
                                 </div>
                             </div>
                             <div className="empty-wrapper"/>
                             <div className="react-datepicker-wrapper">
                                 <div className="react-datepicker__input-container">
                                     <input type="text" name="endDate" placeholder="ДД/ММ/ГГ" autoComplete="off"
-                                           defaultValue=""/>
+                                           defaultValue={props.state.filter.endDate}/>
                                 </div>
                             </div>
                         </div>
