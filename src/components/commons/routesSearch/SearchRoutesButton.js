@@ -48,5 +48,5 @@ export default function SearchRoutesButton(props) {
 
     }
 
-    return <button className="search-btn" onClick={clickHandle}>Найти билет</button>;
+    return <button className="search-btn" onClick={clickHandle}>Найти билеты</button>;
 }

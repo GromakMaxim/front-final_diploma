@@ -19,11 +19,10 @@ export default function RoutesSearchWidget(props) {
 
     let motto = null;
     let bgrStyle = {
-        backgroundImage: `url(${bgr1})`
+        backgroundImage: `url(${bgr1})`,
+        minHeight: '90vh',
+        borderBottom: '8px solid #FFA800',
     }
-
-    let widgetHeight = '87vh';
-
 
     function onInputFromCity(e) {
         setFromCity(e.target.value);
@@ -53,6 +52,8 @@ export default function RoutesSearchWidget(props) {
         return yyyy + '-' + mm + '-' + dd;
     }
 
+    let routesSearch = 'routes_search';
+    let routesSearchWrap = 'routes_search_wrap';
     switch (props.type) {
         case 'default':
             motto = <div className='motto'>
@@ -62,7 +63,12 @@ export default function RoutesSearchWidget(props) {
             break;
         case 'horizontal':
             motto = null;
-            bgrStyle = {backgroundImage: `url(${bgr2})`};
+            bgrStyle = {
+                backgroundImage: `url(${bgr2})`,
+                borderBottom: 'none',
+            };
+            routesSearchWrap = routesSearchWrap + ' hor';
+            routesSearch = routesSearch + ' hor';
             break;
     }
 
@@ -71,30 +77,36 @@ export default function RoutesSearchWidget(props) {
         <section className='routes_search' style={bgrStyle}>
             <Logo/>
             <NavigationMenu/>
-            <div className='routes_search_wrap'>
+            <div className={routesSearchWrap}>
                 {motto}
-                <div className='routes_search'>
+                <div className={routesSearch}>
                     <div className='direction'>
                         <h3>Направление</h3>
                         <div className='controls'>
-                            <input className='from' type='text' placeholder='Откуда' onChange={onInputFromCity} defaultValue={storageHandler.get('fromCity')}/>
+                            <input className='from' type='text' placeholder='Откуда' onChange={onInputFromCity}
+                                   defaultValue={storageHandler.get('fromCity')}/>
                             <div className='pic-refresh'/>
-                            <input className='to' type='text' placeholder='Куда' onChange={onInputToCity} defaultValue={storageHandler.get('toCity')}/>
+                            <input className='to' type='text' placeholder='Куда' onChange={onInputToCity}
+                                   defaultValue={storageHandler.get('toCity')}/>
                         </div>
                     </div>
                     <div className='date'>
                         <h3>Дата</h3>
                         <div className='controls'>
-                            <input className='from' type='date' placeholder='ДД/ММ/ГГ' onChange={onInputStartDate} defaultValue={storageHandler.get('startDate')}/>
-                            <input className='to' type='date' placeholder='ДД/ММ/ГГ' onChange={onInputEndDate} defaultValue={storageHandler.get('endDate')}/>
+                            <input className='from' type='date' placeholder='ДД/ММ/ГГ' onChange={onInputStartDate}
+                                   defaultValue={storageHandler.get('startDate')}/>
+                            <input className='to' type='date' placeholder='ДД/ММ/ГГ' onChange={onInputEndDate}
+                                   defaultValue={storageHandler.get('endDate')}/>
                         </div>
                     </div>
-                    <SearchRoutesButton fromCity={fromCity}
-                                        toCity={toCity}
-                                        startDate={startDate}
-                                        endDate={endDate}
-                                        state={props.state}
-                                        setState={props.setState}/>
+                    <div className='action_btn hor'>
+                        <SearchRoutesButton fromCity={fromCity}
+                                            toCity={toCity}
+                                            startDate={startDate}
+                                            endDate={endDate}
+                                            state={props.state}
+                                            setState={props.setState}/>
+                    </div>
                 </div>
             </div>
         </section>

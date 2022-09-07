@@ -1,7 +1,6 @@
 section.routes_search{
     display: flex;
     flex-direction: column;
-    min-height: 90vh;
     background-repeat: no-repeat;
     border-bottom: 8px solid #FFA800;
 }
@@ -9,19 +8,29 @@ section.routes_search{
 .routes_search_wrap{
     display: flex;
     flex-direction: row;
+    margin-top: 195px;
     margin-left: auto;
     margin-right: auto;
 }
 
+.routes_search_wrap.hor{
+    margin-top: 60px;
+}
 
 div.routes_search{
     display: flex;
     flex-direction: column;
+    max-width: 90%;
     background: rgba(41, 41, 41, 0.8);
-    margin-top: 195px;
     padding-left: 20px;
     padding-right: 20px;
-    padding-bottom: 100px;
+    padding-bottom: 93px;
+}
+
+div.routes_search.hor{
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 0px;
 }
 
 .routes_search .controls{
@@ -86,6 +95,14 @@ div.routes_search{
     text-transform: uppercase;
     color: #292929;
     align-self: flex-end;
-    margin-top: 47px;
     cursor: pointer;
+}
+
+.action_btn{
+    margin-left: auto;
+    margin-top: 45px;
+}
+
+.action_btn.hor{
+    margin-bottom: 10px;
 }
