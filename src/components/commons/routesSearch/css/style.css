@@ -52,3 +52,21 @@ div.routes_search{
     height: 8px;
 }
 
+.direction > .h3 {
+    width: auto;
+    text-align: left;
+}
+
+.from, .to {
+    width: 300px;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.pic-refresh {
+    width: 30px;
+    height: 30px;
+    background-image: url("../img/reload.png");
+    filter: invert(100%);
+    background-size: 30px;
+}

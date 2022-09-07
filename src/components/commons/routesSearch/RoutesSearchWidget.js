@@ -18,7 +18,7 @@ export default function RoutesSearchWidget(props) {
     const [endDate, setEndDate] = useState('');
 
     let motto = null;
-    let css ={
+    let css = {
         backgroundImage: `url(${bgr1})`
     }
 
@@ -89,7 +89,12 @@ export default function RoutesSearchWidget(props) {
                             <input className='to' type='date' placeholder='ДД/ММ/ГГ' onChange={onInputEndDate}/>
                         </div>
                     </div>
-                    <SearchRoutesButton/>
+                    <SearchRoutesButton fromCity={fromCity}
+                                        toCity={toCity}
+                                        startDate={startDate}
+                                        endDate={endDate}
+                                        state={props.state}
+                                        setState={props.setState}/>
                 </div>
             </div>
             <div className='yellow_line'></div>
