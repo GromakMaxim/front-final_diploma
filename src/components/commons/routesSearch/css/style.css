@@ -15,12 +15,12 @@ section.routes_search{
 
 .routes_search_wrap.hor{
     margin-top: 60px;
+    width: 84%;
 }
 
 div.routes_search{
     display: flex;
     flex-direction: column;
-    max-width: 90%;
     background: rgba(41, 41, 41, 0.8);
     padding-left: 20px;
     padding-right: 20px;
@@ -28,9 +28,11 @@ div.routes_search{
 }
 
 div.routes_search.hor{
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding-bottom: 0px;
+    width: 100%;
+    flex-direction: column;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 0;
 }
 
 .routes_search .controls{
@@ -69,7 +71,7 @@ div.routes_search.hor{
     padding: 10px;
 }
 
-.routes_search h3{
+div.routes_search h3{
     font-size: 30px;
     color: white;
     text-align: left;
@@ -105,4 +107,10 @@ div.routes_search.hor{
 
 .action_btn.hor{
     margin-bottom: 10px;
+}
+
+.direction_and_date.hor{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
 }

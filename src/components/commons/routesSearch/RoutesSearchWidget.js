@@ -54,6 +54,7 @@ export default function RoutesSearchWidget(props) {
 
     let routesSearch = 'routes_search';
     let routesSearchWrap = 'routes_search_wrap';
+    let directionAndDate = 'direction_and_date';
     switch (props.type) {
         case 'default':
             motto = <div className='motto'>
@@ -69,6 +70,7 @@ export default function RoutesSearchWidget(props) {
             };
             routesSearchWrap = routesSearchWrap + ' hor';
             routesSearch = routesSearch + ' hor';
+            directionAndDate = directionAndDate + ' hor';
             break;
     }
 
@@ -80,23 +82,25 @@ export default function RoutesSearchWidget(props) {
             <div className={routesSearchWrap}>
                 {motto}
                 <div className={routesSearch}>
-                    <div className='direction'>
-                        <h3>Направление</h3>
-                        <div className='controls'>
-                            <input className='from' type='text' placeholder='Откуда' onChange={onInputFromCity}
-                                   defaultValue={storageHandler.get('fromCity')}/>
-                            <div className='pic-refresh'/>
-                            <input className='to' type='text' placeholder='Куда' onChange={onInputToCity}
-                                   defaultValue={storageHandler.get('toCity')}/>
+                    <div className={directionAndDate}>
+                        <div className='direction'>
+                            <h3>Направление</h3>
+                            <div className='controls'>
+                                <input className='from' type='text' placeholder='Откуда' onChange={onInputFromCity}
+                                       defaultValue={storageHandler.get('fromCity')}/>
+                                <div className='pic-refresh'/>
+                                <input className='to' type='text' placeholder='Куда' onChange={onInputToCity}
+                                       defaultValue={storageHandler.get('toCity')}/>
+                            </div>
                         </div>
-                    </div>
-                    <div className='date'>
-                        <h3>Дата</h3>
-                        <div className='controls'>
-                            <input className='from' type='date' placeholder='ДД/ММ/ГГ' onChange={onInputStartDate}
-                                   defaultValue={storageHandler.get('startDate')}/>
-                            <input className='to' type='date' placeholder='ДД/ММ/ГГ' onChange={onInputEndDate}
-                                   defaultValue={storageHandler.get('endDate')}/>
+                        <div className='date'>
+                            <h3>Дата</h3>
+                            <div className='controls'>
+                                <input className='from' type='date' placeholder='ДД/ММ/ГГ' onChange={onInputStartDate}
+                                       defaultValue={storageHandler.get('startDate')}/>
+                                <input className='to' type='date' placeholder='ДД/ММ/ГГ' onChange={onInputEndDate}
+                                       defaultValue={storageHandler.get('endDate')}/>
+                            </div>
                         </div>
                     </div>
                     <div className='action_btn hor'>
