@@ -31,7 +31,7 @@ export default function SearchRoutesButton(props) {
 
         let routes = await apiClient.getRoutes(findThis);
         temp = props.state;
-        if (routes.error || routes.total_count === 0){
+        if (routes.error || routes.total_count === 0) {
             temp.error = {
                 type: 'err',
                 mainText: 'По выбранному направлению билетов нет',

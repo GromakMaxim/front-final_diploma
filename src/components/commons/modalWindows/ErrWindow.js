@@ -6,7 +6,7 @@ import info_pic from './img/info.png';
 import cloneFunc from "../../../service/CloneFunc";
 
 
-export default function ErrWindow (props) {
+export default function ErrWindow(props) {
 
 
     async function okImUnderstand() {

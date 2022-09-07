@@ -22,11 +22,11 @@ export default function Pagination(props) {
         groups = Math.floor(totalCount / props.state.filter.limit) + 1;
     }
 
-    async function arrowHandle(e){
+    async function arrowHandle(e) {
         let selectedArrow = e.target.dataset.value;
         let changingIndex;
 
-        switch (selectedArrow){
+        switch (selectedArrow) {
             case '<-':
                 changingIndex = -1;
                 break;
@@ -46,9 +46,9 @@ export default function Pagination(props) {
 
     async function paginationHandle(e) {
         let selectedValue;
-        if (e.target !== undefined && e.target !== null){
+        if (e.target !== undefined && e.target !== null) {
             selectedValue = parseInt(e.target.textContent);
-        } else{
+        } else {
             selectedValue = parseInt(e);
         }
         console.log(selectedValue);
