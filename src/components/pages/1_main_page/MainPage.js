@@ -75,12 +75,7 @@ export default function MainPage(props) {
     )
 
 
-    let classes = null;
-    if (state.display === 'default') {
-        classes = 'main-page bgr1';
-    } else {
-        classes = 'main-page bgr2';
-    }
+    let classes = 'main-page';
 
     return (
         <div className={classes}>

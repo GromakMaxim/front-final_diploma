@@ -1,23 +1,6 @@
-.widget-search-wrapper {
-    display: flex;
-    flex-direction: row;
-    margin-right: auto;
-    margin-left: auto;
-}
 
-.motto {
-    display: flex;
-    flex-direction: column;
-    color: #fff;
-    font-size: 72px;
-    font-weight: 200;
-    line-height: 84px;
 
-    margin-right: 105px;
-    margin-left: 120px;
-    text-align: left;
-    align-self: center;
-}
+
 
 .widget-search-ticket {
     display: flex;

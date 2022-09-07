@@ -1,9 +1,8 @@
 import ThnxWidget from "../../7_thnx_page/components/ThnxWidget";
-import Logo from "./logo/Logo";
-import NavigationMenu from "./navigation_menu/NavigationMenu";
 import HorizontalWidget from "../../../commons/horizontalSearch/HorizontalWidget";
 import Progressbar from "../../../commons/progressbar/Progressbar";
 import DefaultWidget from "./search_routes/DefaultWidget";
+import RoutesSearchWidget from "../../../commons/routesSearch/RoutesSearchWidget";
 
 export default function TopSection(props) {
     let showThis = null;
@@ -49,15 +48,11 @@ export default function TopSection(props) {
             break;
 
         default:
-            showThis = <DefaultWidget setState={props.setState} state={props.state}/>
+            showThis = <RoutesSearchWidget state={props.state} setState={props.state} type='default'/>
 
     }
 
     return (
-        <>
-            <Logo/>
-            <NavigationMenu/>
-            {showThis}
-        </>
+        showThis
     );
 }

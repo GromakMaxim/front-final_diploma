@@ -1,8 +1,47 @@
-import React from "react";
+import React, {useState} from "react";
 
 import './css/horizontalWidget.css';
+import SearchRoutesButton from "../routesSearch/SearchRoutesButton";
+import StorageService from "../../../service/StorageService";
 
 export default function HorizontalWidget(props) {
+
+    const [fromCity, setFromCity] = useState(storageHandler.get('fromCity'));
+    const [toCity, setToCity] = useState(storageHandler.get('toCity'));
+    const [startDate, setStartDate] = useState('');
+    const [endDate, setEndDate] = useState('');
+
+    let storageHandler = new StorageService();
+
+
+    function onInputFromCity(e) {
+        setFromCity(e.target.value);
+    }
+
+    function onInputToCity(e) {
+        setToCity(e.target.value);
+    }
+
+    async function onInputStartDate(e) {
+        let rawInput = e.target.value;
+        let preparedDate = await concat(rawInput);
+        setStartDate(preparedDate);
+    }
+
+    async function onInputEndDate(e) {
+        let rawInput = e.target.value;
+        let preparedDate = await concat(rawInput);
+        setEndDate(preparedDate);
+    }
+
+    async function concat(rawDate) {
+        let yyyy = rawDate.split('-')[0];
+        let mm = rawDate.split('-')[1];
+        let dd = rawDate.split('-')[2];
+
+        return yyyy + '-' + mm + '-' + dd;
+    }
+
     return (
         <div className="form-search">
             <form className="form-search-ticket" method="get">
@@ -40,7 +79,12 @@ export default function HorizontalWidget(props) {
                         </div>
                     </fieldset>
                 </div>
-                <button type="submit" className="form-search-btn">Найти билет</button>
+                <SearchRoutesButton startDate={startDate}
+                                    endDate={endDate}
+                                    fromCity={fromCity}
+                                    toCity={toCity}
+                                    state={props.state}
+                                    setState={props.setState}/>
             </form>
         </div>
     );
