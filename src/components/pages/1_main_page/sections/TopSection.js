@@ -1,17 +1,20 @@
 import ThnxWidget from "../../7_thnx_page/components/ThnxWidget";
-import HorizontalWidget from "../../../commons/horizontalSearch/HorizontalWidget";
 import Progressbar from "../../../commons/progressbar/Progressbar";
 import RoutesSearchWidget from "../../../commons/routesSearch/RoutesSearchWidget";
 
 export default function TopSection(props) {
     let showThis = null;
     let progressbarStage = '1';
+    let searchWidgetType = 'default'
+
+    if (props.state.display !== 'default') {
+        searchWidgetType = 'horizontal';
+    }
 
     switch (props.state.display) {
         case 'routes':
         case 'seats':
             showThis = <>
-                <HorizontalWidget state={props.state}/>
                 <Progressbar stage={progressbarStage}/>
             </>
             break;
@@ -19,7 +22,6 @@ export default function TopSection(props) {
         case 'passengers':
             progressbarStage = '2'
             showThis = <>
-                <HorizontalWidget state={props.state}/>
                 <Progressbar stage={progressbarStage}/>
             </>
             break;
@@ -27,7 +29,6 @@ export default function TopSection(props) {
         case 'payment':
             progressbarStage = '3'
             showThis = <>
-                <HorizontalWidget state={props.state}/>
                 <Progressbar stage={progressbarStage}/>
             </>
             break;
@@ -35,7 +36,6 @@ export default function TopSection(props) {
         case 'confirm':
             progressbarStage = '4'
             showThis = <>
-                <HorizontalWidget state={props.state}/>
                 <Progressbar stage={progressbarStage}/>
             </>
             break;
@@ -45,9 +45,13 @@ export default function TopSection(props) {
                 <ThnxWidget/>
             </>
             break;
+
     }
 
     return (
-        <RoutesSearchWidget state={props.state} setState={props.setState} type='default'/>
+        <>
+            <RoutesSearchWidget state={props.state} setState={props.setState} type={searchWidgetType}/>
+            {showThis}
+        </>
     );
 }

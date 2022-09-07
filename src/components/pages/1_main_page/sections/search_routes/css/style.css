@@ -16,11 +16,6 @@
     width: auto;
 }
 
-div > h3 {
-    font-size: 30px;
-    color: white;
-}
-
 .direction, .date {
     display: flex;
     flex-direction: column;

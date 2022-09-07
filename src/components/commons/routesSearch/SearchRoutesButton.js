@@ -26,8 +26,6 @@ export default function SearchRoutesButton(props) {
             pagination: '1' // страница пагинации
         }
 
-        console.log(findThis);
-
         storageHandler.put('fromCity', props.fromCity);
         storageHandler.put('toCity', props.toCity);
 
@@ -45,11 +43,10 @@ export default function SearchRoutesButton(props) {
             temp.filter = findThis;
         }
 
-        console.log(temp)
         let newState = await cloneFunc(temp);
         props.setState(newState);
 
     }
 
-    return <button className="form-search-btn" onClick={clickHandle}>Найти билет</button>;
+    return <button className="search-btn" onClick={clickHandle}>Найти билет</button>;
 }

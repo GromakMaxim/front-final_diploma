@@ -1,12 +1,14 @@
 section.routes_search{
     display: flex;
     flex-direction: column;
+    min-height: 90vh;
+    background-repeat: no-repeat;
+    border-bottom: 8px solid #FFA800;
 }
 
 .routes_search_wrap{
     display: flex;
     flex-direction: row;
-    height: 87vh;
     margin-left: auto;
     margin-right: auto;
 }
@@ -15,11 +17,11 @@ section.routes_search{
 div.routes_search{
     display: flex;
     flex-direction: column;
-    height: 500px;
     background: rgba(41, 41, 41, 0.8);
-    margin-top: auto;
+    margin-top: 195px;
     padding-left: 20px;
     padding-right: 20px;
+    padding-bottom: 100px;
 }
 
 .routes_search .controls{
@@ -46,11 +48,6 @@ div.routes_search{
     align-self: center;
 }
 
-.yellow_line{
-    background-color: #FFA800;
-    width: 100%;
-    height: 8px;
-}
 
 .direction > .h3 {
     width: auto;
@@ -63,10 +60,32 @@ div.routes_search{
     padding: 10px;
 }
 
+.routes_search h3{
+    font-size: 30px;
+    color: white;
+    text-align: left;
+    font-weight: lighter;
+}
+
 .pic-refresh {
     width: 30px;
     height: 30px;
     background-image: url("../img/reload.png");
     filter: invert(100%);
     background-size: 30px;
+}
+
+.search-btn {
+    width: 320px;
+    background-color: #FFA800;
+    border: 1px solid #FFA800;
+    border-radius: 5px;
+    box-sizing: border-box;
+    padding: 16px 0;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #292929;
+    align-self: flex-end;
+    margin-top: 47px;
+    cursor: pointer;
 }

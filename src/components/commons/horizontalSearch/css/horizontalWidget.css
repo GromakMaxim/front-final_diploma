@@ -88,21 +88,7 @@ fieldset {
     background-repeat: no-repeat;
 }
 
-.order-page .form-search-btn {
+.order-page {
     margin-top: 47px;
 }
 
-.form-search-btn {
-    width: 320px;
-    background-color: #FFA800;
-    border: 1px solid #FFA800;
-    border-radius: 5px;
-    box-sizing: border-box;
-    padding: 16px 0;
-    font-size: 24px;
-    text-transform: uppercase;
-    color: #292929;
-    align-self: flex-end;
-    margin-top: 40px;
-    cursor: pointer;
-}

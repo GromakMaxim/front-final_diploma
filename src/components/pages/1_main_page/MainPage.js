@@ -74,11 +74,8 @@ export default function MainPage(props) {
         }
     )
 
-
-    let classes = 'main-page';
-
     return (
-        <div className={classes}>
+        <div className='main-page'>
             <TopSection setState={setState} state={state}/>
             <MiddleSection setState={setState} state={state}/>
             <LowSection setState={setState} state={state}/>

@@ -18,9 +18,11 @@ export default function RoutesSearchWidget(props) {
     const [endDate, setEndDate] = useState('');
 
     let motto = null;
-    let css = {
+    let bgrStyle = {
         backgroundImage: `url(${bgr1})`
     }
+
+    let widgetHeight = '87vh';
 
 
     function onInputFromCity(e) {
@@ -60,15 +62,13 @@ export default function RoutesSearchWidget(props) {
             break;
         case 'horizontal':
             motto = null;
-            css = {
-                backgroundImage: `url(${bgr2})`
-            }
+            bgrStyle = {backgroundImage: `url(${bgr2})`};
             break;
     }
 
 
     return (
-        <section className='routes_search' style={css}>
+        <section className='routes_search' style={bgrStyle}>
             <Logo/>
             <NavigationMenu/>
             <div className='routes_search_wrap'>
@@ -77,16 +77,16 @@ export default function RoutesSearchWidget(props) {
                     <div className='direction'>
                         <h3>Направление</h3>
                         <div className='controls'>
-                            <input className='from' type='text' placeholder='Откуда' onChange={onInputFromCity}/>
+                            <input className='from' type='text' placeholder='Откуда' onChange={onInputFromCity} defaultValue={storageHandler.get('fromCity')}/>
                             <div className='pic-refresh'/>
-                            <input className='to' type='text' placeholder='Куда' onChange={onInputToCity}/>
+                            <input className='to' type='text' placeholder='Куда' onChange={onInputToCity} defaultValue={storageHandler.get('toCity')}/>
                         </div>
                     </div>
                     <div className='date'>
                         <h3>Дата</h3>
                         <div className='controls'>
-                            <input className='from' type='date' placeholder='ДД/ММ/ГГ' onChange={onInputStartDate}/>
-                            <input className='to' type='date' placeholder='ДД/ММ/ГГ' onChange={onInputEndDate}/>
+                            <input className='from' type='date' placeholder='ДД/ММ/ГГ' onChange={onInputStartDate} defaultValue={storageHandler.get('startDate')}/>
+                            <input className='to' type='date' placeholder='ДД/ММ/ГГ' onChange={onInputEndDate} defaultValue={storageHandler.get('endDate')}/>
                         </div>
                     </div>
                     <SearchRoutesButton fromCity={fromCity}
@@ -97,7 +97,6 @@ export default function RoutesSearchWidget(props) {
                                         setState={props.setState}/>
                 </div>
             </div>
-            <div className='yellow_line'></div>
         </section>
     )
 }
