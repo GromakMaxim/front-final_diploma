@@ -3,43 +3,42 @@ import './css/rogerBtn.css'
 
 import warning_pic from './img/exclamation.png';
 import info_pic from './img/info.png';
-import {Component} from "react";
+import cloneFunc from "../../../service/CloneFunc";
 
 
-export default class ErrWindow extends Component {
+export default function ErrWindow (props) {
 
-    constructor(props, context) {
-        super(props, context);
+
+    async function okImUnderstand() {
+        let temp = props.state;
+        temp.error = null;
+        let newState = await cloneFunc(temp);
+        props.setState(newState);
     }
 
+    let css;
+    let pic;
+    if (props.type === 'err') {
+        css = {background: 'rgba(255, 61, 0, 0.38)'}
+        pic = warning_pic;
+    } else {
+        css = {background: 'rgba(255, 245, 0, 0.36)'}
+        pic = info_pic;
+    }
 
-    render() {
-        let css;
-        let pic;
-        if (this.props.type === 'err'){
-            css={background: 'rgba(255, 61, 0, 0.38)'}
-            pic = warning_pic;
-        } else {
-            css={background: 'rgba(255, 245, 0, 0.36)'}
-            pic=info_pic;
-        }
-
-
-
-        return (
-            <div className='error_window'>
-                <div className='err_header' style={css}>
-                    <img src={pic}></img>
-                </div>
-
-                <h4>{this.props.mainTxt}</h4>
-                <label>{this.props.secondaryTxt}</label>
-
-                <div className='err_bottom'>
-                    <button className='roger'>Понятно</button>
-                </div>
+    return (
+        <div className='error_window'>
+            <div className='err_header' style={css}>
+                <img src={pic} alt='warning or info icon'/>
             </div>
-        );
-    }
+
+            <h4>{props.mainText}</h4>
+            <label>{props.secondaryText}</label>
+
+            <div className='err_bottom'>
+                <button className='roger' onClick={okImUnderstand}>Понятно</button>
+            </div>
+        </div>
+    );
 
 }

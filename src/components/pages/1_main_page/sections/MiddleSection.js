@@ -5,6 +5,7 @@ import AddPassengerWidget from "../../4_passengers_page/AddPassangerWidget";
 import Payment from "../../5_payment_page/Payment";
 import Confirm from "../../6_confirm_page/Confirm";
 import ThanksPage from "../../7_thnx_page/ThanksPage";
+import ErrWindow from "../../../commons/modalWindows/ErrWindow";
 
 /**
  * изменяющаяся секция под прогрессбаром
@@ -17,6 +18,19 @@ export default function MiddleSection(props) {
 
     let showThis;
     let showLeftFilter = false;
+    let errorOccurred = null;
+
+    if (props.state.error !== null && props.state.error !== undefined) {
+        if (props.state.error.type !== null) {
+            errorOccurred = <ErrWindow state={props.state}
+                                       setState={props.setState}
+                                       type={props.state.error.type}
+                                       mainText={props.state.error.mainText}
+                                       secondaryText={props.state.error.secondaryText}/>
+            return errorOccurred;
+        }
+    }
+
     switch (props.state.display) {
         case 'routes':
             showLeftFilter = true;
@@ -59,11 +73,13 @@ export default function MiddleSection(props) {
         filter = <FilterWrapper state={props.state} setState={props.setState}/>
     }
 
+
     return (
         <div className='refreshing_area'>
             <div className='middle_wrapper'>
                 {filter}
                 {showThis}
+                {errorOccurred}
             </div>
         </div>
     )

@@ -4,7 +4,6 @@ import './css/mainPage.css';
 import MiddleSection from "./sections/MiddleSection";
 import TopSection from "./sections/TopSection";
 import LowSection from "./sections/LowSection";
-import ErrWindow from "../../commons/modalWindows/ErrWindow";
 
 export default function MainPage(props) {
     const [state, setState] = useState(
@@ -62,6 +61,16 @@ export default function MainPage(props) {
              * user data from the payment page
              */
             paymentDetails: null,
+
+            /**
+             * if any error/info/warning occurred - there is some info
+             */
+
+            error: {
+                type: null,
+                mainText: null,
+                secondaryText: null,
+            }
         }
     )
 

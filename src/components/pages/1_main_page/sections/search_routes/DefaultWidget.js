@@ -50,26 +50,43 @@ export default function DefaultWidget(props) {
     async function clickHandle() {
         let temp;
 
+        let begin = startDate;
+        let end = endDate;
+
+        if (begin.includes('undef')) begin = '';
+        if (end.includes('undef')) end = '';
+
+
         let findThis = {
             fromCity: fromCity,
             toCity: toCity,
-            startDate: startDate,
-            endDate: endDate,
+            startDate: begin,
+            endDate: end,
             limit: '5', // отображать по 5 направлений
             offset: '0', // смещение
             pagination: '1' // страница пагинации
         }
 
+        console.log(findThis);
+
         storageHandler.put('fromCity', fromCity);
         storageHandler.put('toCity', toCity);
 
         let routes = await apiClient.getRoutes(findThis);
-
         temp = props.state;
-        temp.display = 'routes';
-        temp.routes = routes;
-        temp.filter = findThis;
+        if (routes.error || routes.total_count === 0){
+            temp.error = {
+                type: 'err',
+                mainText: 'По выбранному направлению билетов нет',
+                secondaryText: 'Попробуйте выбрать другое направление.',
+            }
+        } else {
+            temp.display = 'routes';
+            temp.routes = routes;
+            temp.filter = findThis;
+        }
 
+        console.log(temp)
         let newState = await cloneFunc(temp);
         props.setState(newState);
 
