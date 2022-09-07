@@ -27,12 +27,24 @@ export default function DefaultWidget(props) {
         setToCity(e.target.value);
     }
 
-    function onInputStartDate(e) {
-        setStartDate(e.target.value);
+    async function onInputStartDate(e) {
+        let rawInput = e.target.value;
+        let preparedDate = await concat(rawInput);
+        setStartDate(preparedDate);
     }
 
-    function onInputEndDate(e) {
-        setEndDate(e.target.value);
+    async function onInputEndDate(e) {
+        let rawInput = e.target.value;
+        let preparedDate = await concat(rawInput);
+        setEndDate(preparedDate);
+    }
+
+    async function concat(rawDate){
+        let yyyy = rawDate.split('-')[0];
+        let mm = rawDate.split('-')[1];
+        let dd = rawDate.split('-')[2];
+
+        return yyyy + '-' + mm + '-' + dd;
     }
 
     async function clickHandle() {
