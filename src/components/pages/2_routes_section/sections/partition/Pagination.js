@@ -22,19 +22,45 @@ export default function Pagination(props) {
         groups = Math.floor(totalCount / props.state.filter.limit) + 1;
     }
 
+    async function arrowHandle(e){
+        let selectedArrow = e.target.dataset.value;
+        let changingIndex;
+
+        switch (selectedArrow){
+            case '<-':
+                changingIndex = -1;
+                break;
+            case '->':
+                changingIndex = 1;
+                break;
+            default:
+                changingIndex = 0;
+        }
+
+        let activePaginationIndex = parseInt(document.querySelector('.pagination_item.active').textContent);
+
+        await paginationHandle(activePaginationIndex + changingIndex);
+
+    }
+
 
     async function paginationHandle(e) {
-        console.log(e.target.textContent);
+        let selectedValue;
+        if (e.target !== undefined && e.target !== null){
+            selectedValue = parseInt(e.target.textContent);
+        } else{
+            selectedValue = parseInt(e);
+        }
+        console.log(selectedValue);
 
         let paginationFilter = props.state.filter;
-        paginationFilter.pagination = e.target.textContent;
+        paginationFilter.pagination = selectedValue;
 
-        if (e.target.textContent === '1') {
+        if (selectedValue === '1') {
             paginationFilter.offset = '0';
         } else {
-            let offsetIndex = parseInt(e.target.textContent) - 1;
-            let routesOffset = props.state.filter.limit * offsetIndex;
-            paginationFilter.offset = routesOffset;
+            let offsetIndex = selectedValue - 1;
+            paginationFilter.offset = props.state.filter.limit * offsetIndex;
         }
 
         let routes = await apiClient.getRoutes(paginationFilter);
@@ -69,15 +95,19 @@ export default function Pagination(props) {
 
     return (
         <div className='routes_pagination'>
-            <div className='pagination_item'>
-                <img className='pagination_left pagination_arrow' src={arrow_l_pic} alt='pagination left arrow'></img>
-            </div>
+            <img className='pagination_item pagination_left pagination_arrow'
+                 src={arrow_l_pic}
+                 data-value='<-'
+                 onClick={arrowHandle}
+                 alt='pagination left arrow'></img>
 
             {resultToShow}
 
-            <div className='pagination_item'>
-                <img className='pagination_right pagination_arrow' src={arrow_r_pic} alt='pagination right arrow'></img>
-            </div>
+            <img className='pagination_item pagination_right pagination_arrow'
+                 src={arrow_r_pic}
+                 data-value='->'
+                 onClick={arrowHandle}
+                 alt='pagination right arrow'></img>
         </div>
     );
 }

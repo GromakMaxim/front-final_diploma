@@ -4,7 +4,7 @@
     margin-left: auto;
 }
 
-.pagination_item {
+.pagination_item, .pagination_item.pagination_arrow {
     display: flex;
     justify-content: center;
     width: 45px;
@@ -26,9 +26,7 @@
 }
 
 .pagination_arrow {
-    width: 30px;
-    height: 30px;
-    filter: grayscale(0.5);
+    padding: 8px;
 }
 
 .pagination_item.active {
